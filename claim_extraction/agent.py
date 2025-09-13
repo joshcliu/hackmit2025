@@ -102,7 +102,8 @@ Guidelines for extraction:
    - IGNORE repeated or duplicate claims - only extract each unique claim once
 
 4. Identify the speaker:
-   - Determine who made each claim from context
+   - The ">>" symbol in transcript lines indicates a change in speaker
+   - Determine who made each claim from context and speaker changes
    - Use names, titles, or roles as appropriate
    - If unclear from transcript, use "Unknown"
 
@@ -149,8 +150,9 @@ Text chunk from transcript (format: "line_number [start_time + duration] TEXT"):
 Extract all verifiable claims from this text chunk. Return them as structured output with:
 - claims: List of atomic, verifiable claims with video_id, timestamps, claim_text, speaker, and importance_score
 
-IMPORTANT: Parse timestamps carefully from the transcript format. For example:
-- "134 [186.82s + 2.90s] >> SO I WAS RAISED AS A" means start_s=186.82, end_s=189.72
+IMPORTANT: 
+- Parse timestamps carefully from the transcript format. For example: "134 [186.82s + 2.90s] >> SO I WAS RAISED AS A" means start_s=186.82, end_s=189.72
+- The ">>" symbol indicates a change in speaker - use this to identify who is making each claim
 - If a claim spans multiple lines, use the start of the first line and end of the last line
 
 For each claim, identify the speaker and assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")

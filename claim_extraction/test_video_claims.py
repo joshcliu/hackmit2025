@@ -123,6 +123,7 @@ async def extract_claims_from_video(video_id: str, chunk_size_seconds: float = 3
         async with semaphore:
             try:
                 print(f"Processing chunk {chunk_id+1}/{len(chunks)}...")
+                print(f"  Chunk text: {chunk_text[:200]}{'...' if len(chunk_text) > 200 else ''}")
                 result = await agent.aextract(video_id=video_id, chunk=chunk_text)
                 chunk_claims = result.claims
                 print(f"  Extracted {len(chunk_claims)} claims from chunk {chunk_id+1}")
