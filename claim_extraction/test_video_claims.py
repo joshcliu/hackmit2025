@@ -86,13 +86,14 @@ def chunk_transcript(transcript_raw: List[Dict[str, Any]], chunk_size_seconds: f
     return chunks
 
 
-async def extract_claims_from_video(video_id: str, chunk_size_seconds: float = 30.0) -> List[ClaimMinimal]:
+async def extract_claims_from_video(video_id: str, chunk_size_seconds: float = 30.0, max_parallel: int = 3) -> List[ClaimMinimal]:
     """
-    Extract all claims from a video transcript.
+    Extract all claims from a video transcript using parallel processing.
     
     Args:
         video_id: YouTube video ID
         chunk_size_seconds: Size of chunks to process
+        max_parallel: Maximum number of parallel extraction tasks
         
     Returns:
         List of all extracted claims
@@ -112,20 +113,48 @@ async def extract_claims_from_video(video_id: str, chunk_size_seconds: float = 3
     
     agent = ClaimExtractionAgent()
     
-    print("Extracting claims from chunks...")
+    print(f"Extracting claims from chunks (max {max_parallel} parallel)...")
+    
+    # Create semaphore to limit concurrent extractions
+    semaphore = asyncio.Semaphore(max_parallel)
+    
+    async def extract_from_chunk(chunk_id: int, chunk_text: str):
+        """Extract claims from a single chunk with semaphore control."""
+        async with semaphore:
+            try:
+                print(f"Processing chunk {chunk_id+1}/{len(chunks)}...")
+                result = await agent.aextract(video_id=video_id, chunk=chunk_text)
+                chunk_claims = result.claims
+                print(f"  Extracted {len(chunk_claims)} claims from chunk {chunk_id+1}")
+                return chunk_claims, chunk_id
+            except Exception as e:
+                print(f"  Error processing chunk {chunk_id+1}: {e}")
+                return [], chunk_id
+    
+    # Create tasks for all chunks
+    extraction_tasks = [
+        extract_from_chunk(i, chunk) 
+        for i, chunk in enumerate(chunks)
+    ]
+    
+    # Run all extractions in parallel
+    results = await asyncio.gather(*extraction_tasks, return_exceptions=True)
+    
+    # Collect all claims
     all_claims = []
+    successful_chunks = 0
     
-    for i, chunk in enumerate(chunks):
-        print(f"Processing chunk {i+1}/{len(chunks)}...")
-        try:
-            result = await agent.aextract(video_id=video_id, chunk=chunk)
-            chunk_claims = result.claims
-            all_claims.extend(chunk_claims)
-            print(f"  Extracted {len(chunk_claims)} claims from chunk {i+1}")
-        except Exception as e:
-            print(f"  Error processing chunk {i+1}: {e}")
+    for result in results:
+        if isinstance(result, Exception):
+            print(f"Chunk extraction failed: {result}")
             continue
+            
+        chunk_claims, chunk_id = result
+        all_claims.extend(chunk_claims)
+        if chunk_claims:
+            successful_chunks += 1
     
+    print(f"Completed extraction from {successful_chunks}/{len(chunks)} chunks")
     return all_claims
 
 
@@ -200,7 +229,7 @@ async def main():
     
     try:
         # Extract claims
-        claims = await extract_claims_from_video(args.video_id, args.chunk_size)
+        claims = await extract_claims_from_video(args.video_id, args.chunk_size, max_parallel=3)
         
         # Print summary
         print_claims_summary(claims, args.video_id)
