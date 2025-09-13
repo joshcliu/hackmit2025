@@ -5,10 +5,10 @@ Main orchestrator for claim verification system.
 import asyncio
 from typing import List, Optional
 from langchain_anthropic import ChatAnthropic
-from composio_langchain import LangchainProvider
 from langgraph.prebuilt import create_react_agent
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import Tool
+import os
 
 from agents import (
     NewsSearcherAgent,
@@ -22,22 +22,37 @@ from agents import (
 class OrchestratorAgent:
     """Orchestrator that synthesizes results from all specialist agents."""
     
-    def __init__(self, model: ChatAnthropic, composio_toolset: Optional[LangchainProvider] = None):
+    def __init__(self, model: ChatAnthropic):
         self.model = model
-        self.composio = composio_toolset or LangchainProvider()
         self.tools = self._setup_tools()
         
     def _setup_tools(self):
         """Setup additional search tools for the orchestrator."""
         tools = []
         
-        # Tavily search for additional investigation
-        try:
-            tavily_tools = self.composio.wrap_tools(app_name="tavily")
-            if tavily_tools:
-                tools.extend(tavily_tools)
-        except Exception as e:
-            print(f"Warning: Could not load Tavily for orchestrator: {e}")
+        # Composio search for additional investigation
+        async def composio_search_tool(search_query: str) -> str:
+            """Perform web search using Composio."""
+            try:
+                from composio import Action, ComposioToolSet
+                
+                toolset = ComposioToolSet(api_key=os.getenv("COMPOSIO_API_KEY"))
+                
+                print(f"Searching for: {search_query}")
+                result = toolset.execute_action(
+                    action=Action.COMPOSIO_SEARCH_SEARCH,
+                    params={"query": search_query},
+                )
+                return result["data"]
+            except Exception as e:
+                print(f"Warning: Composio search failed: {e}")
+                return f"Mock search results for: {search_query}"
+        
+        tools.append(Tool(
+            name="search",
+            description="Search the web for additional verification information",
+            func=composio_search_tool
+        ))
             
         return tools
         
@@ -95,14 +110,16 @@ Please synthesize these findings into a final verification assessment.""")
         )
         
         try:
+            # Format the user message with claim and agent summaries
+            user_message = f"""Claim being verified: {claim}
+
+Agent Findings:
+{agent_summaries}
+
+Please synthesize these findings into a final verification assessment."""
+            
             result = await synthesis_agent.ainvoke({
-                "messages": [(
-                    "user", 
-                    prompt.format_messages(
-                        claim=claim,
-                        agent_summaries=agent_summaries
-                    )[1].content
-                )]
+                "messages": [("user", user_message)]
             })
             
             # Extract the final message
@@ -146,11 +163,8 @@ class ClaimVerificationOrchestrator:
         
         Args:
             anthropic_api_key: API key for Claude
-            composio_api_key: Optional API key for Composio (not needed for Tavily)
+            composio_api_key: Optional API key for Composio (deprecated, use COMPOSIO_API_KEY env var)
         """
-        # Initialize Composio toolset (no API key needed for Tavily)
-        self.composio = LangchainProvider()
-        
         # Initialize Claude 4 Sonnet model
         self.model = ChatAnthropic(
             api_key=anthropic_api_key,
@@ -158,12 +172,12 @@ class ClaimVerificationOrchestrator:
         )
         
         # Initialize all agents
-        self.news_agent = NewsSearcherAgent(self.model, self.composio)
-        self.academic_agent = AcademicSearcherAgent(self.model, self.composio)
-        self.fact_check_agent = FactCheckSearcherAgent(self.model, self.composio)
-        self.gov_data_agent = GovernmentDataAgent(self.model, self.composio)
-        self.temporal_agent = TemporalConsistencyAgent(self.model, self.composio)
-        self.orchestrator = OrchestratorAgent(self.model, self.composio)
+        self.news_agent = NewsSearcherAgent(self.model)
+        self.academic_agent = AcademicSearcherAgent(self.model)
+        self.fact_check_agent = FactCheckSearcherAgent(self.model)
+        self.gov_data_agent = GovernmentDataAgent(self.model)
+        self.temporal_agent = TemporalConsistencyAgent(self.model)
+        self.orchestrator = OrchestratorAgent(self.model)
         
         # TODO: Add memory system for contradiction detection
         self.memory = None

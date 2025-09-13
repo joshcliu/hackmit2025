@@ -7,9 +7,9 @@ from pydantic import BaseModel
 from langgraph.prebuilt import create_react_agent
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_anthropic import ChatAnthropic
-from composio_langchain import LangchainProvider
 from crawl4ai import AsyncWebCrawler
 from langchain_core.tools import Tool
+import os
 
 
 class SourceInfo(BaseModel):
@@ -29,35 +29,38 @@ class AgentOutput(BaseModel):
 class BaseVerificationAgent:
     """Base class for all specialized verification agents."""
     
-    def __init__(self, model: ChatAnthropic, composio_toolset: Optional[LangchainProvider] = None):
+    def __init__(self, model: ChatAnthropic):
         self.model = model
-        self.composio = composio_toolset or LangchainProvider()
         self.tools = self._setup_tools()
         self.agent = self._create_agent()
         
     def _setup_tools(self):
-        """Setup Composio Tavily search and Crawl4AI tools."""
+        """Setup Composio search and Crawl4AI tools."""
         tools = []
         
-        # Tavily search through Composio (no API key needed)
-        try:
-            # Get Tavily search tool from Composio using LangchainProvider
-            # Note: This may need configuration in Composio dashboard
-            tavily_tools = self.composio.wrap_tools(app_name="tavily")
-            if tavily_tools:
-                tools.extend(tavily_tools)
-            else:
-                raise Exception("No Tavily tools available")
-        except Exception as e:
-            print(f"Warning: Could not load Tavily from Composio: {e}")
-            # Create a mock search tool for development
-            def mock_search(query: str) -> str:
-                return f"Mock search results for: {query}"
-            tools.append(Tool(
-                name="search",
-                description="Search the web for information",
-                func=mock_search
-            ))
+        # Composio search tool
+        async def composio_search_tool(search_query: str) -> str:
+            """Perform web search using Composio."""
+            try:
+                from composio import Action, ComposioToolSet
+                
+                toolset = ComposioToolSet(api_key=os.getenv("COMPOSIO_API_KEY"))
+                
+                print(f"Searching for: {search_query}")
+                result = toolset.execute_action(
+                    action=Action.COMPOSIO_SEARCH_SEARCH,
+                    params={"query": search_query},
+                )
+                return result["data"]
+            except Exception as e:
+                print(f"Warning: Composio search failed: {e}")
+                return f"Mock search results for: {search_query}"
+        
+        tools.append(Tool(
+            name="search",
+            description="Search the web for information",
+            func=composio_search_tool
+        ))
         
         # Add Crawl4AI scraping tool
         async def scrape_page(url: str) -> str:

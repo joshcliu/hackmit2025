@@ -79,7 +79,7 @@ async def test_simple_claim():
         
         if result and len(result) > 50:  # Basic check that we got a response
             print("✅ Claim verification completed")
-            print(f"   Response length: {len(result)} characters")
+            print(result)
             return True
         else:
             print("❌ Claim verification returned empty or short response")

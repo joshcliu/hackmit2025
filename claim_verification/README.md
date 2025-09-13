@@ -1,6 +1,6 @@
 # Claim Verification System
 
-A parallel agent-based system for real-time political claim verification using Claude 4 Sonnet and Composio's Tavily search integration.
+A parallel agent-based system for real-time political claim verification using Claude 4 Sonnet and Composio search integration.
 
 ## Quick Start
 
@@ -24,8 +24,9 @@ uv pip install -r requirements.txt
 # Copy the example env file
 cp env.example .env
 
-# Edit .env and add your Anthropic API key
-# ANTHROPIC_API_KEY=your-key-here
+# Edit .env and add your API keys
+# ANTHROPIC_API_KEY=your-anthropic-key-here
+# COMPOSIO_API_KEY=your-composio-key-here
 ```
 
 ### 3. Run Example
@@ -189,7 +190,7 @@ class EconomicDataAgent(BaseVerificationAgent):
 
 - **LLM**: Claude 4 Sonnet (`claude-4-sonnet-20250514`)
 - **Agent Framework**: LangGraph ReAct agents
-- **Search**: Composio Tavily integration
+- **Search**: Composio search (Action.COMPOSIO_SEARCH_SEARCH)
 - **Web Scraping**: Crawl4AI
 - **Async**: Full async/await support
 
@@ -253,10 +254,11 @@ claim_verification/
 - Check that all dependencies are installed
 - Use absolute imports when importing locally
 
-### Composio/Tavily Issues
-- Composio Tavily doesn't require API keys
-- If search fails, system uses mock search for development
-- Configure Composio dashboard for production
+### Composio Search Setup
+- Requires COMPOSIO_API_KEY environment variable
+- Uses Action.COMPOSIO_SEARCH_SEARCH for web search
+- Falls back to mock search if API key not configured
+- Configure Composio dashboard for production use
 
 ### Rate Limiting
 - Add delays between claims
