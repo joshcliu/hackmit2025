@@ -1,0 +1,129 @@
+"""
+Basic tests for the claim extraction agent.
+Mirrors the structure of claim_verification/test_basic.py.
+"""
+import asyncio
+import os
+import sys
+
+# Add current directory to path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+
+async def test_import():
+    """Test that claim extraction modules can be imported."""
+    try:
+        from agent import ClaimExtractionAgent, ClaimMinimal, ExtractionOutput  # noqa: F401
+        print("✅ claim_extraction modules imported successfully")
+        return True
+    except ImportError as e:
+        print(f"❌ Import error: {e}")
+        return False
+
+
+async def test_initialization():
+    """Test that the extraction agent can be initialized."""
+    try:
+        from agent import ClaimExtractionAgent
+
+        # Ensure there's some key in env so ChatAnthropic can initialize without error
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("⚠️  No ANTHROPIC_API_KEY found - setting test key for initialization")
+            os.environ["ANTHROPIC_API_KEY"] = "test-key"
+
+        agent = ClaimExtractionAgent()
+        assert agent is not None
+
+        print("✅ Extraction agent initialized successfully")
+        return True
+    except Exception as e:
+        print(f"❌ Initialization error: {e}")
+        return False
+
+
+async def test_simple_extraction():
+    """Test extracting a simple claim (if a real API key is available)."""
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    # Heuristic: treat 'test-key' as placeholder and skip networked test
+    if not api_key or api_key == "test-key":
+        print("⚠️  Skipping extraction test - no real ANTHROPIC_API_KEY provided")
+        return True
+
+    try:
+        from agent import ClaimExtractionAgent
+
+        agent = ClaimExtractionAgent()
+        chunk = (
+            "The unemployment rate dropped to 3.5% last month, the lowest in 50 years.\n"
+            "I love my family.\n"
+        )
+        video_id = "TEST_VIDEO_ID"
+
+        out = await agent.aextract(video_id=video_id, chunk=chunk)
+
+        if out and getattr(out, "claims", None):
+            # Basic structural checks on first claim
+            c = out.claims[0]
+            ok = (
+                isinstance(c.video_id, str)
+                and isinstance(c.start_s, float)
+                and isinstance(c.end_s, float)
+                and isinstance(c.claim_text, str)
+                and len(c.claim_text) > 0
+            )
+            if ok:
+                print("✅ Claim extraction completed; first claim:")
+                print(f"   video_id={c.video_id}, start={c.start_s}, end={c.end_s}, claim='{c.claim_text[:80]}'")
+                return True
+
+        print("❌ Extraction returned no claims or malformed output")
+        return False
+
+    except Exception as e:
+        print(f"❌ Extraction error: {e}")
+        return False
+
+
+async def main():
+    """Run all tests for claim extraction."""
+    print("\n" + "=" * 60)
+    print("CLAIM EXTRACTION - BASIC TESTS")
+    print("=" * 60 + "\n")
+
+    tests = [
+        ("Import Test", test_import),
+        ("Initialization Test", test_initialization),
+        ("Simple Extraction Test", test_simple_extraction),
+    ]
+
+    results = []
+    for test_name, test_func in tests:
+        print(f"\n{test_name}:")
+        print("-" * 40)
+        result = await test_func()
+        results.append(result)
+
+    print("\n" + "=" * 60)
+    print("TEST SUMMARY")
+    print("=" * 60)
+
+    passed = sum(results)
+    total = len(results)
+
+    if passed == total:
+        print(f"✅ All tests passed ({passed}/{total})")
+    else:
+        print(f"⚠️  {passed}/{total} tests passed")
+
+    return passed == total
+
+
+if __name__ == "__main__":
+    success = asyncio.run(main())
+    exit(0 if success else 1)
