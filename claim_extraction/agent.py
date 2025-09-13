@@ -99,12 +99,7 @@ Guidelines for extraction:
 4. Handle timestamps:
    - If timestamps are provided in the text, use them for start_s and end_s
    - If not provided, set both to 0.0 (the caller will handle this)
-   - Ensure end_s >= start_s
-
-5. Add helpful notes:
-   - Include any extraction challenges or ambiguities in the notes field
-   - Note if claims required significant interpretation
-   - Flag potentially misleading framing"""),
+   - Ensure end_s >= start_s"""),
             ("user", """Video ID: {video_id}
 
 Text chunk from transcript:
@@ -113,8 +108,7 @@ Text chunk from transcript:
 \"\"\"
 
 Extract all verifiable claims from this text chunk. Return them as structured output with:
-- claims: List of atomic, verifiable claims with video_id, timestamps, and claim_text
-- notes: Any relevant notes about the extraction process or challenges encountered""")
+- claims: List of atomic, verifiable claims with video_id, timestamps, and claim_text""")
         ])
 
     async def aextract(self, video_id: str, chunk: str) -> ExtractionOutput:
