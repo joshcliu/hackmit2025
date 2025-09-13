@@ -146,7 +146,27 @@ class Source:
     url: str
     credibility: Literal["high", "medium", "low"]
     relevant_quote: str
+
+### Minimal Claim Schema (Verifier Input)
+
+For transcript-based processing, each extracted claim fed into the verifier should use this minimal structure.
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class ClaimForVerification:
+    """Minimal claim payload produced by the extractor and consumed by the verifier."""
+    video_id: str   # YouTube video ID
+    start_s: float  # start time (seconds) of the utterance containing the claim
+    end_s: float    # end time (seconds) of the utterance containing the claim
+    claim_text: str # atomic, normalized claim text (what to verify)
 ```
+
+Notes:
+- `claim_text` should be the smallest self-contained statement suitable for verification, not the entire caption line(s).
+- `start_s`/`end_s` refer to the transcript time bounds that cover this claim (can span multiple caption snippets if merged into a sentence).
+- Additional fields (speaker, entities, verdict, evidence) can be added later without changing this minimal interface.
 
 ### API Endpoints
 
