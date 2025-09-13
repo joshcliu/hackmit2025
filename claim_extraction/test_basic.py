@@ -96,19 +96,28 @@ async def test_simple_extraction():
         out = await agent.aextract(video_id=video_id, chunk=chunk)
 
         if out and getattr(out, "claims", None):
-            # Basic structural checks on first claim
-            c = out.claims[0]
-            ok = (
-                isinstance(c.video_id, str)
-                and isinstance(c.start_s, float)
-                and isinstance(c.end_s, float)
-                and isinstance(c.claim_text, str)
-                and len(c.claim_text) > 0
-            )
-            if ok:
-                print("✅ Claim extraction completed; first claim:")
-                print(f"   video_id={c.video_id}, start={c.start_s}, end={c.end_s}, claim='{c.claim_text[:80]}'")
-                return True
+            print(f"✅ Claim extraction completed; extracted {len(out.claims)} claims:")
+            
+            # Print all extracted claims
+            for i, c in enumerate(out.claims, 1):
+                # Basic structural validation
+                ok = (
+                    isinstance(c.video_id, str)
+                    and isinstance(c.start_s, float)
+                    and isinstance(c.end_s, float)
+                    and isinstance(c.claim_text, str)
+                    and len(c.claim_text) > 0
+                )
+                
+                status = "✅" if ok else "❌"
+                print(f"   {status} Claim {i}: video_id={c.video_id}, start={c.start_s}, end={c.end_s}")
+                print(f"      claim_text: '{c.claim_text}'")
+            
+            # Print notes if available
+            if out.notes:
+                print(f"   Notes: {out.notes}")
+            
+            return True
 
         print("❌ Extraction returned no claims or malformed output")
         return False
