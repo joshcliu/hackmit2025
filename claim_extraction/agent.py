@@ -107,16 +107,18 @@ Guidelines for extraction:
    - If unclear from transcript, use "Unknown"
 
 5. Handle timestamps:
-   - If timestamps are provided in the text, use them for start_s and end_s
-   - If not provided, set both to 0.0 (the caller will handle this)
+   - Parse timestamps from the transcript format: "134 [186.82s + 2.90s]" means start=186.82s, end=189.72s
+   - For each claim, identify which transcript lines it spans and use those timestamps
+   - If timestamps are unclear, estimate based on surrounding context
+   - If no timestamps available, set both to 0.0
    - Ensure end_s >= start_s
 
 6. Assign importance scores (0.0 to 1.0) based on verification priority:
    
    HIGH IMPORTANCE (0.8-1.0):
-   - Unclear, polarizing but factual claims that require investigation: "The Biden administration has allowed millions of criminals to enter the country"
-   - Disputed statistics or causation claims: "My policies caused unemployment to drop to 3.5%"
-   - Complex policy impact claims: "The Inflation Reduction Act will save families $2000 per year"
+   - Disputed current/historical claims that can be fact-checked: "Current inflation is probably the worst in the nation's history"
+   - Controversial but verifiable statistics: "The Biden administration has allowed millions of criminals to enter the country"
+   - Disputed causation claims about past events: "My policies caused unemployment to drop to 3.5%"
    - Controversial historical interpretations: "The 2020 election had widespread irregularities"
    - Specific personal anecdotes used as evidence: "A person named Amanda in Texas appeared on stage in Chicago and nearly bled out, having sepsis twice because she couldn't get medical care"
    
@@ -130,20 +132,26 @@ Guidelines for extraction:
    
    LOW IMPORTANCE (0.0-0.3):
    - Obvious factual statements: "J.D. Vance is Donald Trump's running mate"
+   - Future predictions that cannot be verified: "My opponent's plan will result in $5 trillion to America's deficit"
+   - Unverifiable policy impact claims: "The Inflation Reduction Act will save families $2000 per year"
    - Pure opinion/subjective statements: "This is the greatest economy ever"
    - Personal feelings: "I love my family"
    - Vague promises: "We will make things better"
 
-   Reserve HIGH priority for claims that are factual but require significant investigation to verify due to complexity, disputed context, or polarizing nature."""),
+   Reserve HIGH priority for claims about current or past events that are factual but disputed. Assign LOW priority to future predictions and unverifiable policy outcomes."""),
             ("user", """Video ID: {video_id}
 
-Text chunk from transcript:
+Text chunk from transcript (format: "line_number [start_time + duration] TEXT"):
 \"\"\"
 {chunk}
 \"\"\"
 
 Extract all verifiable claims from this text chunk. Return them as structured output with:
 - claims: List of atomic, verifiable claims with video_id, timestamps, claim_text, speaker, and importance_score
+
+IMPORTANT: Parse timestamps carefully from the transcript format. For example:
+- "134 [186.82s + 2.90s] >> SO I WAS RAISED AS A" means start_s=186.82, end_s=189.72
+- If a claim spans multiple lines, use the start of the first line and end of the last line
 
 For each claim, identify the speaker and assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")
         ])
