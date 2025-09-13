@@ -1,33 +1,66 @@
+import { useState } from 'react';
 import { Claim } from '../types';
+import { CheckCircle, AlertCircle } from 'lucide-react';
+
+// Helper function to convert timestamp string (e.g., "01:23") to seconds
+const timestampToSeconds = (timestamp: string): number => {
+  const parts = timestamp.split(':').map(Number);
+  if (parts.length === 2) {
+    return parts[0] * 60 + parts[1]; // mm:ss
+  } else if (parts.length === 3) {
+    return parts[0] * 3600 + parts[1] * 60 + parts[2]; // hh:mm:ss
+  }
+  return 0;
+};
 
 interface ClaimItemProps {
   claim: Claim;
+  onTimestampClick?: (seconds: number) => void;
 }
 
-export const ClaimItem = ({ claim }: ClaimItemProps) => (
-  <div className="mb-4">
-    <div className="flex items-start">
-      <span className="text-xs text-gray-500 mr-2">{claim.timestamp}</span>
-      <div className="flex-1">
-        <p className="text-sm">"{claim.text}"</p>
-        {claim.type === 'Opinion' && (
-          <div className="text-right">
-            <span className="text-xs font-semibold text-red-500">Opinion</span>
-            <span className="text-lg font-bold text-red-500 ml-2">{claim.score}</span>
-          </div>
+const getScoreColor = (score: number) => {
+  if (score >= 7) return 'text-green-500';
+  if (score >= 4) return 'text-yellow-500';
+  return 'text-red-500';
+};
+
+export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+  <div className="glowing-card bg-black p-4 rounded-lg cursor-pointer" onClick={() => setIsOpen(!isOpen)} >
+    <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center space-x-2" onClick={(e) => e.stopPropagation()}>
+        <span 
+          className="text-xs font-mono bg-transparent text-custom-gold px-2 py-1 rounded border border-custom-gold cursor-pointer hover:bg-custom-gold hover:text-black transition-colors duration-200"
+          onClick={() => {
+            const seconds = timestampToSeconds(claim.timestamp);
+            onTimestampClick?.(seconds);
+          }}
+          title="Click to jump to this time in the video"
+        >
+          {claim.timestamp}
+        </span>
+      </div>
+      <div className={`flex items-center font-bold text-base ${getScoreColor(claim.score)}`}>
+        {claim.type === 'Fact' ? (
+          <CheckCircle className="h-5 w-5 mr-1" />
+        ) : (
+          <AlertCircle className="h-5 w-5 mr-1" />
         )}
+        {claim.score.toFixed(1)}
       </div>
     </div>
-    <div className="ml-12 mt-1 p-2 bg-gray-100 border border-gray-300 rounded">
-        <p className="text-xs">{claim.synthesis}</p>
-    </div>
-     {claim.type === 'Fact' && (
-        <div className="ml-12 mt-2 flex items-center justify-between p-2 bg-green-100 border border-green-300 rounded">
-            <div>
-                <span className="text-xs font-semibold text-green-700">Fact</span>
+    <p className="text-gray-100 mb-3">{claim.text}</p>
+      <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>
+        <div className="synthesis-content">
+          {claim.synthesis && (
+            <div className="pt-2 mt-2 border-t border-gray-700">
+              <p className="text-sm text-gray-400">{claim.synthesis}</p>
             </div>
-            <span className="text-lg font-bold text-green-700">{claim.score}</span>
+          )}
         </div>
-    )}
+      </div>
   </div>
-);
+  );
+};
