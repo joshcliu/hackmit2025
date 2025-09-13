@@ -211,7 +211,34 @@ def save_claims_json(claims: List[ClaimMinimal], video_id: str, output_file: str
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)
     
-    print(f"\nClaims saved to: {output_file}")
+    print(f"\nAll claims saved to: {output_file}")
+
+
+def save_high_importance_claims_json(claims: List[ClaimMinimal], video_id: str, output_file: str, threshold: float = 0.8):
+    """Save only high importance claims to JSON file."""
+    high_importance_claims = [claim for claim in claims if claim.importance_score >= threshold]
+    
+    output_data = {
+        "video_id": video_id,
+        "importance_threshold": threshold,
+        "total_high_importance_claims": len(high_importance_claims),
+        "total_all_claims": len(claims),
+        "claims": [
+            {
+                "video_id": claim.video_id,
+                "start_s": claim.start_s,
+                "end_s": claim.end_s,
+                "claim_text": claim.claim_text,
+                "importance_score": claim.importance_score
+            }
+            for claim in high_importance_claims
+        ]
+    }
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"High importance claims (≥{threshold}) saved to: {output_file}")
 
 
 async def main():
@@ -240,9 +267,13 @@ async def main():
         # Print summary
         print_claims_summary(claims, args.video_id)
         
-        # Save to file
+        # Save to files
         output_file = args.output or f"claims_{args.video_id}.json"
         save_claims_json(claims, args.video_id, output_file)
+        
+        # Save high importance claims to separate file
+        high_importance_file = f"high_importance_claims_{args.video_id}.json"
+        save_high_importance_claims_json(claims, args.video_id, high_importance_file)
         
         print(f"\n✅ Claim extraction completed successfully!")
         
