@@ -1,6 +1,6 @@
 # Claim Verification System
 
-A parallel agent-based system for real-time political claim verification using Claude 4 Sonnet and Composio search integration.
+A parallel agent-based system for real-time political claim verification using Claude 4 Sonnet and web search (DuckDuckGo/Tavily).
 
 ## Quick Start
 
@@ -26,7 +26,7 @@ cp env.example .env
 
 # Edit .env and add your API keys
 # ANTHROPIC_API_KEY=your-anthropic-key-here
-# COMPOSIO_API_KEY=your-composio-key-here
+# TAVILY_API_KEY=your-tavily-key-here  # Optional - uses free DuckDuckGo if not set
 ```
 
 ### 3. Run Example
@@ -46,7 +46,7 @@ python example_usage.py
               ┌──────────────────────┐
               │   Spawn Parallel     │
               │   Specialized Agents │
-              │  (ReAct + Composio)  │
+              │  (ReAct + Search)    │
               └──────────────────────┘
                          │
         ┌────────┬───────┴────────┬──────────┬──────────┐
@@ -190,7 +190,7 @@ class EconomicDataAgent(BaseVerificationAgent):
 
 - **LLM**: Claude 4 Sonnet (`claude-4-sonnet-20250514`)
 - **Agent Framework**: LangGraph ReAct agents
-- **Search**: Composio search (Action.COMPOSIO_SEARCH_SEARCH)
+- **Search**: DuckDuckGo (free, no API needed) or Tavily API (premium, better for fact-checking)
 - **Web Scraping**: Crawl4AI
 - **Async**: Full async/await support
 
@@ -254,11 +254,11 @@ claim_verification/
 - Check that all dependencies are installed
 - Use absolute imports when importing locally
 
-### Composio Search Setup
-- Requires COMPOSIO_API_KEY environment variable
-- Uses Action.COMPOSIO_SEARCH_SEARCH for web search
-- Falls back to mock search if API key not configured
-- Configure Composio dashboard for production use
+### Web Search Setup
+- **Default (Free)**: Uses DuckDuckGo search - no API key required!
+- **Premium (Optional)**: Set TAVILY_API_KEY for better fact-checking results
+- Automatically falls back to DuckDuckGo if Tavily is not configured
+- Get a Tavily API key at https://tavily.com (optional)
 
 ### Rate Limiting
 - Add delays between claims

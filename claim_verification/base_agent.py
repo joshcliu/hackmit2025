@@ -7,9 +7,7 @@ from pydantic import BaseModel
 from langgraph.prebuilt import create_react_agent
 from langchain_anthropic import ChatAnthropic
 from langchain_core.tools import Tool
-import os
 import asyncio
-from functools import wraps
 
 
 class SourceInfo(BaseModel):
@@ -35,37 +33,41 @@ class BaseVerificationAgent:
         self.agent = self._create_agent()
         
     def _setup_tools(self):
-        """Setup Composio search and scraping tools."""
+        """Setup web search and scraping tools."""
         tools = []
+        search_tool_loaded = False
         
-        # Get Composio search tools
+        # Primary option: DuckDuckGo (free, no API key required!)
+        # This is the simplest and most reliable option
         try:
-            from composio import Composio
+            from langchain_community.tools import DuckDuckGoSearchResults
             
-            # Initialize Composio with API key
-            composio = Composio(api_key=os.getenv("COMPOSIO_API_KEY"))
-            
-            # Get the pre-packaged search tools from Composio
-            # Using a default user_id for the verification system
-            composio_tools = composio.tools.get(
-                user_id="default",
-                toolkits=["COMPOSIO_SEARCH"]
+            # Initialize DuckDuckGo search (no API key needed!)
+            search_tool = DuckDuckGoSearchResults(
+                num_results=5,
+                name="duckduckgo_search",
+                description="Search the web for information using DuckDuckGo (free, no API key required)"
             )
+            tools.append(search_tool)
+            print("✅ Loaded DuckDuckGo search tool (free)")
+            search_tool_loaded = True
             
-            # Add Composio tools to our tools list
-            tools.extend(composio_tools)
-            
+        except ImportError:
+            print("⚠️  langchain-community not installed. Install with: pip install langchain-community duckduckgo-search")
         except Exception as e:
-            print(f"Warning: Failed to load Composio tools: {e}")
-            # Fallback: Add a mock search tool for testing
+            print(f"⚠️  Failed to initialize DuckDuckGo: {e}")
+        
+        # Final fallback to mock search if nothing else works
+        if not search_tool_loaded:
             def mock_search(query: str) -> str:
-                return f"Mock search results for: {query}"
+                return f"Mock search results for: {query}\nNote: Install langchain-community for real search"
             
             tools.append(Tool(
-                name="composio_search",
-                description="Search the web for information",
+                name="web_search",
+                description="Search the web for information (mock mode - install langchain-community)",
                 func=mock_search
             ))
+            print("⚠️  Using mock search tool (install langchain-community for real search)")
         
         # Add Crawl4AI scraping tool
         def scrape_page(url: str) -> str:
@@ -73,7 +75,6 @@ class BaseVerificationAgent:
             try:
                 # Import Crawl4AI components
                 from crawl4ai import AsyncWebCrawler
-                from crawl4ai.extraction_strategy import LLMExtractionStrategy
                 
                 # Create an async wrapper to run Crawl4AI in sync context
                 async def async_scrape():
@@ -105,7 +106,7 @@ class BaseVerificationAgent:
                 # Run the async function in a sync context
                 # Check if there's already an event loop running
                 try:
-                    loop = asyncio.get_running_loop()
+                    asyncio.get_running_loop()
                     # If we're already in an async context, create a new thread
                     import concurrent.futures
                     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -117,7 +118,7 @@ class BaseVerificationAgent:
                     
             except ImportError as e:
                 print(f"Warning: Crawl4AI not installed: {e}")
-                return f"Crawl4AI not available. Please install it with: pip install crawl4ai"
+                return "Crawl4AI not available. Please install it with: pip install crawl4ai"
             except Exception as e:
                 print(f"Warning: Scraping failed: {e}")
                 return f"Error scraping {url}: {str(e)}"

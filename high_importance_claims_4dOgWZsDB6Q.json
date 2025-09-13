@@ -1,0 +1,1728 @@
+{
+  "video_id": "4dOgWZsDB6Q",
+  "importance_threshold": 0.8,
+  "total_high_importance_claims": 215,
+  "total_all_claims": 549,
+  "claims": [
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's tariff policies would result in a 20% tax on everyday goods",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Economists have said that Trump's tariff policies would result in middle-class families paying about $4,000 more per year",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I took in billions and billions of dollars from China through tariffs",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China never took the tariff off because it was so much money",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "During Trump's presidency, there were tariffs but no inflation",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Current inflation is probably the worst in the nation's history",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Inflation reached 21%",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are pouring into the United States from prisons and jails",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are pouring into the United States from mental institutions and insane asylums",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Immigrants are taking jobs that are currently occupied by African Americans and Hispanics",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Immigrants are taking jobs that are currently occupied by union workers",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, Ohio, immigrants are taking over the town and taking over buildings violently",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Aurora, Colorado, immigrants are taking over the town and taking over buildings violently",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The immigrants in Springfield, Ohio and Aurora, Colorado are at the highest level of criminality",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump created one of the greatest economies in the history of the United States",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump left us the worst unemployment since the Great Depression",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump left us the worst attack on our democracy since the Civil War",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have nothing to do with Project 2025",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We had the greatest economy",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A pandemic occurred that was the worst since 1917 when 100 million people died",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The jobs created during the Biden administration were only bounceback jobs that Trump originally created",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Goldman Sachs said that Donald Trump's plan would make the economy worse",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Goldman Sachs said that my plan would strengthen the economy",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Wharton School said that Donald Trump's plan would [make the economy worse]",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "16 Nobel laureates have described Donald Trump's economic plan as something that would increase inflation",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "16 Nobel laureates have described Donald Trump's economic plan as something that would invite a recession by the middle of next year",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's tariff proposal is characterized as essentially a national sales tax",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris has argued that tariffs will cost the typical family nearly $4,000 a year",
+      "speaker": "Moderator",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Americans are not going to have higher prices due to tariffs",
+      "speaker": "Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China is going to have higher prices due to tariffs",
+      "speaker": "Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I was the only president ever to have China paying us hundreds of billions of dollars",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China paid us hundreds of billions of dollars during my presidency",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I had no inflation, virtually no inflation during my presidency",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States had the highest inflation perhaps in the history of the country during the current administration",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Trump administration resulted in a trade deficit that was one of the highest in the history of America",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "During his presidency, he sold American chips to China to help them improve and modernize their military",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump tweeted 'Thank you, President Xi'",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Xi was responsible for lacking transparency about the origins of COVID",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "21 million people are pouring into the country monthly",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "More than 21 million people have entered the country illegally, which is bigger than New York State's population",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the people entering the country illegally are criminals",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The previous governor of West Virginia said the baby will be born and we will decide what to do with the baby",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The previous governor of West Virginia advocated for executing babies after birth",
+      "speaker": "Unknown",
+      "importance_score": 0.95
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Tim Walz says abortion in the ninth month is absolutely fine",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Tim Walz says execution after birth is okay",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Every legal scholar, every Democrat, every Republican, liberal, conservative all wanted the abortion issue to be brought back to the states where people could vote",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump selected Supreme Court members with the intention that they would undo the protections of Roe v. Wade",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's Supreme Court appointees overturned the protections of Roe v. Wade",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Over 20 states have abortion bans that make it criminal for a doctor or nurse to provide healthcare",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "One state provides prison for life for doctors or nurses providing abortion care",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Some abortion bans make no exception even for rape and incest",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Project 2025 includes provisions for monitoring pregnancies",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Now you have a vote of the people on abortion",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nowhere in America is a woman carrying a pregnancy to term and asking for an abortion",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In every state where this issue has been on the ballot, in red and blue states both, the people of America have voted for freedom",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Alabama legislature voted in favor of IVF two days after the negative court decision",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Under Roe v. Wade, you could do abortions in the seventh month, the eighth month, and the ninth month",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Under Roe v. Wade, abortions were allowed probably after birth",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former Governor of Virginia supported post-birth abortions",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The governor of Virginia said we put the baby aside and then we determine what we want to do with the baby",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Illegal border crossings reached a record high in the Biden Administration",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I am the only person on this stage who has prosecuted transnational criminal organizations for the trafficking of guns, drugs, and human beings",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump called folks in Congress and said to kill the bill",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump says windmills cause cancer",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris buses people to her rallies and pays them to attend",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States became a failing nation 3.5 years ago",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, immigrants are eating the dogs of people that live there",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, immigrants are eating the cats of people that live there",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, immigrants are eating the pets of people that live there",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A dog was eaten by people in Springfield",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Springfield city manager says there's no evidence of pets being eaten",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's former chief of staff, a four-star general, said he has contempt for the Constitution of the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's former national security adviser said he is dangerous and unfit",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's former secretary of defense said the nation and republic would never survive",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got more votes than any Republican in history by far",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got more votes than any sitting president in history by far",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They allowed many millions of criminals to enter the country",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They allowed terrorists to enter the country",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They allowed drug dealers to enter the country",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Crime in Venezuela and crime in countries all over the world is way down",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Venezuela and other countries have taken their criminals off the street and given them to the United States to put into the country",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "All over the world crime is down except in the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Crime in the United States is up and through the roof",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI was defrauding statements about crime statistics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI didn't include the worst cities in their crime statistics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI didn't include the cities with the worst crime in their statistics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI said they created 818,000 jobs which turned out to be a fraud",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been prosecuted for national security crimes",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been prosecuted for economic crimes",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been prosecuted for election interference",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been found liable for sexual assault",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone's next big court appearance is in November at criminal sentencing",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former vice president called for defunding federal law enforcement, 45,000 agents",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former vice president called for defunding federal law enforcement on the day after he was arraigned on 34 felony counts",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I'm winning most of the legal cases against me",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Weaponization of the justice system never happened in this country before",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They weaponized the Justice Department",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Every one of the legal cases against me was involved with the DOJ",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Joe Biden was found essentially guilty on the documents case",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States Supreme Court recently ruled that the former president would essentially be immune from any misconduct if he were to enter the White House again",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has openly said he would terminate the Constitution of the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has said he would weaponize the Department of Justice against his political enemies",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has openly expressed disdain for members of the military",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was the tie-breaking vote on the Inflation Reduction Act",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We have had the largest increase in domestic oil production in history",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She went out in Minnesota and raised money to get criminals out of jail who killed people and burned down Minneapolis",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She wants to do transgender operations on illegal aliens that are in prison",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She wants to confiscate your guns",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She will never allow fracking in Pennsylvania",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got the oil business going like nobody has ever done before",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "On January 6th, Trump told his supporters to march to the Capitol",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump said he would be right there with his supporters at the Capitol on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Officers came under attack at the Capitol on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Aides in the West Wing say Trump watched January 6th events unfold on television from the Oval Office",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump said 'peacefully and patriotically' during his speech on January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nobody on the other side was killed on January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Ashli Babbitt was shot by an out-of-control police officer",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People are pouring into the country and killing people that Kamala Harris allowed to pour in",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People burned down Minneapolis",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Protesters took over a big percentage of the city of Seattle",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I had nothing to do with that other than they asked me to make a speech",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I offered 10,000 National Guard or soldiers for January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nancy Pelosi rejected my offer of 10,000 National Guard or soldiers",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nancy Pelosi's daughter has a tape of her saying she is fully responsible for what happened on January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nancy Pelosi was responsible for security on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The President of the United States incited events on January 6th",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "140 law enforcement officers were injured on January 6th at the U.S. Capitol",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Some law enforcement officers died on January 6th at the U.S. Capitol",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The president said 'there were fine people on each side' in response to the tiki torch incident",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former president told the Proud Boys to 'stand back and stand by'",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said in this election there will be a bloodbath if the outcome of this election is not to his liking",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Charlottesville story has been debunked",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are coming through the southern border",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost the 2020 election",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "For 3 1/2 years after losing the 2020 election, Donald Trump repeatedly falsely claimed that he won",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump many times said he won the 2020 election in a landslide",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The 2020 election results should have been sent back to the legislatures for approval",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Our elections are bad",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They're trying to get illegal immigrants to vote",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "No judge looked at the election cases because they said we didn't have standing",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The election cases were dismissed on technicality grounds rather than being examined on merit",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump attempted in the past to upend the will of the voters in a free and fair election",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost court cases related to the election",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost the election",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump ended the Nordstream 2 pipeline",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden put the Nordstream 2 pipeline back on day one of his presidency",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There were no problems when Trump was president",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "An estimated 40,000 Palestinians are dead in the Israel-Hamas war",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nearly 100 hostages remain from the Israel-Hamas war",
+      "speaker": "Moderator",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "On October 7 Hamas slaughtered 1,200 Israelis",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Russia killed millions of people in Ukraine",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris refused to attend Netanyahu's speech to Congress because she was at a sorority party",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran was broke under Donald Trump",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran now has $300 billion because they took off all the sanctions that I had",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran had no money for Hamas or Hezbollah under my sanctions",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran had no money and was broke before a certain policy change",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran is spreading money to the Houthis in Yemen",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said he wants to be a dictator on day one",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "168 different countries sent people into the US last month",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Their crime rates are way down",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin endorsed her last week",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin said 'I hope she wins'",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People are being killed by the millions in Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The casualty numbers being reported are fake numbers",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "NATO members paid billions and billions, hundreds of billions of dollars after being told to pay up or lose protection",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden hasn't made a phone call in two years to Putin",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The war in Ukraine would never have happened if Trump had been president",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are dead from the current conflict",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden was thrown out of his campaign",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin has lost 300,000 men and women in the war",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She was sent to negotiate peace before this war started",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Three days after she negotiated, he went in and started the war",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris met with Zelenskyy and Putin for negotiations, and the war started three days later.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden is the worst president in the history of the United States.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris is the worst vice president in the history of the United States.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was sent to negotiate with Putin, and Putin did the invasion as soon as they left.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "NATO Secretary-General Stoltenberg said Trump did the most amazing thing he had ever seen by getting NATO countries to pay up",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "America's taxpayers were paying $300 million a day for the Afghanistan war",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There is not one member of the United States military who is in active duty in a combat zone in any war zone around the world as of today",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "This is the first time this century that no US military members are in active duty in a combat zone",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump negotiated directly with the Taliban, bypassing the Afghan government",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Taliban deal negotiated by Trump involved the Taliban getting 5,000 Taliban terrorists released",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The president invited the Taliban to Camp David",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump has consistently disparaged and demeaned members of the US military",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "For 18 months we had nobody killed in Afghanistan",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The US left $85 billion worth of military equipment behind during the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many Americans were left behind during the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The withdrawal from Afghanistan was the most embarrassing moment in the history of our country",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Russia attacked Ukraine because they saw how incompetent she and her boss are",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump was investigated for refusing to rent property to Black families",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump took out a full-page ad in the New York Times calling for the execution of five young Black and Latino boys",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The five young Black and Latino boys referenced in the New York Times ad were innocent",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump took out a full-page ad calling for the execution of the Central Park Five",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump spread birther lies about the first Black President of the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "This is the most divisive presidency in the history of our country",
+      "speaker": "President Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Central Park Five pled guilty",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Central Park Five badly hurt a person",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Central Park Five killed a person ultimately",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The worst inflation we've ever had occurred during the Biden administration",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Democrats voted unanimously against changing Obamacare",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump disparaged John McCain and said he didn't like him because he got caught",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said he was going to allow Medicare to negotiate drug prices but never did",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost manufacturing jobs during his presidency",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They lost 10,000 manufacturing jobs this last month",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the auto plants in Mexico are owned by China",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden doesn't go after China because China paid him millions of dollars",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China paid Biden and his son millions of dollars",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "He got 3.5 million dollars from the mayor of Moscow's wife",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Germany tried renewable energy and within one year they were back to building normal energy plants",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She gave a lot of military equipment away to the Taliban",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She gave military equipment to Afghanistan",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the people who came into our country are criminals",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A person named Amanda in Texas appeared on stage in Chicago and nearly bled out, having sepsis twice because she couldn't get medical care",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump does not support a national abortion ban",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris has let the Mexican drug cartels take over the southern border",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    }
+  ]
+}

@@ -1,0 +1,4398 @@
+{
+  "video_id": "4dOgWZsDB6Q",
+  "total_claims": 549,
+  "claims": [
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Biden withdrew from the presidential race after his last debate",
+      "speaker": "David Muir or Linsey Davis",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump and Kamala Harris are essentially tied in the polls nationally",
+      "speaker": "David Muir or Linsey Davis",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "This is the first face-to-face meeting ever between Kamala Harris and Donald Trump",
+      "speaker": "David Muir or Linsey Davis",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Biden withdrew from the race on July 21st",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Biden had a debate against President Donald Trump in June",
+      "speaker": "Moderator",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The debate will be 90 minutes with two commercial breaks",
+      "speaker": "Moderator",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "No topics or questions have been shared with the campaigns",
+      "speaker": "Moderator",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Candidates will have two minutes to answer questions",
+      "speaker": "Moderator",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Trump won the coin toss",
+      "speaker": "Moderator",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump chose to deliver the final closing statement of the evening",
+      "speaker": "Moderator",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris selected the podium to the right",
+      "speaker": "Moderator",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The two candidates have never met",
+      "speaker": "Moderator",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The debate is taking place at the National Constitution Center",
+      "speaker": "Moderator",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was raised as a middle-class kid",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris is the only person on the debate stage who has a plan that is about lifting up the middle class and working people",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We have a shortage of homes and housing",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The cost of housing is too expensive for far too many people",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I intend on extending a tax cut for those families of $6,000",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The $6,000 child tax credit would be the largest child tax credit that we have given in a long time",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "My plan is to give a $50,000 tax deduction to startup small businesses",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "My opponent's plan is to provide a tax cut for billionaires and big corporations",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "My opponent's plan will result in $5 trillion to America's deficit",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's tariff policies would result in a 20% tax on everyday goods",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Economists have said that Trump's tariff policies would result in middle-class families paying about $4,000 more per year",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have no sales tax",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We're doing tariffs on other countries",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Other countries haven't paid us back for 75 years for all that we've done for the world",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I took in billions and billions of dollars from China through tariffs",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China never took the tariff off because it was so much money",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Biden administration has taken in billions of dollars from China and other places through tariffs",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The current administration has left tariffs in place from the previous administration",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "During Trump's presidency, there were tariffs but no inflation",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Current inflation is probably the worst in the nation's history",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Inflation reached 21%",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many items are 50, 60, 70, and 80% higher in price than before",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are pouring into the United States from prisons and jails",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are pouring into the United States from mental institutions and insane asylums",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Immigrants are taking jobs that are currently occupied by African Americans and Hispanics",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Immigrants are taking jobs that are currently occupied by union workers",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, Ohio, immigrants are taking over the town and taking over buildings violently",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Aurora, Colorado, immigrants are taking over the town and taking over buildings violently",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The immigrants in Springfield, Ohio and Aurora, Colorado are at the highest level of criminality",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump created one of the greatest economies in the history of the United States",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump left us the worst unemployment since the Great Depression",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump left us the worst public health epidemic in a century",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump left us the worst attack on our democracy since the Civil War",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former president intends on implementing Project 2025 if he were elected again",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have nothing to do with Project 2025",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I haven't read Project 2025",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I'm not going to read Project 2025",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I will cut taxes very substantially",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We had the greatest economy",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A pandemic occurred that was the worst since 1917 when 100 million people died",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The stock market was higher after the pandemic than it was before the pandemic came in",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The administration made ventilators for the entire world during the pandemic",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "100 million people died in the 1917 pandemic",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We rebuilt the military",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The jobs created during the Biden administration were only bounceback jobs that Trump originally created",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has no plan for economic policy",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's economic plan is all about tax breaks for the richest",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Goldman Sachs said that Donald Trump's plan would make the economy worse",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Goldman Sachs said that my plan would strengthen the economy",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Wharton School said that Donald Trump's plan would [make the economy worse]",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "16 Nobel laureates have described Donald Trump's economic plan as something that would increase inflation",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "16 Nobel laureates have described Donald Trump's economic plan as something that would invite a recession by the middle of next year",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has no plan for you",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I went to the Wharton School of Finance",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many top professors at the Wharton School think my plan is a brilliant plan",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris copied Biden's plan",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris's plan consists of only four sentences",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris doesn't have a plan",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's tariff proposal is characterized as essentially a national sales tax",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's proposal calls for tariffs on foreign imports",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump recently said that he might double his plan, imposing tariffs up to 20% on goods coming into this country",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris has argued that tariffs will cost the typical family nearly $4,000 a year",
+      "speaker": "Moderator",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Americans are not going to have higher prices due to tariffs",
+      "speaker": "Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China is going to have higher prices due to tariffs",
+      "speaker": "Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I was the only president ever to have China paying us hundreds of billions of dollars",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China paid us hundreds of billions of dollars during my presidency",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The current administration has kept the tariffs in place for 3.5 years",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I had no inflation, virtually no inflation during my presidency",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States had the highest inflation perhaps in the history of the country during the current administration",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Polls show that 80-90% of people say the Trump economy was great and the current economy is terrible",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Biden administration kept a number of the Trump tariffs in place",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Trump administration resulted in a trade deficit that was one of the highest in the history of America",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "During his presidency, he sold American chips to China to help them improve and modernize their military",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump thanked President Xi for what he did during COVID",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump tweeted 'Thank you, President Xi'",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Xi was responsible for lacking transparency about the origins of COVID",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They bought their chips from Taiwan",
+      "speaker": "President Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We hardly make chips anymore",
+      "speaker": "President Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Her father is a Marxist professor in economics",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "21 million people are pouring into the country monthly",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "More than 21 million people have entered the country illegally, which is bigger than New York State's population",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the people entering the country illegally are criminals",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Trump was able to kill Roe v. Wade",
+      "speaker": "Linsey",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Trump said he was proud to be the most pro-life president in American history",
+      "speaker": "Linsey",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Trump said his administration would be great for women and their reproductive rights",
+      "speaker": "Linsey",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Florida has a six-week abortion ban",
+      "speaker": "Linsey",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "You said you were going to be voting that we need more than six weeks regarding an abortion ban",
+      "speaker": "Moderator/Interviewer",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The very next day you reversed course and said you would vote to support the six-week ban",
+      "speaker": "Moderator/Interviewer",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The previous governor of West Virginia said the baby will be born and we will decide what to do with the baby",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The previous governor of West Virginia advocated for executing babies after birth",
+      "speaker": "Unknown",
+      "importance_score": 0.95
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Tim Walz says abortion in the ninth month is absolutely fine",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Tim Walz says execution after birth is okay",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People have been trying to get Roe v. Wade into the states for 52 years",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Six Supreme Court justices overturned Roe v. Wade",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Ronald Reagan believed in exceptions for rape, incest and life of the mother regarding abortion",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "85% of Republicans support exceptions for rape, incest and life of the mother regarding abortion",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The abortion issue has torn the country apart for 52 years",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Every legal scholar, every Democrat, every Republican, liberal, conservative all wanted the abortion issue to be brought back to the states where people could vote",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Ohio voted somewhat liberal on the abortion issue",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kansas voted somewhat liberal on the abortion issue",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kansas voted much more liberal than people would have thought on the abortion issue",
+      "speaker": "Unknown",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Supreme Court returned abortion decisions to the states through their ruling",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Six Supreme Court justices voted to overturn federal abortion protections",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There is no state in this country where it is legal to kill a baby after it's born",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump hand-selected three members of the United States Supreme Court",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump selected Supreme Court members with the intention that they would undo the protections of Roe v. Wade",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's Supreme Court appointees overturned the protections of Roe v. Wade",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Over 20 states have abortion bans that make it criminal for a doctor or nurse to provide healthcare",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "One state provides prison for life for doctors or nurses providing abortion care",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Some abortion bans make no exception even for rape and incest",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Roe v. Wade previously provided legal protections for abortion access",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump will sign a national abortion ban if re-elected",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Project 2025 includes provisions for monitoring pregnancies",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump is not signing a ban on abortion",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Democrats, Republicans and every legal scholar wanted abortion decisions to be brought back to the states",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Roe vs. Wade was the law for 52 years before being overturned",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The speaker accomplished something that nobody thought was possible regarding abortion being returned to the states",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The speaker is not in favor of an abortion ban",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Congress is essentially 50-50 split in both the Senate and House",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She will never get the vote to pass her proposal through Congress",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Student loan termination proposals ended up being a total failure",
+      "speaker": "Unknown",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Supreme Court rejected the student loan forgiveness plan twice",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Biden administration attempted student loan forgiveness a second time after being rejected by the Supreme Court the first time",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "J.D. Vance has said that Trump would veto a national abortion ban if it came to his desk",
+      "speaker": "Interviewer",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump did not discuss vetoing a national abortion ban with J.D. Vance",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They couldn't get student loans approved",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We did something that everybody said couldn't be done regarding student loans",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Now you have a vote of the people on abortion",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Roe v. Wade provided protections for abortion rights",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nowhere in America is a woman carrying a pregnancy to term and asking for an abortion",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The majority of Americans believe in a woman's right to make decisions about her own body",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In every state where this issue has been on the ballot, in red and blue states both, the people of America have voted for freedom",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have been a leader on IVF (in vitro fertilization)",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Alabama courts made a negative decision on IVF",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Alabama legislature voted in favor of IVF two days after the negative court decision",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Under Roe v. Wade, you could do abortions in the seventh month, the eighth month, and the ninth month",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Under Roe v. Wade, abortions were allowed probably after birth",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former Governor of Virginia supported post-birth abortions",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The governor of Virginia said we put the baby aside and then we determine what we want to do with the baby",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris was tasked by President Biden with getting to the root causes of migration from Central America",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Illegal border crossings reached a record high in the Biden Administration",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "President Biden imposed tough new asylum restrictions in June",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Border crossing numbers have dropped significantly since a previous period",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The administration waited until six months before the election to act on border issues",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I am the only person on this stage who has prosecuted transnational criminal organizations for the trafficking of guns, drugs, and human beings",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Some of the most conservative members of the United States Senate were involved in United States Congress discussions",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A border security bill would have put 1,500 more border agents on the border",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The speaker supported a border security bill",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A bill would have put more resources to allow prosecution of transnational criminal organizations for trafficking in guns, drugs and human beings",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump called folks in Congress and said to kill the bill",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump talks about fictional characters like Hannibal Lecter during his rallies",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump says windmills cause cancer",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People start leaving Trump's rallies early out of exhaustion and boredom",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People don't go to Kamala Harris's rallies",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris buses people to her rallies and pays them to attend",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People start leaving Donald Trump's rallies",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump rallies are the biggest rallies in the history of politics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States became a failing nation 3.5 years ago",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions and millions of people have been allowed to come into the United States",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, immigrants are eating the dogs of people that live there",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, immigrants are eating the cats of people that live there",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In Springfield, immigrants are eating the pets of people that live there",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "ABC News reached out to the city manager of Springfield, Ohio regarding reports about the city",
+      "speaker": "Moderator",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The city manager of Springfield, Ohio told ABC News there have been no credible reports of specific incidents",
+      "speaker": "Moderator",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People on television say their dogs were taken and used for food",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A dog was eaten by people in Springfield",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Springfield city manager says there's no evidence of pets being eaten",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have the endorsement of 200 Republicans who have formally worked with President Bush, Mitt Romney, and John McCain",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have the endorsement of former Vice President Dick Cheney",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have the endorsement of Congress member Liz Cheney",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's former chief of staff, a four-star general, said he has contempt for the Constitution of the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's former national security adviser said he is dangerous and unfit",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's former secretary of defense said the nation and republic would never survive",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I fired most of those people",
+      "speaker": "President Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "No person was fired in connection with Afghanistan and the Taliban withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "13 people were killed during the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "No generals or top officials were fired following the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got more votes than any Republican in history by far",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got more votes than any sitting president in history by far",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump called his deportation proposal the largest domestic deportation operation in the history of our country",
+      "speaker": "Moderator",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The number of undocumented immigrants is much higher than 11 million",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They allowed many millions of criminals to enter the country",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They allowed terrorists to enter the country",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They allowed drug dealers to enter the country",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Crime in Venezuela and crime in countries all over the world is way down",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Venezuela and other countries have taken their criminals off the street and given them to the United States to put into the country",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "All over the world crime is down except in the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Crime in the United States is up and through the roof",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people have been let into the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI says overall violent crime is actually coming down in this country",
+      "speaker": "Moderator",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI was defrauding statements about crime statistics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI didn't include the worst cities in their crime statistics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI didn't include the cities with the worst crime in their statistics",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The FBI said they created 818,000 jobs which turned out to be a fraud",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been prosecuted for national security crimes",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been prosecuted for economic crimes",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been prosecuted for election interference",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone has been found liable for sexual assault",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Someone's next big court appearance is in November at criminal sentencing",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former vice president called for defunding federal law enforcement, 45,000 agents",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former vice president was arraigned on 34 felony counts",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former vice president called for defunding federal law enforcement on the day after he was arraigned on 34 felony counts",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I'm winning most of the legal cases against me",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I'll win the rest of the legal cases on appeal",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Supreme Court made a recent decision in my favor",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Weaponization of the justice system never happened in this country before",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They weaponized the Justice Department",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Every one of the legal cases against me was involved with the DOJ",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The DOJ was involved in the Atlanta case with Fani Willis",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The DOJ was involved in the New York Attorney General case",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Joe Biden was found essentially guilty on the documents case",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's documents case was thrown out two months ago",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States Supreme Court recently ruled that the former president would essentially be immune from any misconduct if he were to enter the White House again",
+      "speaker": "Vice President Harris",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has openly said he would terminate the Constitution of the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has said he would weaponize the Department of Justice against his political enemies",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has openly expressed disdain for members of the military",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I probably took a bullet to the head because of the things that they say about me",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There was a Russia investigation",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris said she wanted to ban fracking in her last presidential run",
+      "speaker": "Linsey",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris wanted mandatory government buyback programs for assault weapons in her previous campaign",
+      "speaker": "Linsey",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris supported decriminalizing border crossings in her previous campaign",
+      "speaker": "Linsey",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris made it very clear in 2020 that she would not ban fracking",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris has not banned fracking as Vice President of the United States",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was the tie-breaking vote on the Inflation Reduction Act",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Inflation Reduction Act opened new leases for fracking",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We have had the largest increase in domestic oil production in history",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump was handed $400 million",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump filed bankruptcy six times",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We will increase housing by 3 million homes by the end of my first term",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have done long-standing work protecting seniors from scams",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump was not given $400 million",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump's father was a Brooklyn builder who worked in Brooklyn and Queens",
+      "speaker": "Donald Trump",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I built a tiny fraction into many, many billions of dollars",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She has been against fracking for 12 years",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She has been against defund the police forever",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She gave up at least 12 and probably 14 or 15 different positions",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She was big on defund the police",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She went out in Minnesota and raised money to get criminals out of jail who killed people and burned down Minneapolis",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She wants to do transgender operations on illegal aliens that are in prison",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She wants to confiscate your guns",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She will never allow fracking in Pennsylvania",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "If she won the election, fracking in Pennsylvania will end on day one",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got the oil business going like nobody has ever done before",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Energy prices were quadrupling and doubling",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Gasoline prices increased significantly",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Solar plants require 400-500 acres of desert to generate energy",
+      "speaker": "Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There are 56 days until the election",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "On January 6th, Trump told his supporters to march to the Capitol",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump said he would be right there with his supporters at the Capitol on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Officers came under attack at the Capitol on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Aides in the West Wing say Trump watched January 6th events unfold on television from the Oval Office",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump sent out tweets on January 6th but it was more than two hours before [incomplete statement]",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump said 'peacefully and patriotically' during his speech on January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nobody on the other side was killed on January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Ashli Babbitt was shot by an out-of-control police officer",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was the border czar",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People are pouring into the country and killing people that Kamala Harris allowed to pour in",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Crime rates are down all over the world",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People burned down Minneapolis",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Protesters took over a big percentage of the city of Seattle",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I had nothing to do with that other than they asked me to make a speech",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I went to Nancy Pelosi and the mayor of Washington, D.C. about security for the speech",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The mayor put it back in writing",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I offered 10,000 National Guard or soldiers for January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nancy Pelosi rejected my offer of 10,000 National Guard or soldiers",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nancy Pelosi's daughter has a tape of her saying she is fully responsible for what happened on January 6th",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "This tape was recorded two weeks ago",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nancy Pelosi was responsible for security on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was at the Capitol on January 6th",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was the Vice President-elect on January 6th",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was an acting Senator on January 6th",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The President of the United States incited events on January 6th",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "140 law enforcement officers were injured on January 6th at the U.S. Capitol",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Some law enforcement officers died on January 6th at the U.S. Capitol",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former president has been indicted for inciting violence at the U.S. Capitol on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former president has been impeached for inciting violence at the U.S. Capitol on January 6th",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There was a mob of people carrying tiki torches spewing antisemitic hate",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The president said 'there were fine people on each side' in response to the tiki torch incident",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former president told the Proud Boys to 'stand back and stand by'",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said in this election there will be a bloodbath if the outcome of this election is not to his liking",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The term 'bloodbath' was used in relation to energy policy",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Charlottesville story has been debunked",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Laura Ingraham, Sean Hannity, and Jesse covered the debunking of the Charlottesville story",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are coming through the southern border",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The President of the United States has the right to close the border without needing bills",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost the 2020 election",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "For 3 1/2 years after losing the 2020 election, Donald Trump repeatedly falsely claimed that he won",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump many times said he won the 2020 election in a landslide",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got almost 75 million votes in the 2020 election",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I received the most votes of any sitting president in history",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The 2020 election results should have been sent back to the legislatures for approval",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I got 63 electoral votes in 2016",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "If you get 63 electoral votes, you can't be beaten",
+      "speaker": "Donald Trump",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Our elections are bad",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They're trying to get illegal immigrants to vote",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "60 cases were brought in front of many judges regarding election challenges",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "No judge looked at the election cases because they said we didn't have standing",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The election cases were dismissed on technicality grounds rather than being examined on merit",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said 'when I win, those people who cheated will be prosecuted to the fullest extent of the law, which will include long-term prison sentences' about the upcoming election",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump was fired by 81 million people",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump attempted in the past to upend the will of the voters in a free and fair election",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "World leaders are laughing at the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost court cases related to the election",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost the election",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Viktor Orban is the Prime Minister of Hungary",
+      "speaker": "Mr. President",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Viktor Orban is called one of the most respected men and they call him a strong man",
+      "speaker": "Mr. President",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The whole world was not blowing up three years ago",
+      "speaker": "Mr. President",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump ended the Nordstream 2 pipeline",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden put the Nordstream 2 pipeline back on day one of his presidency",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden ended the XL pipeline",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The XL Pipeline in the United States was ended by the current administration",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The administration allowed Russians to build a pipeline going all over Europe and heading into Germany",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Russian pipeline going into Germany is the biggest pipeline in the world",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Viktor Orban said that Donald Trump is the most respected, most feared person",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There were no problems when Trump was president",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden got 14 million votes in the Democratic primary",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris got zero votes in the Democratic primary process",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was the first candidate to leave when she ran for president previously",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "An estimated 40,000 Palestinians are dead in the Israel-Hamas war",
+      "speaker": "Moderator",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Nearly 100 hostages remain from the Israel-Hamas war",
+      "speaker": "Moderator",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris said in December 'Israel has a right to defend itself' but 'it matters how'",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris said nine months ago that Israel must do more to protect innocent civilians",
+      "speaker": "Moderator",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Prime Minister Benjamin Netanyahu said there's not a deal in the making last week",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "On October 7 Hamas slaughtered 1,200 Israelis",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the October 7 victims were young people attending a concert",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Russia killed millions of people in Ukraine",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There was no threat of Russia invading Ukraine for four years during Trump's presidency",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris hates Israel",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris refused to attend Netanyahu's speech to Congress because she was at a sorority party",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Netanyahu made a speech to Congress",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "If Kamala Harris is president, Israel will not exist within two years",
+      "speaker": "Donald Trump",
+      "importance_score": 0.1
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran was broke under Donald Trump",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran now has $300 billion because they took off all the sanctions that I had",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran had no money for Hamas or Hezbollah under my sanctions",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There are 28 different spheres of terror supported by Iran",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran had no money and was broke before a certain policy change",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran is now a rich nation",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Iran is spreading money to the Houthis in Yemen",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Harris has supported Israel and the Israeli people throughout her entire career and life",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump is weak and wrong on national security and foreign policy",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said he wants to be a dictator on day one",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said Putin can do whatever the hell he wants and go into Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said Russia's invasion of Ukraine was brilliant",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump exchanged love letters with Kim Jong Un",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Military leaders who worked with Trump have said he is a disgrace",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "168 different countries sent people into the US last month",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Their crime rates are way down",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin endorsed her last week",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin said 'I hope she wins'",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden killed the Keystone pipeline",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump said he would solve the Ukraine war in 24 hours",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People are being killed by the millions in Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The casualty numbers being reported are fake numbers",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The US is spending 250 billion dollars or more on Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Europe is spending 150 billion dollars less than the US on Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "NATO members paid billions and billions, hundreds of billions of dollars after being told to pay up or lose protection",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The US is contributing 250 to 275 billion while other countries are contributing 100 to 150 billion",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden hasn't made a phone call in two years to Putin",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I will get the Ukraine war settled before I even become president if I win",
+      "speaker": "Donald Trump",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin built up soldiers after Trump left office",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The war in Ukraine would never have happened if Trump had been president",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people are dead from the current conflict",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden was thrown out of his campaign",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump says that this war would be over within 24 hours",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I met with Zelenskyy",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Russia invaded and tried through force to change territorial boundaries",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I met with President Zelenskyy",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I shared American intelligence with President Zelenskyy about how he could defend himself",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I went to NATO's Eastern Flank, to Poland and Romania",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "50 countries were brought together to support Ukraine in its righteous defense",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The US provided air defense, ammunition, artillery, Javelins, and Abrams tanks to Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Ukraine stands as an independent and free country because of US support",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "If Donald Trump were president, Putin would be sitting in Kyiv right now",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "NATO is the greatest military alliance the world has ever known",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There are 800,000 Polish Americans in Pennsylvania",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin has lost 300,000 men and women in the war",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Putin has nuclear weapons",
+      "speaker": "Unknown",
+      "importance_score": 0.4
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She was sent to negotiate peace before this war started",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Three days after she negotiated, he went in and started the war",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She was the emissary sent in to negotiate",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris met with Zelenskyy and Putin for negotiations, and the war started three days later.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden is the worst president in the history of the United States.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris is the worst vice president in the history of the United States.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris was sent to negotiate with Putin, and Putin did the invasion as soon as they left.",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris has met with President Zelenskyy over five times",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "NATO Secretary-General Stoltenberg said Trump did the most amazing thing he had ever seen by getting NATO countries to pay up",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There were 28 NATO countries at the time Trump was dealing with NATO payments",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "For years the US was paying almost all of NATO expenses",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump got NATO countries to increase their payments by threatening to not protect them if they didn't pay",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President agreed with President Biden's decision to pull out of Afghanistan",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Four presidents said they would withdraw from Afghanistan",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Joe Biden withdrew from Afghanistan",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "America's taxpayers were paying $300 million a day for the Afghanistan war",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There is not one member of the United States military who is in active duty in a combat zone in any war zone around the world as of today",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "This is the first time this century that no US military members are in active duty in a combat zone",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump negotiated directly with the Taliban, bypassing the Afghan government",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump's national security adviser said the Taliban deal was weak and terrible",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Taliban deal negotiated by Trump involved the Taliban getting 5,000 Taliban terrorists released",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The president invited the Taliban to Camp David",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "As president, Trump invited the Taliban to Camp David",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump has consistently disparaged and demeaned members of the US military",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Taliban was killing US soldiers with snipers during a specific period of time",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump got involved with negotiations with the Taliban",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Abdul is the head of the Taliban",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "For 18 months we had nobody killed in Afghanistan",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Mike Pompeo negotiated an agreement with the Taliban",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The US left $85 billion worth of military equipment behind during the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "US soldiers were lost during the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many Americans were left behind during the Afghanistan withdrawal",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The agreement was terminated by us because they didn't do what they were supposed to do",
+      "speaker": "President Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The withdrawal from Afghanistan was the most embarrassing moment in the history of our country",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Russia attacked Ukraine because they saw how incompetent she and her boss are",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump recently said of Vice President Harris: 'I didn't know she was black until a number of years ago when she happened to turn black, and now she wants to be known as black.'",
+      "speaker": "Moderator",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris previously put out information stating she was not Black",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris later stated or indicated she was Black",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump was investigated for refusing to rent property to Black families",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump took out a full-page ad in the New York Times calling for the execution of five young Black and Latino boys",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The five young Black and Latino boys referenced in the New York Times ad were innocent",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump took out a full-page ad calling for the execution of the Central Park Five",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump spread birther lies about the first Black President of the United States",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "This is the most divisive presidency in the history of our country",
+      "speaker": "President Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There's never been anything like it in terms of divisiveness",
+      "speaker": "President Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Mayor Bloomberg agreed with me on the Central Park Five",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Central Park Five pled guilty",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Central Park Five badly hurt a person",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Central Park Five killed a person ultimately",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The worst inflation we've ever had occurred during the Biden administration",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris is not Joe Biden",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.1
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris is not Donald Trump",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.1
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have a plan to give startup businesses $50,000 tax deduction",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have a plan to provide $6,000 for young families for the first year of their child's life",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have a plan to offer $25,000 down payment assistance for first-time home buyers",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris has a plan to defund the police",
+      "speaker": "President Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris has a plan to confiscate everybody's gun",
+      "speaker": "President Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris will not allow fracking in Pennsylvania or anywhere else",
+      "speaker": "President Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump has long vowed to repeal and replace the Affordable Care Act",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump now says he's going to keep Obamacare unless we can do something much better",
+      "speaker": "Moderator",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Last month Trump said 'We're working on it' regarding healthcare plans",
+      "speaker": "Moderator",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "It has been nine years since Trump first promised to repeal and replace the Affordable Care Act",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Democrats voted unanimously against changing Obamacare",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump inherited Obamacare because Democrats wouldn't change it",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Democrats wouldn't vote for a specific measure when Trump was president",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump had top people and good people in his administration",
+      "speaker": "Donald Trump",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I saved it (referring to a policy or program that was previously rotting)",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I have concepts of a plan for healthcare",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I am not president right now",
+      "speaker": "Unknown",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "In 2017, Vice President Harris supported Bernie Sanders' proposal to do away with private insurance and create a government-run health care system",
+      "speaker": "Moderator",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Two years later (2019), Vice President Harris proposed a plan that included a private insurance option",
+      "speaker": "Moderator",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Over the last four years as Vice President, Harris has supported private health care options",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Tim Walz and I are both gun owners",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "When Donald Trump was president, he tried to get rid of the Affordable Care Act 60 times",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The speaker was a Senator at the time of a healthcare vote",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A healthcare vote took place in the early morning hours in the United States Senate",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "John McCain walked onto the Senate floor during a late night healthcare vote",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump disparaged John McCain and said he didn't like him because he got caught",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Affordable Care Act eliminated the ability of insurance companies to deny people with pre-existing conditions",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Insurance companies previously could deny coverage if a child had asthma",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Insurance companies previously could deny coverage for breast cancer survivors",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Over the last four years, the Biden administration has strengthened the Affordable Care Act",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Medicare was allowed to negotiate drug prices for the first time under the Biden administration",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said he was going to allow Medicare to negotiate drug prices but never did",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The cost of insulin has been capped at $35 a month under the Biden administration",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "When I am President we will cap insulin costs at $2,000 a year for all people",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Access to health care should be a right and not just a privilege of those who can afford it",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The plan has to be to strengthen the Affordable Care Act, not get rid of it",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "John McCain fought Obamacare for ten years",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "All of the Democrats kept Obamacare going",
+      "speaker": "Donald Trump",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She wants everybody to be on government insurance where you wait six months for an operation that you need immediately",
+      "speaker": "President Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris calls climate change an existential threat",
+      "speaker": "Moderator",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The former president said that climate change is a hoax",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "As Vice President over the last four years, we have invested a trillion dollars in a clean energy economy",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We have increased domestic gas production to historic levels while Kamala Harris has been Vice President",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "We have created over 800,000 new manufacturing jobs while Kamala Harris has been Vice President",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump lost manufacturing jobs during his presidency",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The speaker has the endorsement of the United Auto Workers and Shawn Fain",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Auto plants closed under Donald Trump's administration",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They lost 10,000 manufacturing jobs this last month",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They're building big auto plants in Mexico",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the auto plants in Mexico are owned by China",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Biden doesn't go after China because China paid him millions of dollars",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "China paid Biden and his son millions of dollars",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "He got 3.5 million dollars from the mayor of Moscow's wife",
+      "speaker": "President Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The United States has the most lethal fighting force in the world",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I started my career as a prosecutor",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I was a District Attorney",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I was an Attorney General",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I was a United States Senator",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I am currently Vice President",
+      "speaker": "Kamala Harris",
+      "importance_score": 0.2
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She has been in office for 3.5 years",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "They have had 3.5 years to fix the border",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Germany tried renewable energy and within one year they were back to building normal energy plants",
+      "speaker": "Unknown",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There are wars going on in the Middle East",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "There are wars going on with Russia and Ukraine",
+      "speaker": "Unknown",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I rebuilt our entire military",
+      "speaker": "Donald Trump",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She gave a lot of military equipment away to the Taliban",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She gave military equipment to Afghanistan",
+      "speaker": "Donald Trump",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Millions of people have come into our country",
+      "speaker": "Donald Trump",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Many of the people who came into our country are criminals",
+      "speaker": "Donald Trump",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump is nearly 80 years old",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Roe vs. Wade was the law of the land for 52 years",
+      "speaker": "Governor Walz",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A person named Amanda in Texas appeared on stage in Chicago and nearly bled out, having sepsis twice because she couldn't get medical care",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Roe vs. Wade provided protections where women make their own decisions with their health care providers",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "J.D. Vance is Donald Trump's running mate",
+      "speaker": "Jon (interviewer)",
+      "importance_score": 0.1
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump was asked if he would veto a national abortion ban during a debate",
+      "speaker": "Jon (interviewer)",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump didn't answer the question about whether he would veto a national abortion ban",
+      "speaker": "Jon (interviewer)",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The President said he would veto a national abortion ban",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The President doesn't want a national abortion ban",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The President doesn't support a national abortion ban",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Trump wants abortion policies to be made by the states",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris is the vice president",
+      "speaker": "Unknown",
+      "importance_score": 0.1
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump does not support a national abortion ban",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.8
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has been explicit about not supporting a national abortion ban",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "People can't afford groceries and housing because of Kamala Harris's policies",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris has let the Mexican drug cartels take over the southern border",
+      "speaker": "Unknown",
+      "importance_score": 0.9
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "A lot of kids are dying of fentanyl overdoses",
+      "speaker": "Unknown",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump described Kamala Harris as a low I.Q. individual before this debate",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said Kamala Harris doesn't have the mental capacity to be President",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump called Kamala Harris really dumb",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump said Kamala Harris is unable to put two sentences together",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris has been the Vice President for 3 1/2 years",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I accomplished lower prices",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I accomplished lower housing prices",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "I secured the southern border",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.7
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "She has failed as vice president",
+      "speaker": "J.D. Vance",
+      "importance_score": 0.3
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump spent more time talking about people eating pets than he did about the economy",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "The Harris campaign says they want another debate",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump's numbers just don't move",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris didn't address the economy and the cost of living",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris had no answers on immigration",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris had no answers when asked about defunding the police",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Kamala Harris had nothing to say about the families that were lost in Afghanistan",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump has been convicted",
+      "speaker": "Unknown",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Donald Trump and Kamala Harris are currently tied in polling",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Hillary Clinton thought she won debates in 2016",
+      "speaker": "Unknown",
+      "importance_score": 0.6
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Vice President Harris is ready for a second debate and they're looking for one in October",
+      "speaker": "Campaign/Rachel",
+      "importance_score": 0.5
+    },
+    {
+      "video_id": "4dOgWZsDB6Q",
+      "start_s": 0.0,
+      "end_s": 0.0,
+      "claim_text": "Voters out there want a change according to polls",
+      "speaker": "Rachel",
+      "importance_score": 0.6
+    }
+  ]
+}

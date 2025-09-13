@@ -38,7 +38,7 @@ Critical considerations:
 - Context importance: Some claims may be technically true but misleading without context
 
 Tools at your disposal:
-- composio_search: Search for additional verification information
+- web_search: Search for additional verification information (DuckDuckGo or Tavily)
 - scrape_page: Extract and analyze content from specific webpages
 
 Output requirements:
