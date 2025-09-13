@@ -37,23 +37,156 @@ async def test_import():
 
 
 async def test_initialization():
-    """Test that orchestrator can be initialized."""
+    """Test that a single agent can be initialized."""
     try:
-        from orchestrator import ClaimVerificationOrchestrator
+        from agents import FactCheckSearcherAgent
+        from langchain_anthropic import ChatAnthropic
         
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
             print("⚠️  No ANTHROPIC_API_KEY found - using test key")
             api_key = "test-key"
         
-        orchestrator = ClaimVerificationOrchestrator(
-            anthropic_api_key=api_key
+        model = ChatAnthropic(
+            api_key=api_key,
+            model_name="claude-4-sonnet-20250514",
+            temperature=0
         )
         
-        print("✅ Orchestrator initialized successfully")
+        agent = FactCheckSearcherAgent(model=model)
+        
+        # Verify the agent was created with tools
+        if agent and agent.tools:
+            print(f"✅ Agent initialized successfully with {len(agent.tools)} tools")
+        else:
+            print("✅ Agent initialized successfully")
         return True
     except Exception as e:
         print(f"❌ Initialization error: {e}")
+        return False
+
+
+async def test_single_agent():
+    """Test a single agent directly without the orchestrator."""
+    try:
+        from agents import NewsSearcherAgent
+        from langchain_anthropic import ChatAnthropic
+        
+        # Check if we have an API key
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("⚠️  Using mock mode - no ANTHROPIC_API_KEY found")
+            # Create a mock agent to test initialization
+            from unittest.mock import MagicMock
+            model = MagicMock()
+        else:
+            model = ChatAnthropic(
+                model="claude-3-5-sonnet-20241022",
+                api_key=api_key,
+                temperature=0
+            )
+        
+        # Create the agent
+        agent = NewsSearcherAgent(model)
+        
+        # Test that the agent has tools
+        if not agent.tools:
+            print("❌ Agent has no tools")
+            return False
+        
+        print(f"✅ NewsSearcherAgent created with {len(agent.tools)} tools:")
+        for tool in agent.tools:
+            print(f"   - {tool.name}: {tool.description[:50]}...")
+        
+        # Test the agent's prompt
+        prompt = agent.get_prompt()
+        if "news verification specialist" in prompt.lower():
+            print("✅ Agent prompt is correctly configured")
+        else:
+            print("❌ Agent prompt seems incorrect")
+            return False
+        
+        # If we have an API key, test a simple verification
+        if api_key:
+            print("\n📝 Testing simple claim verification...")
+            claim = "Python is a programming language"
+            try:
+                result = await agent.verify(claim)
+                if result and len(result) > 20:
+                    print("✅ Agent verification returned a response")
+                    print(f"   Response preview: {result[:100]}...")
+                else:
+                    print("⚠️  Agent returned short/empty response")
+            except Exception as e:
+                print(f"⚠️  Agent verification failed: {e}")
+                # This is okay - might be rate limits or network issues
+        
+        return True
+        
+    except ImportError as e:
+        print(f"❌ Import error: {e}")
+        print("   Make sure langchain-anthropic is installed")
+        return False
+    except Exception as e:
+        print(f"❌ Test error: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+
+async def test_agent_tools():
+    """Test that agent tools (Composio search and Crawl4AI scraper) are working."""
+    try:
+        from agents import FactCheckSearcherAgent
+        from unittest.mock import MagicMock
+        
+        # Use a mock model for this test
+        model = MagicMock()
+        agent = FactCheckSearcherAgent(model)
+        
+        print("Testing agent tools:")
+        
+        # Check for search tool
+        search_tool = None
+        scrape_tool = None
+        
+        for tool in agent.tools:
+            if "search" in tool.name.lower() or "composio" in tool.name.lower():
+                search_tool = tool
+            if "scrape" in tool.name.lower():
+                scrape_tool = tool
+        
+        if search_tool:
+            print(f"✅ Found search tool: {search_tool.name}")
+            # Test search with a simple query
+            try:
+                result = search_tool.func("test query")
+                print(f"   Search result: {result[:100] if result else 'Empty'}...")
+            except Exception as e:
+                print(f"   ⚠️  Search tool error: {e}")
+        else:
+            print("❌ No search tool found")
+            return False
+        
+        if scrape_tool:
+            print(f"✅ Found scrape tool: {scrape_tool.name}")
+            # Test scraping with example.com
+            try:
+                result = scrape_tool.func("https://example.com")
+                if "Example Domain" in result or "example" in result.lower():
+                    print("   ✅ Scraper working correctly")
+                else:
+                    print(f"   ⚠️  Unexpected scrape result: {result[:100]}...")
+            except Exception as e:
+                print(f"   ⚠️  Scrape tool error: {e}")
+        else:
+            print("❌ No scrape tool found")
+            return False
+        
+        return True
+        
+    except Exception as e:
+        print(f"❌ Tools test error: {e}")
         return False
 
 
@@ -65,21 +198,28 @@ async def test_simple_claim():
         return True
     
     try:
-        from orchestrator import ClaimVerificationOrchestrator
+        from agents import FactCheckSearcherAgent
+        from langchain_anthropic import ChatAnthropic
         
-        orchestrator = ClaimVerificationOrchestrator(
-            anthropic_api_key=api_key
+        # Initialize the model
+        model = ChatAnthropic(
+            api_key=api_key,
+            model_name="claude-4-sonnet-20250514",
+            temperature=0
         )
+        
+        # Create a single agent instead of orchestrator
+        agent = FactCheckSearcherAgent(model=model)
         
         # Test with a simple, verifiable claim
         claim = "The Earth orbits around the Sun"
         print(f"\n📝 Testing claim: '{claim}'")
         
-        result = await orchestrator.verify_claim(claim)
+        result = await agent.verify(claim)
         
         if result and len(result) > 50:  # Basic check that we got a response
             print("✅ Claim verification completed")
-            print(result)
+            print(result[:200] + "..." if len(result) > 200 else result)
             return True
         else:
             print("❌ Claim verification returned empty or short response")

@@ -5,10 +5,6 @@ Main orchestrator for claim verification system.
 import asyncio
 from typing import List, Optional
 from langchain_anthropic import ChatAnthropic
-from langgraph.prebuilt import create_react_agent
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.tools import Tool
-import os
 
 from agents import (
     NewsSearcherAgent,
@@ -17,118 +13,99 @@ from agents import (
     GovernmentDataAgent,
     TemporalConsistencyAgent
 )
+from base_agent import BaseVerificationAgent
 
 
-class OrchestratorAgent:
+class OrchestratorAgent(BaseVerificationAgent):
     """Orchestrator that synthesizes results from all specialist agents."""
     
-    def __init__(self, model: ChatAnthropic):
-        self.model = model
-        self.tools = self._setup_tools()
+    def get_prompt(self):
+        """Return the synthesis-focused system prompt for the orchestrator."""
+        return """You are the lead fact-checker synthesizing findings from multiple specialist verification agents.
+
+Your role is to:
+1. Carefully analyze all agent assessments
+2. Identify points of agreement and conflict between agents
+3. Use search and scraping tools to resolve ambiguities or gather additional context
+4. Cross-validate sources across different agent findings
+5. Produce a clear, comprehensive verdict
+
+Critical considerations:
+- Source credibility hierarchy: Government data > Academic papers > Established media > Fact-check sites > Blogs/social media
+- Temporal consistency: Recent information supersedes older claims unless historical context is needed
+- Consensus patterns: Strong agreement across agents increases confidence
+- Contradiction handling: When agents disagree, dig deeper to understand why
+- Context importance: Some claims may be technically true but misleading without context
+
+Tools at your disposal:
+- composio_search: Search for additional verification information
+- scrape_page: Extract and analyze content from specific webpages
+
+Output requirements:
+- Start with a clear verdict: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
+- Provide comprehensive reasoning that synthesizes all agent findings
+- Highlight key evidence and any important contradictions
+- Note crucial context or caveats
+- End with a consolidated list of the most credible sources
+
+Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible."""
         
-    def _setup_tools(self):
-        """Setup additional search tools for the orchestrator."""
-        tools = []
+    async def verify(self, claim: str, agent_results: List[str] = None) -> str:
+        """
+        Override verify to synthesize agent findings.
         
-        # Composio search for additional investigation
-        async def composio_search_tool(search_query: str) -> str:
-            """Perform web search using Composio."""
-            try:
-                from composio import Action, ComposioToolSet
-                
-                toolset = ComposioToolSet(api_key=os.getenv("COMPOSIO_API_KEY"))
-                
-                print(f"Searching for: {search_query}")
-                result = toolset.execute_action(
-                    action=Action.COMPOSIO_SEARCH_SEARCH,
-                    params={"query": search_query},
-                )
-                return result["data"]
-            except Exception as e:
-                print(f"Warning: Composio search failed: {e}")
-                return f"Mock search results for: {search_query}"
-        
-        tools.append(Tool(
-            name="search",
-            description="Search the web for additional verification information",
-            func=composio_search_tool
-        ))
+        Args:
+            claim: The claim being verified
+            agent_results: List of findings from specialist agents
             
-        return tools
-        
-    async def synthesize(self, claim: str, agent_results: List[str]) -> str:
+        Returns:
+            Synthesized assessment with verdict and sources
         """
-        Synthesize all agent findings into a final assessment.
-        Returns a natural language summary with sources.
-        """
+        if not agent_results:
+            # If called without agent results, just do a direct verification
+            return await super().verify(claim)
         
-        # Format agent results for the synthesis prompt
+        # Format agent results for synthesis
         agent_summaries = self._format_agent_results(agent_results)
         
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", """You are the lead fact-checker synthesizing findings from multiple specialist agents.
+        # Create the synthesis request
+        synthesis_message = f"""CLAIM TO VERIFY: {claim}
 
-Your job is to:
-1. Review all agent assessments carefully
-2. Identify where agents agree and where they conflict
-3. Use the search tool if you need to resolve any ambiguities
-4. Produce a clear, natural language verdict
+=== SPECIALIST AGENT FINDINGS ===
 
-Consider:
-- Source credibility (government data > established media > blogs)
-- Recency of information
-- Consensus among agents
-- Any important caveats or context needed
-
-Your output should be a comprehensive natural language assessment that:
-- Clearly states whether the claim is accurate, false, misleading, or needs context
-- Explains the key evidence supporting your conclusion
-- Notes any important caveats or nuances
-- Is accessible to a general audience
-- Ends with a consolidated list of the most credible sources
-
-Format your response as:
-[Natural language assessment of the claim, explaining your verdict and reasoning]
-
-Sources:
-[Consolidated list of the most credible sources from all agents]
-
-Do NOT output confidence scores. Focus on clear, accessible explanation."""),
-            ("user", """Claim being verified: {claim}
-
-Agent Findings:
 {agent_summaries}
 
-Please synthesize these findings into a final verification assessment.""")
-        ])
-        
-        # Create ReAct agent for synthesis
-        synthesis_agent = create_react_agent(
-            model=self.model,
-            tools=self.tools,
-            prompt=prompt
-        )
+=== YOUR TASK ===
+
+Synthesize all agent findings into a comprehensive final assessment. 
+
+Steps to follow:
+1. Analyze areas of agreement and contradiction between agents
+2. Use search/scraping tools to resolve any ambiguities or verify conflicting information
+3. Cross-reference sources mentioned by different agents
+4. Determine the most credible conclusion based on evidence quality
+5. Provide a clear verdict with comprehensive reasoning
+
+Output format:
+VERDICT: [TRUE/FALSE/MISLEADING/PARTIALLY TRUE/UNVERIFIABLE]
+
+[Detailed natural language assessment explaining your reasoning, key evidence, and any important context or caveats]
+
+SOURCES:
+[Consolidated list of the most credible sources, with brief credibility notes]"""
         
         try:
-            # Format the user message with claim and agent summaries
-            user_message = f"""Claim being verified: {claim}
-
-Agent Findings:
-{agent_summaries}
-
-Please synthesize these findings into a final verification assessment."""
-            
-            result = await synthesis_agent.ainvoke({
-                "messages": [("user", user_message)]
+            result = await self.agent.ainvoke({
+                "messages": [("user", synthesis_message)]
             })
             
-            # Extract the final message
+            # Extract the final message from the agent
             if result.get("messages"):
                 last_message = result["messages"][-1]
                 if hasattr(last_message, "content"):
                     return last_message.content
-                    
-            return "Unable to synthesize findings."
+            
+            return "Unable to synthesize findings due to processing error."
             
         except Exception as e:
             return f"Synthesis failed: {str(e)}"
@@ -216,7 +193,7 @@ class ClaimVerificationOrchestrator:
         
         # Orchestrator synthesizes all findings
         print("Synthesizing agent findings...")
-        final_assessment = await self.orchestrator.synthesize(
+        final_assessment = await self.orchestrator.verify(
             claim=claim,
             agent_results=agent_results
         )

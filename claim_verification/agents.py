@@ -2,7 +2,6 @@
 Specialized verification agents for different types of fact-checking.
 """
 
-from langchain_core.prompts import ChatPromptTemplate
 from base_agent import BaseVerificationAgent
 
 
@@ -10,8 +9,7 @@ class NewsSearcherAgent(BaseVerificationAgent):
     """Agent specialized in searching and verifying news articles."""
     
     def get_prompt(self):
-        return ChatPromptTemplate.from_messages([
-            ("system", """You are a news verification specialist. Your job is to search recent news articles 
+        return """You are a news verification specialist. Your job is to search recent news articles 
 to verify or refute the given claim. 
 
 Focus on:
@@ -35,17 +33,14 @@ Your output should be natural language that includes:
 Format sources at the end with:
 <sources>
 - [Source Name] (URL): Brief description of what this source says
-</sources>"""),
-            ("user", "Verify this claim using news sources: {claim}")
-        ])
+</sources>"""
 
 
 class AcademicSearcherAgent(BaseVerificationAgent):
     """Agent specialized in searching academic and research sources."""
     
     def get_prompt(self):
-        return ChatPromptTemplate.from_messages([
-            ("system", """You are an academic research specialist. Search for peer-reviewed studies, 
+        return """You are an academic research specialist. Search for peer-reviewed studies, 
 academic papers, and scholarly sources that relate to the claim.
 
 Focus on:
@@ -73,17 +68,14 @@ Use accessible language - explain technical concepts clearly.
 Format sources at the end with:
 <sources>
 - [Study Title, Journal] (URL): Key finding and methodology notes
-</sources>"""),
-            ("user", "Find academic research related to: {claim}")
-        ])
+</sources>"""
 
 
 class FactCheckSearcherAgent(BaseVerificationAgent):
     """Agent specialized in searching existing fact-checks."""
     
     def get_prompt(self):
-        return ChatPromptTemplate.from_messages([
-            ("system", """You are a fact-checking specialist. Search established fact-checking 
+        return """You are a fact-checking specialist. Search established fact-checking 
 organizations to see if this claim has been previously verified.
 
 Check these sources:
@@ -111,17 +103,14 @@ Your output should summarize:
 Format sources at the end with:
 <sources>
 - [Fact-Checker Name] (URL): Their verdict and key reasoning
-</sources>"""),
-            ("user", "Check if fact-checkers have reviewed: {claim}")
-        ])
+</sources>"""
 
 
 class GovernmentDataAgent(BaseVerificationAgent):
     """Agent specialized in verifying claims using government data."""
     
     def get_prompt(self):
-        return ChatPromptTemplate.from_messages([
-            ("system", """You are a government data specialist. Search official government sources 
+        return """You are a government data specialist. Search official government sources 
 and databases for data relevant to this claim.
 
 Focus on:
@@ -147,17 +136,14 @@ Your output should explain:
 Format sources at the end with:
 <sources>
 - [Agency Name, Dataset] (URL): Specific data point and date
-</sources>"""),
-            ("user", "Verify using government data: {claim}")
-        ])
+</sources>"""
 
 
 class TemporalConsistencyAgent(BaseVerificationAgent):
     """Agent specialized in analyzing temporal aspects of claims."""
     
     def get_prompt(self):
-        return ChatPromptTemplate.from_messages([
-            ("system", """You are a temporal analysis specialist. Verify the time-related aspects 
+        return """You are a temporal analysis specialist. Verify the time-related aspects 
 of this claim.
 
 Investigate:
@@ -189,9 +175,7 @@ Your output should assess:
 Format sources at the end with:
 <sources>
 - [Source Name] (URL): What time period data this provides
-</sources>"""),
-            ("user", "Analyze the temporal accuracy of: {claim}")
-        ])
+</sources>"""
 
 
 # For easy access to all agents
