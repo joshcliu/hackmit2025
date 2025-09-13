@@ -174,6 +174,7 @@ def print_claims_summary(claims: List[ClaimMinimal], video_id: str):
     
     for i, claim in enumerate(claims, 1):
         print(f"\nClaim {i}:")
+        print(f"  Speaker: {claim.speaker}")
         print(f"  Time: {claim.start_s:.1f}s - {claim.end_s:.1f}s")
         print(f"  Importance: {claim.importance_score:.2f}")
         print(f"  Text: {claim.claim_text}")
@@ -202,6 +203,7 @@ def save_claims_json(claims: List[ClaimMinimal], video_id: str, output_file: str
                 "start_s": claim.start_s,
                 "end_s": claim.end_s,
                 "claim_text": claim.claim_text,
+                "speaker": claim.speaker,
                 "importance_score": claim.importance_score
             }
             for claim in claims
@@ -229,6 +231,7 @@ def save_high_importance_claims_json(claims: List[ClaimMinimal], video_id: str, 
                 "start_s": claim.start_s,
                 "end_s": claim.end_s,
                 "claim_text": claim.claim_text,
+                "speaker": claim.speaker,
                 "importance_score": claim.importance_score
             }
             for claim in high_importance_claims

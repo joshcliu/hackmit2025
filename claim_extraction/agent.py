@@ -26,6 +26,7 @@ class ClaimMinimal(BaseModel):
     start_s: float = Field(..., description="Start time (seconds) of the utterance containing the claim")
     end_s: float = Field(..., description="End time (seconds) of the utterance containing the claim")
     claim_text: str = Field(..., description="Atomic, normalized claim text (what to verify)")
+    speaker: str = Field(..., description="Name or identifier of the person who made the claim")
     importance_score: float = Field(..., description="Importance score from 0.0 to 1.0 indicating verification priority")
 
     @validator("end_s")
@@ -100,12 +101,17 @@ Guidelines for extraction:
    - Include necessary context within the claim text
    - IGNORE repeated or duplicate claims - only extract each unique claim once
 
-4. Handle timestamps:
+4. Identify the speaker:
+   - Determine who made each claim from context
+   - Use names, titles, or roles as appropriate
+   - If unclear from transcript, use "Unknown"
+
+5. Handle timestamps:
    - If timestamps are provided in the text, use them for start_s and end_s
    - If not provided, set both to 0.0 (the caller will handle this)
    - Ensure end_s >= start_s
 
-5. Assign importance scores (0.0 to 1.0) based on verification priority:
+6. Assign importance scores (0.0 to 1.0) based on verification priority:
    
    HIGH IMPORTANCE (0.8-1.0):
    - Unclear, polarizing but factual claims that require investigation: "The Biden administration has allowed millions of criminals to enter the country"
@@ -137,9 +143,9 @@ Text chunk from transcript:
 \"\"\"
 
 Extract all verifiable claims from this text chunk. Return them as structured output with:
-- claims: List of atomic, verifiable claims with video_id, timestamps, claim_text, and importance_score
+- claims: List of atomic, verifiable claims with video_id, timestamps, claim_text, speaker, and importance_score
 
-For each claim, assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")
+For each claim, identify the speaker and assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")
         ])
 
     async def aextract(self, video_id: str, chunk: str) -> ExtractionOutput:
