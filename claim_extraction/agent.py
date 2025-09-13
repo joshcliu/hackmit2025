@@ -108,24 +108,27 @@ Guidelines for extraction:
 5. Assign importance scores (0.0 to 1.0) based on verification priority:
    
    HIGH IMPORTANCE (0.8-1.0):
-   - Specific statistics: "Unemployment dropped to 3.5%"
-   - Concrete policy details: "I will cut taxes by $2000 per family"
-   - Verifiable historical claims: "The bill was signed in March 2021"
-   - Measurable outcomes: "Crime decreased by 15% in our city"
-   - News mentions: "A person named Amanda in Texas appeared on stage in Chicago and nearly bled out, having sepsis twice because she couldn't get medical care"
+   - Unclear, polarizing but factual claims that require investigation: "The Biden administration has allowed millions of criminals to enter the country"
+   - Disputed statistics or causation claims: "My policies caused unemployment to drop to 3.5%"
+   - Complex policy impact claims: "The Inflation Reduction Act will save families $2000 per year"
+   - Controversial historical interpretations: "The 2020 election had widespread irregularities"
+   - Specific personal anecdotes used as evidence: "A person named Amanda in Texas appeared on stage in Chicago and nearly bled out, having sepsis twice because she couldn't get medical care"
    
    MEDIUM IMPORTANCE (0.4-0.7):
+   - Simple factual statements that can be easily verified: "Donald Trump and Kamala Harris are currently tied in polling"
+   - Basic historical facts: "Roe vs. Wade was the law of the land for 52 years"
+   - Straightforward policy positions: "I will cut taxes by $2000 per family"
    - General policy positions: "I support universal healthcare"
    - Broad historical references: "We rebuilt our military"
-   - Comparative claims without specifics: "We're doing better than before"
+   - Measurable outcomes without disputed causation: "Crime decreased by 15% in our city"
    
    LOW IMPORTANCE (0.0-0.3):
    - Obvious factual statements: "J.D. Vance is Donald Trump's running mate"
-   - Defamatory/inflammatory claims: "Many people who came into the country are criminals"
-   - Subjective characterizations: "This is the greatest economy ever"
-   - Personal anecdotes: "I met a veteran who told me..."
+   - Pure opinion/subjective statements: "This is the greatest economy ever"
+   - Personal feelings: "I love my family"
+   - Vague promises: "We will make things better"
 
-   Prioritize claims that can be fact-checked with concrete data sources over those that are obvious, inflammatory, or purely subjective."""),
+   Reserve HIGH priority for claims that are factual but require significant investigation to verify due to complexity, disputed context, or polarizing nature."""),
             ("user", """Video ID: {video_id}
 
 Text chunk from transcript:
