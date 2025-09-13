@@ -122,17 +122,11 @@ Extract all verifiable claims from this text chunk. Return them as structured ou
                 return result
             
             # Fallback: return empty result if something unexpected happens
-            return ExtractionOutput(
-                claims=[],
-                notes="Failed to extract structured output from model response"
-            )
+            return ExtractionOutput(claims=[])
             
         except Exception as e:
-            # Return empty result with error note
-            return ExtractionOutput(
-                claims=[],
-                notes=f"Extraction failed: {str(e)}"
-            )
+            # Return empty result on error
+            return ExtractionOutput(claims=[])
 
     def extract(self, video_id: str, chunk: str) -> ExtractionOutput:
         """Sync wrapper for convenience (runs the underlying async call)."""
