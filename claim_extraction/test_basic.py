@@ -113,10 +113,6 @@ async def test_simple_extraction():
                 print(f"   {status} Claim {i}: video_id={c.video_id}, start={c.start_s}, end={c.end_s}")
                 print(f"      claim_text: '{c.claim_text}'")
             
-            # Print notes if available
-            if out.notes:
-                print(f"   Notes: {out.notes}")
-            
             return True
 
         print("❌ Extraction returned no claims or malformed output")

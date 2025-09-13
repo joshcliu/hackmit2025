@@ -42,10 +42,6 @@ class ExtractionOutput(BaseModel):
         default_factory=list,
         description="List of extracted claims from the text"
     )
-    notes: Optional[str] = Field(
-        default=None,
-        description="Optional notes from the extractor (e.g., heuristics applied, extraction confidence)",
-    )
 
 
 class ClaimExtractionAgent:
