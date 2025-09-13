@@ -26,12 +26,19 @@ class ClaimMinimal(BaseModel):
     start_s: float = Field(..., description="Start time (seconds) of the utterance containing the claim")
     end_s: float = Field(..., description="End time (seconds) of the utterance containing the claim")
     claim_text: str = Field(..., description="Atomic, normalized claim text (what to verify)")
+    importance_score: float = Field(..., description="Importance score from 0.0 to 1.0 indicating verification priority")
 
     @validator("end_s")
     def _end_after_start(cls, v, values):  # type: ignore[override]
         start = values.get("start_s")
         if start is not None and v < start:
             raise ValueError("end_s must be >= start_s")
+        return v
+
+    @validator("importance_score")
+    def _importance_in_range(cls, v):  # type: ignore[override]
+        if not 0.0 <= v <= 1.0:
+            raise ValueError("importance_score must be between 0.0 and 1.0")
         return v
 
 
@@ -91,11 +98,34 @@ Guidelines for extraction:
    - Each claim should be self-contained and independently verifiable
    - Break compound statements into separate claims
    - Include necessary context within the claim text
+   - IGNORE repeated or duplicate claims - only extract each unique claim once
 
 4. Handle timestamps:
    - If timestamps are provided in the text, use them for start_s and end_s
    - If not provided, set both to 0.0 (the caller will handle this)
-   - Ensure end_s >= start_s"""),
+   - Ensure end_s >= start_s
+
+5. Assign importance scores (0.0 to 1.0) based on verification priority:
+   
+   HIGH IMPORTANCE (0.8-1.0):
+   - Specific statistics: "Unemployment dropped to 3.5%"
+   - Concrete policy details: "I will cut taxes by $2000 per family"
+   - Verifiable historical claims: "The bill was signed in March 2021"
+   - Measurable outcomes: "Crime decreased by 15% in our city"
+   - News mentions: "A person named Amanda in Texas appeared on stage in Chicago and nearly bled out, having sepsis twice because she couldn't get medical care"
+   
+   MEDIUM IMPORTANCE (0.4-0.7):
+   - General policy positions: "I support universal healthcare"
+   - Broad historical references: "We rebuilt our military"
+   - Comparative claims without specifics: "We're doing better than before"
+   
+   LOW IMPORTANCE (0.0-0.3):
+   - Obvious factual statements: "J.D. Vance is Donald Trump's running mate"
+   - Defamatory/inflammatory claims: "Many people who came into the country are criminals"
+   - Subjective characterizations: "This is the greatest economy ever"
+   - Personal anecdotes: "I met a veteran who told me..."
+
+   Prioritize claims that can be fact-checked with concrete data sources over those that are obvious, inflammatory, or purely subjective."""),
             ("user", """Video ID: {video_id}
 
 Text chunk from transcript:
@@ -104,7 +134,9 @@ Text chunk from transcript:
 \"\"\"
 
 Extract all verifiable claims from this text chunk. Return them as structured output with:
-- claims: List of atomic, verifiable claims with video_id, timestamps, and claim_text""")
+- claims: List of atomic, verifiable claims with video_id, timestamps, claim_text, and importance_score
+
+For each claim, assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")
         ])
 
     async def aextract(self, video_id: str, chunk: str) -> ExtractionOutput:
@@ -115,7 +147,17 @@ Extract all verifiable claims from this text chunk. Return them as structured ou
             
             # The structured model should return an ExtractionOutput directly
             if isinstance(result, ExtractionOutput):
-                return result
+                # Deduplicate claims based on claim text (case-insensitive)
+                seen_claims = set()
+                unique_claims = []
+                
+                for claim in result.claims:
+                    claim_key = claim.claim_text.lower().strip()
+                    if claim_key not in seen_claims:
+                        seen_claims.add(claim_key)
+                        unique_claims.append(claim)
+                
+                return ExtractionOutput(claims=unique_claims)
             
             # Fallback: return empty result if something unexpected happens
             return ExtractionOutput(claims=[])

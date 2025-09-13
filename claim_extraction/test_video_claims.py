@@ -175,13 +175,18 @@ def print_claims_summary(claims: List[ClaimMinimal], video_id: str):
     for i, claim in enumerate(claims, 1):
         print(f"\nClaim {i}:")
         print(f"  Time: {claim.start_s:.1f}s - {claim.end_s:.1f}s")
+        print(f"  Importance: {claim.importance_score:.2f}")
         print(f"  Text: {claim.claim_text}")
     
     # Basic statistics
     if claims:
         avg_duration = sum(c.end_s - c.start_s for c in claims if c.end_s > c.start_s) / len(claims)
+        avg_importance = sum(c.importance_score for c in claims) / len(claims)
+        high_importance_count = sum(1 for c in claims if c.importance_score >= 0.8)
         print(f"\nStatistics:")
         print(f"  Average claim duration: {avg_duration:.1f}s")
+        print(f"  Average importance score: {avg_importance:.2f}")
+        print(f"  High importance claims (≥0.8): {high_importance_count}/{len(claims)}")
         print(f"  Shortest claim: {min(len(c.claim_text) for c in claims)} characters")
         print(f"  Longest claim: {max(len(c.claim_text) for c in claims)} characters")
 
@@ -196,7 +201,8 @@ def save_claims_json(claims: List[ClaimMinimal], video_id: str, output_file: str
                 "video_id": claim.video_id,
                 "start_s": claim.start_s,
                 "end_s": claim.end_s,
-                "claim_text": claim.claim_text
+                "claim_text": claim.claim_text,
+                "importance_score": claim.importance_score
             }
             for claim in claims
         ]
