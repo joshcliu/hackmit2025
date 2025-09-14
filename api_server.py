@@ -287,8 +287,8 @@ async def process_video_pipeline(video_id: str, session_id: str):
         extraction_agent = ClaimExtractionAgent()
         orchestrator = ClaimVerificationOrchestrator(anthropic_api_key=api_key)
         
-        # Create semaphore to limit concurrent verifications (3 at a time)
-        verification_semaphore = asyncio.Semaphore(3)
+        # Create semaphore to limit concurrent verifications (5 at a time)
+        verification_semaphore = asyncio.Semaphore(5)
         verification_tasks = []
         
         # Extract claims from chunks

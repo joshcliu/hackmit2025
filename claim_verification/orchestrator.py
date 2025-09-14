@@ -77,8 +77,8 @@ Tools at your disposal:
 
 You must provide a structured response with:
 1. verdict: Choose exactly one: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
-2. summary: Comprehensive explanation synthesizing all findings, evidence, and reasoning
-3. score: Rate 0-10 where 0=definitely false, 5=uncertain/mixed, 10=definitely true
+2. summary: Comprehensive yet concise explanation (one paragraph max) synthesizing all findings, evidence, and reasoning
+3. score: Rate 0-10 where 0=definitely false, 5=uncertain/mixed, 10=definitely true, on a decimal scale
 4. sources: List the most credible sources with URLs when available
 
 Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible."""
@@ -181,19 +181,25 @@ class ClaimVerificationOrchestrator:
             anthropic_api_key: API key for Claude
             composio_api_key: Optional API key for Composio (deprecated, use COMPOSIO_API_KEY env var)
         """
-        # Initialize Claude 4 Sonnet model
+        # Initialize Claude 4 Sonnet model for orchestrator
         self.model = ChatAnthropic(
             api_key=anthropic_api_key,
             model="claude-4-sonnet-20250514"
         )
         
-        # Initialize all agents
-        self.news_agent = NewsSearcherAgent(self.model)
-        self.academic_agent = AcademicSearcherAgent(self.model)
-        self.fact_check_agent = FactCheckSearcherAgent(self.model)
-        self.gov_data_agent = GovernmentDataAgent(self.model)
-        self.temporal_agent = TemporalConsistencyAgent(self.model)
-        self.orchestrator = OrchestratorAgent(self.model)
+        # Initialize Claude Haiku model for agents (faster and cheaper)
+        self.agent_model = ChatAnthropic(
+            api_key=anthropic_api_key,
+            model="claude-3-5-haiku-20241022"
+        )
+        
+        # Initialize all agents with Haiku model
+        self.news_agent = NewsSearcherAgent(self.agent_model)
+        self.academic_agent = AcademicSearcherAgent(self.agent_model)
+        self.fact_check_agent = FactCheckSearcherAgent(self.agent_model)
+        self.gov_data_agent = GovernmentDataAgent(self.agent_model)
+        self.temporal_agent = TemporalConsistencyAgent(self.agent_model)
+        self.orchestrator = OrchestratorAgent(self.model)  # Orchestrator uses Sonnet
         
         # TODO: Add memory system for contradiction detection
         self.memory = None
