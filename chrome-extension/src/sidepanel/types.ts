@@ -4,6 +4,8 @@ export interface Claim {
   type: 'Opinion' | 'Fact';
   score: number;
   synthesis: string;
+  isVerified?: boolean;
+  startSeconds?: number;
 }
 
 export interface Speaker {
