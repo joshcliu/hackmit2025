@@ -55,7 +55,17 @@ class OrchestratorAgent(BaseVerificationAgent):
     
     def get_prompt(self):
         """Return the synthesis-focused system prompt for the orchestrator."""
-        return """You are the lead fact-checker synthesizing findings from multiple specialist verification agents.
+        from datetime import datetime
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        
+        return f"""You are the lead fact-checker synthesizing findings from multiple specialist verification agents.
+
+CURRENT DATE: {current_date}
+
+CRITICAL: Trust the data and information gathered by your search tools and specialist agents over your own judgment. 
+If your tools or agents find information that seems surprising or contradictory to your expectations 
+(e.g., data that appears to be from the future, unexpected statistics, or counterintuitive facts), 
+you MUST report and synthesize what was found rather than dismissing it based on your preconceptions.
 
 Your role is to:
 1. Carefully analyze all agent assessments
@@ -81,7 +91,8 @@ You must provide a structured response with:
 3. score: Rate 0-10 where 0=definitely false, 5=uncertain/mixed, 10=definitely true, on a decimal scale
 4. sources: List the most credible sources with URLs when available
 
-Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible."""
+Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible. 
+Trust what your tools and agents find, even if the information seems unexpected or contradicts your training data."""
         
     async def verify(self, claim: str, agent_results: List[str] = None, video_context: str = "") -> VerificationResult:
         """
