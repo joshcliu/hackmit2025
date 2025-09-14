@@ -14,50 +14,6 @@ const timestampToSeconds = (timestamp: string): number => {
   return 0;
 };
 
-// Helper function to format exact quote text with proper capitalization and punctuation
-const formatExactQuote = (text: string): string => {
-  if (!text) return text;
-  
-  // Convert to lowercase first
-  let formatted = text.toLowerCase();
-  
-  // Capitalize first letter of the entire text
-  formatted = formatted.charAt(0).toUpperCase() + formatted.slice(1);
-  
-  // Capitalize after sentence-ending punctuation (. ! ?)
-  formatted = formatted.replace(/([.!?]\s+)([a-z])/g, (_, punctuation, letter) => 
-    punctuation + letter.toUpperCase()
-  );
-  
-  // Capitalize "I" when it's a standalone word
-  formatted = formatted.replace(/\bi\b/g, 'I');
-  
-  // Capitalize common proper nouns and abbreviations
-  const properNouns = ['america', 'american', 'usa', 'us', 'covid', 'nasa', 'fda', 'cdc', 'who', 'un', 'eu'];
-  properNouns.forEach(noun => {
-    const regex = new RegExp(`\\b${noun}\\b`, 'gi');
-    formatted = formatted.replace(regex, noun.toUpperCase());
-  });
-  
-  // Handle common contractions
-  formatted = formatted.replace(/\bi'm\b/g, "I'm");
-  formatted = formatted.replace(/\bdon't\b/g, "don't");
-  formatted = formatted.replace(/\bcan't\b/g, "can't");
-  formatted = formatted.replace(/\bwon't\b/g, "won't");
-  formatted = formatted.replace(/\bisn't\b/g, "isn't");
-  formatted = formatted.replace(/\baren't\b/g, "aren't");
-  formatted = formatted.replace(/\bwasn't\b/g, "wasn't");
-  formatted = formatted.replace(/\bweren't\b/g, "weren't");
-  formatted = formatted.replace(/\bhadn't\b/g, "hadn't");
-  formatted = formatted.replace(/\bhasn't\b/g, "hasn't");
-  formatted = formatted.replace(/\bhaven't\b/g, "haven't");
-  formatted = formatted.replace(/\bwouldn't\b/g, "wouldn't");
-  formatted = formatted.replace(/\bshouldn't\b/g, "shouldn't");
-  formatted = formatted.replace(/\bcouldn't\b/g, "couldn't");
-  
-  return formatted;
-};
-
 interface ClaimItemProps {
   claim: Claim;
   onTimestampClick?: (seconds: number) => void;
@@ -106,7 +62,7 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
     </div>
     <div className="mb-3">
       <p className="text-gray-100 mb-2 tracking-wide">{claim.text}</p>
-      <p className="text-gray-500 text-xs italic">"{formatExactQuote(claim.exactQuote)}"</p>
+      <p className="text-gray-500 italic" style={{ fontSize: '10px' }}>"{claim.exactQuote}"</p>
     </div>
       <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>
         <div className="synthesis-content">
