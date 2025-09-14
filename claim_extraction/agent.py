@@ -143,6 +143,10 @@ Guidelines for extraction:
    Reserve HIGH priority for claims about current or past events that are factual but disputed. Assign LOW priority to future predictions and unverifiable policy outcomes."""),
             ("user", """Video ID: {video_id}
 
+{video_context}
+
+{summary_context}
+
 Text chunk from transcript (format: "line_number [start_time + duration] TEXT"):
 \"\"\"
 {chunk}
@@ -155,15 +159,21 @@ IMPORTANT:
 - Parse timestamps carefully from the transcript format. For example: "134 [186.82s + 2.90s] >> SO I WAS RAISED AS A" means start_s=186.82, end_s=189.72
 - The ">>" symbol indicates a change in speaker - use this to identify who is making each claim
 - If a claim spans multiple lines, use the start of the first line and end of the last line
+- Use the video context and summary to better understand the overall topic and assign appropriate importance scores
 
 For each claim, identify the speaker and assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")
         ])
 
-    async def aextract(self, video_id: str, chunk: str) -> ExtractionOutput:
+    async def aextract(self, video_id: str, chunk: str, video_context: str = "", summary_context: str = "") -> ExtractionOutput:
         """Async extraction using the chain with structured output."""
         try:
-            # Invoke the chain with the video_id and chunk
-            result = await self.chain.ainvoke({"video_id": video_id, "chunk": chunk})
+            # Invoke the chain with the video_id, chunk, and context
+            result = await self.chain.ainvoke({
+                "video_id": video_id, 
+                "chunk": chunk,
+                "video_context": video_context,
+                "summary_context": summary_context
+            })
             
             # The structured model should return an ExtractionOutput directly
             if isinstance(result, ExtractionOutput):
@@ -186,7 +196,7 @@ For each claim, identify the speaker and assign an importance_score from 0.0 to 
             # Return empty result on error
             return ExtractionOutput(claims=[])
 
-    def extract(self, video_id: str, chunk: str) -> ExtractionOutput:
+    def extract(self, video_id: str, chunk: str, video_context: str = "", summary_context: str = "") -> ExtractionOutput:
         """Sync wrapper for convenience (runs the underlying async call)."""
         import asyncio
 
@@ -200,6 +210,6 @@ For each claim, identify the speaker and assign an importance_score from 0.0 to 
             # Use nest_asyncio for nested event loops
             import nest_asyncio
             nest_asyncio.apply()
-            return asyncio.run(self.aextract(video_id, chunk))
+            return asyncio.run(self.aextract(video_id, chunk, video_context, summary_context))
         else:
-            return loop.run_until_complete(self.aextract(video_id, chunk))
+            return loop.run_until_complete(self.aextract(video_id, chunk, video_context, summary_context))

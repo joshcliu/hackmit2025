@@ -196,15 +196,16 @@ class BaseVerificationAgent:
         """Override in subclasses with specialized prompts."""
         raise NotImplementedError("Subclasses must implement get_prompt()")
     
-    async def verify(self, claim: str) -> str:
+    async def verify(self, claim: str, video_context: str = "") -> str:
         """
         Run verification and return natural language assessment.
         
         For now returns natural language. XML parsing will be added later.
         """
         try:
-            # Format the claim with the appropriate prefix for this agent type
-            user_message = f"Verify this claim: {claim}"
+            # Format the claim with video context and appropriate prefix for this agent type
+            context_prefix = f"\n\n{video_context}\n\n" if video_context else ""
+            user_message = f"{context_prefix}Verify this claim: {claim}"
             
             result = await self.agent.ainvoke({"messages": [("user", user_message)]})
             
