@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Claim } from '../types';
 import { CheckCircle, AlertCircle } from 'lucide-react';
+import { MarkdownRenderer } from './MarkdownRenderer';
 
 // Helper function to convert timestamp string (e.g., "01:23") to seconds
 const timestampToSeconds = (timestamp: string): number => {
@@ -63,7 +64,7 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
       <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>
         <div className="synthesis-content">
           {claim.synthesis && (
-            <div className="pt-2 mt-2 border-t border-gray-700 space-y-3">
+            <div className="pt-2 mt-2 border-t border-gray-700 space-y-3 max-h-80 overflow-y-auto">
               {claim.verdict && (
                 <div className="flex items-center space-x-2">
                   <span className="text-xs uppercase tracking-wider text-gray-500">Verdict:</span>
@@ -79,7 +80,7 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
                 </div>
               )}
               
-              <p className="text-sm text-gray-400">{claim.synthesis}</p>
+              <MarkdownRenderer content={claim.synthesis} className="text-sm" />
               
               {claim.sources && claim.sources.length > 0 && (
                 <div className="mt-2">
