@@ -51,7 +51,7 @@ class BaseVerificationAgent:
                 
                 # Get Composio search tools
                 composio_tools = composio.tools.get(user_id=user_id, toolkits=["COMPOSIO_SEARCH"])
-                
+
                 # Create completion with search query
                 completion = openai_client.chat.completions.create(
                     model="gpt-4o",
