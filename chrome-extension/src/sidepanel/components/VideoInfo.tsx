@@ -1,4 +1,4 @@
-import { Gauge } from 'lucide-react';
+import { GaugeComponent } from './GaugeComponent';
 import { Claim } from '../types';
 
 interface VideoInfoProps {
@@ -6,11 +6,6 @@ interface VideoInfoProps {
   videoTitle: string;
 }
 
-const getScoreColor = (score: number) => {
-  if (score >= 7) return 'text-green-500';
-  if (score >= 4) return 'text-yellow-500';
-  return 'text-red-500';
-};
 
 export const VideoInfo = ({ claims, videoTitle }: VideoInfoProps) => {
   const averageScore = claims.length > 0
@@ -25,7 +20,7 @@ export const VideoInfo = ({ claims, videoTitle }: VideoInfoProps) => {
   return (
     <div className="p-4 bg-black border-b border-custom-gold">
       {/* Video Title */}
-      <h2 className="text-lg font-serif font-bold text-white mb-4 truncate">{videoTitle}</h2>
+      <h2 className="text-lg font-bold text-white mb-4 truncate">{videoTitle}</h2>
       
       <div className="flex items-start justify-between gap-6">
         {/* Left side: Claims Tally */}
@@ -51,7 +46,7 @@ export const VideoInfo = ({ claims, videoTitle }: VideoInfoProps) => {
         <div className="text-center flex-shrink-0">
           <h3 className="text-sm font-semibold text-custom-gold uppercase tracking-wider">Overall Score</h3>
           <div className="flex flex-col items-center mt-2">
-            <Gauge className={`h-12 w-12 ${getScoreColor(averageScore)}`} />
+            <GaugeComponent score={averageScore} />
             <span className="text-xl font-bold text-white mt-1">{averageScore.toFixed(1)}</span>
           </div>
         </div>

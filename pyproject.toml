@@ -21,6 +21,8 @@ dependencies = [
     "redis[hiredis]",
     "httpx",
     "nest-asyncio>=1.5.0",
+    "composio",
+    "youtube-transcript-api",
 ]
 
 [project.optional-dependencies]

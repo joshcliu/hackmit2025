@@ -51,7 +51,7 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
         {claim.score.toFixed(1)}
       </div>
     </div>
-    <p className="text-gray-100 mb-3">{claim.text}</p>
+    <p className="text-gray-100 mb-3 tracking-wide">{claim.text}</p>
       <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>
         <div className="synthesis-content">
           {claim.synthesis && (
