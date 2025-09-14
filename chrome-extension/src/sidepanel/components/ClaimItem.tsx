@@ -88,7 +88,7 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
                   <ul className="text-xs text-gray-400 space-y-1">
                     {claim.sources.map((source, idx) => (
                       <li key={idx} className="pl-2 border-l border-gray-700">
-                        {source}
+                        <MarkdownRenderer content={source} className="text-xs" />
                       </li>
                     ))}
                   </ul>
