@@ -5,7 +5,7 @@ Main orchestration loop that processes video transcripts end-to-end:
 3. Creates C_i parallel verification agents for each extracted claim
 4. Outputs final results
 
-Uses agents from claim_extraction/ and claim_verification/ packages.
+Uses agents from agents/claim_extraction/ and agents/claim_verification/ packages.
 """
 import asyncio
 import os
@@ -15,10 +15,10 @@ import json
 from datetime import datetime
 
 # Import extraction agent
-from claim_extraction import ClaimExtractionAgent, ClaimMinimal, ExtractionOutput
+from agents.claim_extraction import ClaimExtractionAgent, ClaimMinimal, ExtractionOutput
 
 # Import verification orchestrator
-from claim_verification.orchestrator import ClaimVerificationOrchestrator
+from agents.claim_verification.orchestrator import ClaimVerificationOrchestrator
 
 
 @dataclass

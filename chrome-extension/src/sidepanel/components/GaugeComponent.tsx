@@ -9,6 +9,13 @@ const getScoreColor = (score: number) => {
 };
 
 export const GaugeComponent = ({ score }: GaugeComponentProps) => {
+  if (score === -1) {
+    return (
+      <div style={{ width: '100px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="animate-spin w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full"></div>
+      </div>
+    );
+  }
   const normalizedScore = Math.max(0, Math.min(10, score));
   const rotation = (normalizedScore / 10) * 180 - 90;
   const color = getScoreColor(score);
