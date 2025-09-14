@@ -8,6 +8,9 @@ from langgraph.prebuilt import create_react_agent
 from langchain_anthropic import ChatAnthropic
 from langchain_core.tools import Tool
 import asyncio
+from composio import Composio
+from openai import OpenAI
+import json
 
 
 class SourceInfo(BaseModel):
@@ -35,93 +38,135 @@ class BaseVerificationAgent:
     def _setup_tools(self):
         """Setup web search and scraping tools."""
         tools = []
-        search_tool_loaded = False
         
-        # Primary option: DuckDuckGo (free, no API key required!)
-        # This is the simplest and most reliable option
-        try:
-            from langchain_community.tools import DuckDuckGoSearchResults
-            
-            # Initialize DuckDuckGo search (no API key needed!)
-            search_tool = DuckDuckGoSearchResults(
-                num_results=5,
-                name="duckduckgo_search",
-                description="Search the web for information using DuckDuckGo (free, no API key required)"
-            )
-            tools.append(search_tool)
-            print("✅ Loaded DuckDuckGo search tool (free)")
-            search_tool_loaded = True
-            
-        except ImportError:
-            print("⚠️  langchain-community not installed. Install with: pip install langchain-community duckduckgo-search")
-        except Exception as e:
-            print(f"⚠️  Failed to initialize DuckDuckGo: {e}")
-        
-        # Final fallback to mock search if nothing else works
-        if not search_tool_loaded:
-            def mock_search(query: str) -> str:
-                return f"Mock search results for: {query}\nNote: Install langchain-community for real search"
-            
-            tools.append(Tool(
-                name="web_search",
-                description="Search the web for information (mock mode - install langchain-community)",
-                func=mock_search
-            ))
-            print("⚠️  Using mock search tool (install langchain-community for real search)")
-        
-        # Add Crawl4AI scraping tool
-        def scrape_page(url: str) -> str:
-            """Scrape a webpage using Crawl4AI and return clean text content."""
+        # Web search tool using Composio
+        def web_search(query: str) -> str:
+            """Search the web for information related to the query using Composio."""
             try:
-                # Import Crawl4AI components
+                openai_client = OpenAI()
+                composio = Composio()
+                
+                # User ID must be a valid UUID format
+                user_id = "0000-0000-0000"  # Replace with actual user UUID from your database
+                
+                # Get Composio search tools
+                composio_tools = composio.tools.get(user_id=user_id, toolkits=["COMPOSIO_SEARCH"])
+                
+                # Create completion with search query
+                completion = openai_client.chat.completions.create(
+                    model="gpt-4o",
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": f"Search for information about: {query}",
+                        },
+                    ],
+                    tools=composio_tools,
+                )
+                
+                # Handle result from tool call
+                result = composio.provider.handle_tool_calls(user_id=user_id, response=completion)
+                
+                # Extract and return the search results
+                if result:
+                    return json.dumps(result, indent=2)
+                else:
+                    return f"No results found for query: {query}"
+                    
+            except Exception as e:
+                return f"Search failed: {str(e)}"
+        
+        tools.append(Tool(
+            name="web_search",
+            description="Search the web for information to verify claims using Composio",
+            func=web_search
+        ))
+        
+        # Add web scraping tool with fallback options
+        def scrape_page(url: str) -> str:
+            """Scrape a webpage and return clean text content."""
+            # First try: Crawl4AI (if properly set up)
+            try:
                 from crawl4ai import AsyncWebCrawler
                 
-                # Create an async wrapper to run Crawl4AI in sync context
                 async def async_scrape():
                     try:
-                        # Initialize the crawler
                         async with AsyncWebCrawler(verbose=False) as crawler:
-                            # Crawl the page
                             result = await crawler.arun(
                                 url=url,
                                 bypass_cache=True,
-                                # Use markdown format for better readability
                                 word_count_threshold=10,
                                 excluded_tags=['script', 'style'],
                                 remove_overlay=True
                             )
                             
                             if result.success:
-                                # Return the markdown content which is cleaner
                                 content = result.markdown if result.markdown else result.cleaned_html
-                                # Truncate if too long
                                 if len(content) > 5000:
                                     content = content[:5000] + "\n\n[Content truncated...]"
                                 return f"Successfully scraped {url}:\n\n{content}"
                             else:
-                                return f"Failed to scrape {url}: {result.error_message if hasattr(result, 'error_message') else 'Unknown error'}"
-                    except Exception as e:
-                        return f"Error during crawling: {str(e)}"
+                                return None  # Signal to try fallback
+                    except Exception:
+                        return None  # Signal to try fallback
                 
-                # Run the async function in a sync context
-                # Check if there's already an event loop running
+                # Try to run Crawl4AI
                 try:
                     asyncio.get_running_loop()
-                    # If we're already in an async context, create a new thread
                     import concurrent.futures
                     with concurrent.futures.ThreadPoolExecutor() as executor:
                         future = executor.submit(asyncio.run, async_scrape())
-                        return future.result(timeout=30)
+                        result = future.result(timeout=30)
+                        if result:
+                            return result
                 except RuntimeError:
-                    # No event loop running, we can use asyncio.run directly
-                    return asyncio.run(async_scrape())
-                    
-            except ImportError as e:
-                print(f"Warning: Crawl4AI not installed: {e}")
-                return "Crawl4AI not available. Please install it with: pip install crawl4ai"
+                    result = asyncio.run(async_scrape())
+                    if result:
+                        return result
+                        
+            except ImportError:
+                pass  # Fall through to backup methods
             except Exception as e:
-                print(f"Warning: Scraping failed: {e}")
-                return f"Error scraping {url}: {str(e)}"
+                if "Executable doesn't exist" in str(e) or "playwright" in str(e).lower():
+                    print("⚠️  Playwright browsers not installed. Run 'playwright install' to use Crawl4AI")
+                else:
+                    print(f"⚠️  Crawl4AI failed: {e}")
+            
+            # Fallback 1: Try requests + BeautifulSoup
+            try:
+                import requests
+                from bs4 import BeautifulSoup
+                
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+                }
+                response = requests.get(url, headers=headers, timeout=10)
+                response.raise_for_status()
+                
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                # Remove script and style elements
+                for script in soup(["script", "style"]):
+                    script.decompose()
+                
+                # Get text content
+                text = soup.get_text()
+                
+                # Clean up whitespace
+                lines = (line.strip() for line in text.splitlines())
+                chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+                text = ' '.join(chunk for chunk in chunks if chunk)
+                
+                # Truncate if too long
+                if len(text) > 5000:
+                    text = text[:5000] + "\n\n[Content truncated...]"
+                
+                return f"Successfully scraped {url} (using requests+BeautifulSoup):\n\n{text}"
+                
+            except ImportError:
+                return f"Could not scrape {url}: Missing dependencies. Install with: pip install requests beautifulsoup4"
+            except Exception as e:
+                return f"Failed to scrape {url}: {str(e)}"
         
         tools.append(Tool(
             name="scrape_page",
