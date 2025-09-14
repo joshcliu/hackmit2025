@@ -26,6 +26,29 @@ graph TB
         B --> C[WebSocket Client]
     end
     
+class Source:
+    title: str
+    url: str
+    credibility: Literal["high", "medium", "low"]
+    relevant_quote: str
+
+### Minimal Claim Schema (Verifier Input)
+
+For transcript-based processing, each extracted claim fed into the verifier should use this minimal structure.
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class ClaimForVerification:
+    """Minimal claim payload produced by the extractor and consumed by the verifier."""
+    video_id: str   # YouTube video ID
+    start_s: float  # start time (seconds) of the utterance containing the claim
+    end_s: float    # end time (seconds) of the utterance containing the claim
+    exact_quote: str # exact quote from the transcript containing the claim
+    claim_text: str # atomic, normalized claim text (cleaned and concise version for verification)
+    speaker: str    # name or identifier of the person who made the claim
+    importance_score: float # importance score from 0.0 to 1.0 indicating verification priority
     subgraph "FastAPI Backend"
         C <--> D[WebSocket Server]
         D --> E[Claim Extraction Agent]
@@ -47,6 +70,11 @@ graph TB
     end
 ```
 
+Notes:
+- `exact_quote` preserves the original wording, capitalization, and speech patterns from the transcript
+- `claim_text` is a cleaned, clear, and concise version suitable for fact-checking (normalized grammar, removed filler words, complete sentence)
+- `start_s`/`end_s` refer to the transcript time bounds that cover this claim (can span multiple caption snippets if merged into a sentence)
+- `importance_score` helps prioritize which claims to verify first (0.8-1.0 for high priority disputed claims, 0.4-0.7 for medium priority factual statements, 0.0-0.3 for low priority obvious facts)
 ## 🚀 Quick Start
 
 ### Prerequisites

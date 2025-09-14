@@ -101,6 +101,7 @@ class ClaimWithVerification(BaseModel):
     video_id: str
     start_s: float
     end_s: float
+    exact_quote: str
     claim_text: str
     speaker: str
     importance_score: float
@@ -198,7 +199,7 @@ async def verify_single_claim(claim, orchestrator, session_id: str, manager: Con
             })
             
             # Verify the claim and get structured result
-            verification_result = await orchestrator.verify_claim(claim.claim_text, video_context)
+            verification_result = await orchestrator.verify_claim(claim.claim_text, video_context, exact_quote=claim.exact_quote)
             
             # Map verdict to status
             verdict_status_map = {
@@ -219,6 +220,7 @@ async def verify_single_claim(claim, orchestrator, session_id: str, manager: Con
                     "video_id": claim.video_id,
                     "start_s": claim.start_s,
                     "end_s": claim.end_s,
+                    "exact_quote": claim.exact_quote,
                     "claim_text": claim.claim_text,
                     "speaker": claim.speaker,
                     "importance_score": claim.importance_score,
@@ -317,6 +319,7 @@ async def process_video_pipeline(video_id: str, session_id: str):
                         "video_id": claim.video_id,
                         "start_s": claim.start_s,
                         "end_s": claim.end_s,
+                        "exact_quote": claim.exact_quote,
                         "claim_text": claim.claim_text,
                         "speaker": claim.speaker,
                         "importance_score": claim.importance_score,
