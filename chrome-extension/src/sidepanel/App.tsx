@@ -27,13 +27,13 @@ export default function App() {
       return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
 
-    // Determine type based on importance score
-    const type = apiClaim.importance_score >= 0.7 ? 'Fact' : 'Opinion';
+    // Determine type based on verification status
+    const type = apiClaim.verification_status ? 'Fact' : 'Opinion';
 
-    // Use verification score if available, otherwise map importance score to 0-10 scale
+    // Only use verification score if available, otherwise don't show a score
     const score = apiClaim.verification_score !== undefined 
       ? apiClaim.verification_score 
-      : apiClaim.importance_score * 10;
+      : -1; // -1 indicates no score to display
 
     return {
       timestamp: formatTime(apiClaim.start_s),
@@ -41,6 +41,8 @@ export default function App() {
       type,
       score,
       synthesis: apiClaim.verification_summary || `Speaker: ${apiClaim.speaker}`,
+      isVerified: apiClaim.verification_status !== undefined && apiClaim.verification_status !== 'pending',
+      startSeconds: apiClaim.start_s, // Keep raw seconds for sorting
     };
   };
 

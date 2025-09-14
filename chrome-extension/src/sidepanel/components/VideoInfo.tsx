@@ -8,14 +8,16 @@ interface VideoInfoProps {
 
 
 export const VideoInfo = ({ claims, videoTitle }: VideoInfoProps) => {
-  const averageScore = claims.length > 0
-    ? claims.reduce((acc, claim) => acc + claim.score, 0) / claims.length
-    : 0;
+  // Only calculate average for verified claims (score >= 0)
+  const verifiedClaims = claims.filter(claim => claim.score >= 0);
+  const averageScore = verifiedClaims.length > 0
+    ? verifiedClaims.reduce((acc, claim) => acc + claim.score, 0) / verifiedClaims.length
+    : -1; // -1 indicates no verified claims yet
 
-  // Categorize claims based on score
-  const validClaims = claims.filter(claim => claim.score >= 7).length;
-  const flaggedClaims = claims.filter(claim => claim.score >= 4 && claim.score < 7).length;
-  const wrongClaims = claims.filter(claim => claim.score < 4).length;
+  // Categorize only verified claims based on score
+  const validClaims = verifiedClaims.filter(claim => claim.score >= 7).length;
+  const flaggedClaims = verifiedClaims.filter(claim => claim.score >= 4 && claim.score < 7).length;
+  const wrongClaims = verifiedClaims.filter(claim => claim.score >= 0 && claim.score < 4).length;
 
   return (
     <div className="p-4 bg-black border-b border-custom-gold">
@@ -46,8 +48,19 @@ export const VideoInfo = ({ claims, videoTitle }: VideoInfoProps) => {
         <div className="text-center flex-shrink-0">
           <h3 className="text-sm font-semibold text-custom-gold uppercase tracking-wider">Overall Score</h3>
           <div className="flex flex-col items-center mt-2">
-            <GaugeComponent score={averageScore} />
-            <span className="text-xl font-bold text-white mt-1">{averageScore.toFixed(1)}</span>
+            {averageScore >= 0 ? (
+              <>
+                <GaugeComponent score={averageScore} />
+                <span className="text-xl font-bold text-white mt-1">{averageScore.toFixed(1)}</span>
+              </>
+            ) : (
+              <>
+                <div className="w-20 h-20 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">Pending</span>
+                </div>
+                <span className="text-xl font-bold text-gray-500 mt-1">--</span>
+              </>
+            )}
           </div>
         </div>
       </div>

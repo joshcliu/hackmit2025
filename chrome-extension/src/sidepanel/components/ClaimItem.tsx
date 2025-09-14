@@ -26,6 +26,7 @@ const getScoreColor = (score: number) => {
 
 export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const hasScore = claim.score >= 0; // Check if we have a valid score to display
 
   return (
   <div className="glowing-card bg-black p-4 rounded-lg cursor-pointer" onClick={() => setIsOpen(!isOpen)} >
@@ -42,14 +43,21 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
           {claim.timestamp}
         </span>
       </div>
-      <div className={`flex items-center font-bold text-base ${getScoreColor(claim.score)}`}>
-        {claim.type === 'Fact' ? (
-          <CheckCircle className="h-5 w-5 mr-1" />
-        ) : (
-          <AlertCircle className="h-5 w-5 mr-1" />
-        )}
-        {claim.score.toFixed(1)}
-      </div>
+      {hasScore ? (
+        <div className={`flex items-center font-bold text-base ${getScoreColor(claim.score)}`}>
+          {claim.isVerified ? (
+            <CheckCircle className="h-5 w-5 mr-1" />
+          ) : (
+            <AlertCircle className="h-5 w-5 mr-1" />
+          )}
+          {claim.score.toFixed(1)}
+        </div>
+      ) : (
+        <div className="flex items-center text-gray-500 text-sm">
+          <AlertCircle className="h-4 w-4 mr-1" />
+          <span>Pending</span>
+        </div>
+      )}
     </div>
     <p className="text-gray-100 mb-3 tracking-wide">{claim.text}</p>
       <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>

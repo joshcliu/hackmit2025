@@ -174,6 +174,58 @@ def chunk_transcript(transcript: List[Dict[str, Any]], chunk_size_seconds: float
     
     return chunks
 
+async def verify_single_claim(claim, orchestrator, session_id: str, manager: ConnectionManager):
+    """
+    Verify a single claim asynchronously.
+    """
+    try:
+        # Send verification start
+        await manager.send_message(session_id, {
+            "type": "verification_start",
+            "claim_text": claim.claim_text[:100]
+        })
+        
+        # Verify the claim
+        verification_result = await orchestrator.verify_claim(claim.claim_text)
+        
+        # Parse verification result
+        verification_score = 5.0  # Default middle score
+        verification_status = "unverified"
+        
+        # Simple parsing of verdict
+        if "TRUE" in verification_result.upper()[:100]:
+            verification_score = 8.5
+            verification_status = "verified"
+        elif "FALSE" in verification_result.upper()[:100]:
+            verification_score = 2.0
+            verification_status = "false"
+        elif "MISLEADING" in verification_result.upper()[:100]:
+            verification_score = 4.0
+            verification_status = "misleading"
+        elif "PARTIALLY TRUE" in verification_result.upper()[:100]:
+            verification_score = 6.0
+            verification_status = "partial"
+        
+        # Send verification result
+        await manager.send_message(session_id, {
+            "type": "claim_verified",
+            "claim": {
+                "video_id": claim.video_id,
+                "start_s": claim.start_s,
+                "end_s": claim.end_s,
+                "claim_text": claim.claim_text,
+                "speaker": claim.speaker,
+                "importance_score": claim.importance_score,
+                "verification_status": verification_status,
+                "verification_score": verification_score,
+                "verification_summary": verification_result[:500]  # First 500 chars
+            }
+        })
+        
+    except Exception as e:
+        print(f"Error verifying claim '{claim.claim_text[:50]}...': {e}")
+
+
 async def process_video_pipeline(video_id: str, session_id: str):
     """
     Main pipeline for processing a video:
@@ -203,12 +255,13 @@ async def process_video_pipeline(video_id: str, session_id: str):
         # Chunk transcript
         chunks = chunk_transcript(transcript, chunk_size_seconds=60.0)
         
-        # Initialize extraction agent
+        # Initialize extraction agent and verification orchestrator
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
             raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY not configured")
         
         extraction_agent = ClaimExtractionAgent()
+        orchestrator = ClaimVerificationOrchestrator(anthropic_api_key=api_key)
         
         # Extract claims from chunks
         await manager.send_message(session_id, {
@@ -230,7 +283,7 @@ async def process_video_pipeline(video_id: str, session_id: str):
                     "claims_found": len(result.claims)
                 })
                 
-                # Send each claim as it's extracted
+                # Send each claim as it's extracted and immediately verify if high importance
                 for claim in result.claims:
                     claim_dict = {
                         "video_id": claim.video_id,
@@ -248,83 +301,31 @@ async def process_video_pipeline(video_id: str, session_id: str):
                         "claim": claim_dict
                     })
                     
+                    # Immediately verify high-importance claims
+                    if claim.importance_score >= 0.7:
+                        # Start verification in background
+                        asyncio.create_task(verify_single_claim(
+                            claim, orchestrator, session_id, manager
+                        ))
+                    
             except Exception as e:
                 print(f"Error processing chunk {i+1}: {e}")
                 continue
         
-        # Filter for high-importance claims to verify
-        high_importance_claims = [c for c in all_claims if c.importance_score >= 0.7]
+        # Wait a bit for any ongoing verifications to complete
+        await asyncio.sleep(2)
         
-        if high_importance_claims:
-            # Initialize verification orchestrator
-            await manager.send_message(session_id, {
-                "type": "status",
-                "status": "verifying_claims",
-                "message": f"Verifying {len(high_importance_claims)} high-importance claims..."
-            })
-            
-            orchestrator = ClaimVerificationOrchestrator(anthropic_api_key=api_key)
-            
-            # Verify each high-importance claim
-            for i, claim in enumerate(high_importance_claims):
-                try:
-                    # Send verification start
-                    await manager.send_message(session_id, {
-                        "type": "verification_start",
-                        "claim_index": i + 1,
-                        "total_claims": len(high_importance_claims),
-                        "claim_text": claim.claim_text
-                    })
-                    
-                    # Verify the claim
-                    verification_result = await orchestrator.verify_claim(claim.claim_text)
-                    
-                    # Parse verification result
-                    verification_score = 5.0  # Default middle score
-                    verification_status = "unverified"
-                    
-                    # Simple parsing of verdict
-                    if "TRUE" in verification_result.upper()[:100]:
-                        verification_score = 8.5
-                        verification_status = "verified"
-                    elif "FALSE" in verification_result.upper()[:100]:
-                        verification_score = 2.0
-                        verification_status = "false"
-                    elif "MISLEADING" in verification_result.upper()[:100]:
-                        verification_score = 4.0
-                        verification_status = "misleading"
-                    elif "PARTIALLY TRUE" in verification_result.upper()[:100]:
-                        verification_score = 6.0
-                        verification_status = "partial"
-                    
-                    # Send verification result
-                    await manager.send_message(session_id, {
-                        "type": "claim_verified",
-                        "claim": {
-                            "video_id": claim.video_id,
-                            "start_s": claim.start_s,
-                            "end_s": claim.end_s,
-                            "claim_text": claim.claim_text,
-                            "speaker": claim.speaker,
-                            "importance_score": claim.importance_score,
-                            "verification_status": verification_status,
-                            "verification_score": verification_score,
-                            "verification_summary": verification_result[:500]  # First 500 chars
-                        }
-                    })
-                    
-                except Exception as e:
-                    print(f"Error verifying claim {i+1}: {e}")
-                    continue
+        # Count high-importance claims that were verified
+        high_importance_count = len([c for c in all_claims if c.importance_score >= 0.7])
         
         # Send completion
         await manager.send_message(session_id, {
             "type": "complete",
             "status": "completed",
-            "message": f"Processing complete. Extracted {len(all_claims)} claims, verified {len(high_importance_claims)}.",
+            "message": f"Processing complete. Extracted {len(all_claims)} claims, verified {high_importance_count} high-importance claims.",
             "summary": {
                 "total_claims": len(all_claims),
-                "verified_claims": len(high_importance_claims),
+                "verified_claims": high_importance_count,
                 "video_id": video_id
             }
         })
