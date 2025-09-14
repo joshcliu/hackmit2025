@@ -329,6 +329,9 @@ export default function App() {
                 <>
                   <div className="animate-spin w-12 h-12 border-4 border-custom-gold border-t-transparent rounded-full mx-auto mb-4"></div>
                   <p className="text-gray-400">Processing video transcript...</p>
+                  {processingStatus && (
+                    <p className="text-sm text-custom-gold mt-2">{processingStatus}</p>
+                  )}
                   <p className="text-sm text-gray-500 mt-2">This may take a few minutes</p>
                 </>
               ) : (
