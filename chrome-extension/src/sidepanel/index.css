@@ -31,7 +31,8 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;  /* Thin vertical scrollbar */
+  height: 4px; /* Thin horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -40,9 +41,14 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #d7b58c;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #b5946f;
+}
+
+/* Corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background: #000;
 }
