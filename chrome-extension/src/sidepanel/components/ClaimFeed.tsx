@@ -6,9 +6,11 @@ interface ClaimFeedProps {
   claims: Claim[];
   onTimestampClick?: (seconds: number) => void;
   autoScroll?: boolean;
+  scrollToClaimText?: string | null;
+  onScrollComplete?: () => void;
 }
 
-export const ClaimFeed = ({ claims, onTimestampClick, autoScroll }: ClaimFeedProps) => {
+export const ClaimFeed = ({ claims, onTimestampClick, autoScroll, scrollToClaimText, onScrollComplete }: ClaimFeedProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Sort claims: verified first, then by timestamp within each group
@@ -31,7 +33,25 @@ export const ClaimFeed = ({ claims, onTimestampClick, autoScroll }: ClaimFeedPro
         behavior: 'smooth'
       });
     }
-  }, [claims.length, autoScroll]);
+    }, [claims.length, autoScroll]);
+
+  // Scroll to a specific claim when requested
+  useEffect(() => {
+    if (scrollToClaimText && scrollRef.current) {
+      // Find the element with the matching data attribute
+      const claimElement = Array.from(
+        scrollRef.current.querySelectorAll('[data-claim-text]')
+      ).find(
+        (el) => (el as HTMLElement).dataset.claimText === scrollToClaimText
+      );
+
+      if (claimElement) {
+        claimElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Reset the scroll trigger once we've scrolled
+        onScrollComplete?.();
+      }
+    }
+  }, [scrollToClaimText, onScrollComplete]);
 
   // Group claims by verification status for visual separation
   const verifiedClaims = sortedClaims.filter(c => c.isVerified);
@@ -43,7 +63,9 @@ export const ClaimFeed = ({ claims, onTimestampClick, autoScroll }: ClaimFeedPro
       <>
         <div className="text-xs uppercase tracking-wider text-custom-gold mb-2">Verified Claims</div>
         {verifiedClaims.map((claim, index) => (
-          <ClaimItem key={`verified-${index}`} claim={claim} onTimestampClick={onTimestampClick} />
+                    <div key={`verified-${index}`} data-claim-text={claim.text}>
+            <ClaimItem claim={claim} onTimestampClick={onTimestampClick} />
+          </div>
         ))}
       </>
     )}
@@ -53,7 +75,9 @@ export const ClaimFeed = ({ claims, onTimestampClick, autoScroll }: ClaimFeedPro
         {verifiedClaims.length > 0 && <div className="mt-6" />}
         <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">Unverified Claims</div>
         {unverifiedClaims.map((claim, index) => (
-          <ClaimItem key={`unverified-${index}`} claim={claim} onTimestampClick={onTimestampClick} />
+                    <div key={`unverified-${index}`} data-claim-text={claim.text}>
+            <ClaimItem claim={claim} onTimestampClick={onTimestampClick} />
+          </div>
         ))}
       </>
     )}
