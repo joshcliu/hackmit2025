@@ -25,7 +25,8 @@ class ClaimMinimal(BaseModel):
     video_id: str = Field(..., description="YouTube video ID")
     start_s: float = Field(..., description="Start time (seconds) of the utterance containing the claim")
     end_s: float = Field(..., description="End time (seconds) of the utterance containing the claim")
-    claim_text: str = Field(..., description="Atomic, normalized claim text (what to verify)")
+    exact_quote: str = Field(..., description="Exact quote from the transcript containing the claim")
+    claim_text: str = Field(..., description="Atomic, normalized claim text (what to verify) - cleaned and concise version")
     speaker: str = Field(..., description="Name or identifier of the person who made the claim")
     importance_score: float = Field(..., description="Importance score from 0.0 to 1.0 indicating verification priority")
 
@@ -153,13 +154,17 @@ Text chunk from transcript (format: "line_number [start_time + duration] TEXT"):
 \"\"\"
 
 Extract all verifiable claims from this text chunk. Return them as structured output with:
-- claims: List of atomic, verifiable claims with video_id, timestamps, claim_text, speaker, and importance_score
+- claims: List of atomic, verifiable claims with video_id, timestamps, exact_quote, claim_text, speaker, and importance_score
 
 IMPORTANT: 
 - Parse timestamps carefully from the transcript format. For example: "134 [186.82s + 2.90s] >> SO I WAS RAISED AS A" means start_s=186.82, end_s=189.72
 - The ">>" symbol indicates a change in speaker - use this to identify who is making each claim
 - If a claim spans multiple lines, use the start of the first line and end of the last line
 - Use the video context and summary to better understand the overall topic and assign appropriate importance scores
+
+For each claim, provide BOTH:
+1. exact_quote: The EXACT text from the transcript that contains the claim (preserve original wording, capitalization, and any speech patterns)
+2. claim_text: A cleaned, clear, and concise version of the claim that is suitable for fact-checking (normalize grammar, remove filler words, make it a complete sentence)
 
 For each claim, identify the speaker and assign an importance_score from 0.0 to 1.0 based on the guidelines above.""")
         ])

@@ -160,13 +160,17 @@ class ClaimForVerification:
     video_id: str   # YouTube video ID
     start_s: float  # start time (seconds) of the utterance containing the claim
     end_s: float    # end time (seconds) of the utterance containing the claim
-    claim_text: str # atomic, normalized claim text (what to verify)
+    exact_quote: str # exact quote from the transcript containing the claim
+    claim_text: str # atomic, normalized claim text (cleaned and concise version for verification)
+    speaker: str    # name or identifier of the person who made the claim
+    importance_score: float # importance score from 0.0 to 1.0 indicating verification priority
 ```
 
 Notes:
-- `claim_text` should be the smallest self-contained statement suitable for verification, not the entire caption line(s).
-- `start_s`/`end_s` refer to the transcript time bounds that cover this claim (can span multiple caption snippets if merged into a sentence).
-- Additional fields (speaker, entities, verdict, evidence) can be added later without changing this minimal interface.
+- `exact_quote` preserves the original wording, capitalization, and speech patterns from the transcript
+- `claim_text` is a cleaned, clear, and concise version suitable for fact-checking (normalized grammar, removed filler words, complete sentence)
+- `start_s`/`end_s` refer to the transcript time bounds that cover this claim (can span multiple caption snippets if merged into a sentence)
+- `importance_score` helps prioritize which claims to verify first (0.8-1.0 for high priority disputed claims, 0.4-0.7 for medium priority factual statements, 0.0-0.3 for low priority obvious facts)
 
 ### API Endpoints
 

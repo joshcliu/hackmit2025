@@ -111,7 +111,10 @@ Remember: You're the final arbiter. Use the tools to resolve uncertainties and p
         # Create the synthesis request with video context
         context_section = f"\n\n=== VIDEO CONTEXT ===\n{video_context}\n" if video_context else ""
         
-        synthesis_message = f"""CLAIM TO VERIFY: {claim}{context_section}
+        # Include exact quote in synthesis if available
+        quote_section = f"\n\nEXACT QUOTE FROM TRANSCRIPT: '{exact_quote}'\n" if exact_quote else ""
+        
+        synthesis_message = f"""CLAIM TO VERIFY: {claim}{quote_section}{context_section}
 
 === SPECIALIST AGENT FINDINGS ===
 
@@ -204,7 +207,7 @@ class ClaimVerificationOrchestrator:
         # TODO: Add memory system for contradiction detection
         self.memory = None
         
-    async def verify_claim(self, claim: str, video_context: str = "", summary_context: str = "") -> VerificationResult:
+    async def verify_claim(self, claim: str, video_context: str = "", summary_context: str = "", exact_quote: str = "") -> VerificationResult:
         """
         Verify a single atomic claim.
         
@@ -212,14 +215,18 @@ class ClaimVerificationOrchestrator:
             claim: The atomic claim to verify
             video_context: Video metadata context for temporal verification
             summary_context: Video summary context for better understanding
+            exact_quote: The exact quote from transcript for additional context
             
         Returns:
             Structured verification result with verdict, summary, score, and sources
         """
         print(f"Verifying claim: {claim}")
         
-        # Combine video context and summary context
-        combined_context = f"{video_context}\n\n{summary_context}".strip()
+        # Combine video context, summary context, and exact quote
+        context_parts = [video_context, summary_context]
+        if exact_quote:
+            context_parts.append(f"EXACT QUOTE FROM TRANSCRIPT: '{exact_quote}'")
+        combined_context = "\n\n".join([part for part in context_parts if part.strip()])
         
         # Spawn all agents in parallel with combined context
         agent_tasks = [
