@@ -14,7 +14,9 @@ export interface Claim {
   importance_score: number;
   verification_status?: string;
   verification_score?: number;
+  verification_verdict?: string;
   verification_summary?: string;
+  verification_sources?: string[];
 }
 
 export interface ProcessingStatus {

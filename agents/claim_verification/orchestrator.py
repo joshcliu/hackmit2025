@@ -5,6 +5,7 @@ Main orchestrator for claim verification system.
 import asyncio
 from typing import List, Optional
 from langchain_anthropic import ChatAnthropic
+from pydantic import BaseModel, Field
 
 from agents import (
     NewsSearcherAgent,
@@ -16,8 +17,41 @@ from agents import (
 from base_agent import BaseVerificationAgent
 
 
+class VerificationResult(BaseModel):
+    """Structured output for claim verification."""
+    verdict: str = Field(
+        description="The final verdict: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE"
+    )
+    summary: str = Field(
+        description="Detailed explanation of the verdict with key evidence and reasoning"
+    )
+    score: float = Field(
+        description="Numerical score from 0-10 (0=definitely false, 5=uncertain, 10=definitely true)",
+        ge=0,
+        le=10
+    )
+    sources: List[str] = Field(
+        description="List of credible sources used as citations with URLs when available"
+    )
+
+
 class OrchestratorAgent(BaseVerificationAgent):
     """Orchestrator that synthesizes results from all specialist agents."""
+    
+    def _create_agent(self):
+        """Create ReAct agent for the orchestrator."""
+        from langgraph.prebuilt import create_react_agent
+        
+        # Get the system prompt
+        system_prompt = self.get_prompt()
+        
+        # Create agent without structured output binding to avoid tool conflicts
+        return create_react_agent(
+            model=self.model,
+            tools=self.tools,
+            response_format=VerificationResult,
+            prompt=system_prompt
+        )
     
     def get_prompt(self):
         """Return the synthesis-focused system prompt for the orchestrator."""
@@ -41,16 +75,15 @@ Tools at your disposal:
 - web_search: Search for additional verification information (DuckDuckGo or Tavily)
 - scrape_page: Extract and analyze content from specific webpages
 
-Output requirements:
-- Start with a clear verdict: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
-- Provide comprehensive reasoning that synthesizes all agent findings
-- Highlight key evidence and any important contradictions
-- Note crucial context or caveats
-- End with a consolidated list of the most credible sources
+You must provide a structured response with:
+1. verdict: Choose exactly one: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
+2. summary: Comprehensive explanation synthesizing all findings, evidence, and reasoning
+3. score: Rate 0-10 where 0=definitely false, 5=uncertain/mixed, 10=definitely true
+4. sources: List the most credible sources with URLs when available
 
 Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible."""
         
-    async def verify(self, claim: str, agent_results: List[str] = None) -> str:
+    async def verify(self, claim: str, agent_results: List[str] = None) -> VerificationResult:
         """
         Override verify to synthesize agent findings.
         
@@ -63,7 +96,13 @@ Remember: You're the final arbiter. Use the tools to resolve uncertainties and p
         """
         if not agent_results:
             # If called without agent results, just do a direct verification
-            return await super().verify(claim)
+            # This shouldn't happen for the orchestrator, but handle it gracefully
+            return VerificationResult(
+                verdict="UNVERIFIABLE",
+                summary="No agent results provided for synthesis.",
+                score=5.0,
+                sources=[]
+            )
         
         # Format agent results for synthesis
         agent_summaries = self._format_agent_results(agent_results)
@@ -84,31 +123,27 @@ Steps to follow:
 2. Use search/scraping tools to resolve any ambiguities or verify conflicting information
 3. Cross-reference sources mentioned by different agents
 4. Determine the most credible conclusion based on evidence quality
-5. Provide a clear verdict with comprehensive reasoning
+5. Provide a structured verdict with comprehensive reasoning
 
-Output format:
-VERDICT: [TRUE/FALSE/MISLEADING/PARTIALLY TRUE/UNVERIFIABLE]
+Provide your response as a structured output with these exact fields:
+- verdict: Choose one: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
+- summary: Detailed assessment explaining your reasoning, key evidence, and important context
+- score: Numerical rating from 0-10 (0=definitely false, 10=definitely true)
+- sources: List of credible sources with URLs"""
 
-[Detailed natural language assessment explaining your reasoning, key evidence, and any important context or caveats]
+        result = await self.agent.ainvoke({
+            "messages": [("user", synthesis_message)]
+        })
 
-SOURCES:
-[Consolidated list of the most credible sources, with brief credibility notes]"""
-        
-        try:
-            result = await self.agent.ainvoke({
-                "messages": [("user", synthesis_message)]
-            })
-            
-            # Extract the final message from the agent
-            if result.get("messages"):
-                last_message = result["messages"][-1]
-                if hasattr(last_message, "content"):
-                    return last_message.content
-            
-            return "Unable to synthesize findings due to processing error."
-            
-        except Exception as e:
-            return f"Synthesis failed: {str(e)}"
+        if result.get("structured_response"):
+            return result.get("structured_response")
+        else:
+            return VerificationResult(
+                verdict="UNVERIFIABLE",
+                summary="Unable to synthesize findings due to processing error.",
+                score=5.0,
+                sources=[]
+            )
     
     def _format_agent_results(self, results: List[str]) -> str:
         """Format agent results for the synthesis prompt."""
@@ -159,7 +194,7 @@ class ClaimVerificationOrchestrator:
         # TODO: Add memory system for contradiction detection
         self.memory = None
         
-    async def verify_claim(self, claim: str) -> str:
+    async def verify_claim(self, claim: str) -> VerificationResult:
         """
         Verify a single atomic claim.
         
@@ -167,7 +202,7 @@ class ClaimVerificationOrchestrator:
             claim: The atomic claim to verify
             
         Returns:
-            Natural language assessment of the claim with sources
+            Structured verification result with verdict, summary, score, and sources
         """
         print(f"Verifying claim: {claim}")
         
@@ -204,7 +239,7 @@ class ClaimVerificationOrchestrator:
         
         return final_assessment
     
-    async def verify_claims_batch(self, claims: List[str]) -> List[str]:
+    async def verify_claims_batch(self, claims: List[str]) -> List[VerificationResult]:
         """
         Verify multiple claims in parallel.
         
@@ -212,7 +247,7 @@ class ClaimVerificationOrchestrator:
             claims: List of claims to verify
             
         Returns:
-            List of natural language assessments
+            List of structured verification results
         """
         tasks = [self.verify_claim(claim) for claim in claims]
         return await asyncio.gather(*tasks)

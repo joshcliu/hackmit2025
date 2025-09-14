@@ -63,8 +63,36 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
       <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>
         <div className="synthesis-content">
           {claim.synthesis && (
-            <div className="pt-2 mt-2 border-t border-gray-700">
+            <div className="pt-2 mt-2 border-t border-gray-700 space-y-3">
+              {claim.verdict && (
+                <div className="flex items-center space-x-2">
+                  <span className="text-xs uppercase tracking-wider text-gray-500">Verdict:</span>
+                  <span className={`text-xs font-semibold uppercase ${
+                    claim.verdict === 'TRUE' ? 'text-green-500' :
+                    claim.verdict === 'FALSE' ? 'text-red-500' :
+                    claim.verdict === 'MISLEADING' ? 'text-orange-500' :
+                    claim.verdict === 'PARTIALLY TRUE' ? 'text-yellow-500' :
+                    'text-gray-400'
+                  }`}>
+                    {claim.verdict}
+                  </span>
+                </div>
+              )}
+              
               <p className="text-sm text-gray-400">{claim.synthesis}</p>
+              
+              {claim.sources && claim.sources.length > 0 && (
+                <div className="mt-2">
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Sources:</p>
+                  <ul className="text-xs text-gray-400 space-y-1">
+                    {claim.sources.map((source, idx) => (
+                      <li key={idx} className="pl-2 border-l border-gray-700">
+                        {source}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           )}
         </div>

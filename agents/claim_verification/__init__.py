@@ -5,11 +5,12 @@ A parallel agent-based system for verifying political claims using
 specialized search agents and an orchestrator for synthesis.
 """
 
-from .orchestrator import ClaimVerificationOrchestrator
+from .orchestrator import ClaimVerificationOrchestrator, VerificationResult
 from .base_agent import AgentOutput, SourceInfo
 
 __all__ = [
     "ClaimVerificationOrchestrator",
+    "VerificationResult",
     "AgentOutput",
     "SourceInfo"
 ]

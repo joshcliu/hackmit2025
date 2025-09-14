@@ -6,6 +6,8 @@ export interface Claim {
   synthesis: string;
   isVerified?: boolean;
   startSeconds?: number;
+  verdict?: string;
+  sources?: string[];
 }
 
 export interface Speaker {

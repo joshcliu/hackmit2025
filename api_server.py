@@ -188,30 +188,22 @@ async def verify_single_claim(claim, orchestrator, session_id: str, manager: Con
                 "claim_text": claim.claim_text[:100]
             })
             
-            # Verify the claim
+            # Verify the claim and get structured result
             verification_result = await orchestrator.verify_claim(claim.claim_text)
             
-            # Parse verification result
-            verification_score = 5.0  # Default middle score
-            verification_status = "unverified"
+            # Map verdict to status
+            verdict_status_map = {
+                "TRUE": "verified",
+                "FALSE": "false",
+                "MISLEADING": "misleading",
+                "PARTIALLY TRUE": "partial",
+                "UNVERIFIABLE": "unverifiable"
+            }
+            verification_status = verdict_status_map.get(verification_result.verdict, "unverifiable")
             
-            # Simple parsing of verdict
-            if "TRUE" in verification_result.upper()[:100]:
-                verification_score = 8.5
-                verification_status = "verified"
-            elif "FALSE" in verification_result.upper()[:100]:
-                verification_score = 2.0
-                verification_status = "false"
-            elif "MISLEADING" in verification_result.upper()[:100]:
-                verification_score = 4.0
-                verification_status = "misleading"
-            elif "PARTIALLY TRUE" in verification_result.upper()[:100]:
-                verification_score = 6.0
-                verification_status = "partial"
+            print(f"[Verification] Completed: {claim.claim_text[:50]}... -> {verification_result.verdict} (score: {verification_result.score})")
             
-            print(f"[Verification] Completed: {claim.claim_text[:50]}... -> {verification_status}")
-            
-            # Send verification result
+            # Send verification result with full structured data
             await manager.send_message(session_id, {
                 "type": "claim_verified",
                 "claim": {
@@ -222,8 +214,10 @@ async def verify_single_claim(claim, orchestrator, session_id: str, manager: Con
                     "speaker": claim.speaker,
                     "importance_score": claim.importance_score,
                     "verification_status": verification_status,
-                    "verification_score": verification_score,
-                    "verification_summary": verification_result[:500]  # First 500 chars
+                    "verification_score": verification_result.score,
+                    "verification_verdict": verification_result.verdict,
+                    "verification_summary": verification_result.summary,  # Full summary, no truncation
+                    "verification_sources": verification_result.sources
                 }
             })
             

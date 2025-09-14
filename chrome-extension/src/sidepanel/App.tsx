@@ -43,6 +43,8 @@ export default function App() {
       synthesis: apiClaim.verification_summary || `Speaker: ${apiClaim.speaker}`,
       isVerified: apiClaim.verification_status !== undefined && apiClaim.verification_status !== 'pending',
       startSeconds: apiClaim.start_s, // Keep raw seconds for sorting
+      verdict: apiClaim.verification_verdict,
+      sources: apiClaim.verification_sources,
     };
   };
 
