@@ -275,7 +275,7 @@ async def main():
     
     try:
         # Extract claims
-        claims = await extract_claims_from_video(args.video_id, args.chunk_size, max_parallel=10)
+        claims = await extract_claims_from_video(args.video_id, args.chunk_size, max_parallel=20)
         
         # Print summary
         print_claims_summary(claims, args.video_id)
