@@ -40,6 +40,7 @@ export default function App() {
     return {
       timestamp: formatTime(apiClaim.start_s),
       text: apiClaim.claim_text,
+      exactQuote: apiClaim.exact_quote,
       type,
       score,
       synthesis: apiClaim.verification_summary || `Speaker: ${apiClaim.speaker}`,

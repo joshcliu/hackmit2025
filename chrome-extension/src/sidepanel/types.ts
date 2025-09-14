@@ -1,6 +1,7 @@
 export interface Claim {
   timestamp: string;
   text: string;
+  exactQuote: string;
   type: 'Opinion' | 'Fact';
   score: number;
   synthesis: string;

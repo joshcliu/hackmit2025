@@ -9,6 +9,7 @@ export interface Claim {
   video_id: string;
   start_s: number;
   end_s: number;
+  exact_quote: string;
   claim_text: string;
   speaker: string;
   importance_score: number;

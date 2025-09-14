@@ -60,7 +60,10 @@ export const ClaimItem = ({ claim, onTimestampClick }: ClaimItemProps) => {
         </div>
       )}
     </div>
-    <p className="text-gray-100 mb-3 tracking-wide">{claim.text}</p>
+    <div className="mb-3">
+      <p className="text-gray-100 mb-2 tracking-wide">{claim.text}</p>
+      <p className="text-gray-400 text-sm italic tracking-wide">"{claim.exactQuote}"</p>
+    </div>
       <div className={`synthesis-container ${isOpen ? 'open' : ''}`}>
         <div className="synthesis-content">
           {claim.synthesis && (
