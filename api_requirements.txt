@@ -14,6 +14,9 @@ langchain-community>=0.3.0
 duckduckgo-search>=6.0.0
 crawl4ai>=0.4.0
 nest-asyncio>=1.6.0
+composio-core
+openai
+yt-dlp
 
 # Optional but useful
 aiohttp>=3.10.0

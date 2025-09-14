@@ -20,6 +20,9 @@ from agents.claim_extraction import ClaimExtractionAgent, ClaimMinimal, Extracti
 # Import verification orchestrator
 from agents.claim_verification.orchestrator import ClaimVerificationOrchestrator
 
+# Import video metadata utilities
+from video_metadata import get_video_metadata, format_video_context, VideoMetadata
+
 
 @dataclass
 class TranscriptChunk:
@@ -139,12 +142,13 @@ class AgentLoop:
         
         return chunks
     
-    async def extract_claims_from_chunk(self, chunk: TranscriptChunk) -> List[ClaimMinimal]:
+    async def extract_claims_from_chunk(self, chunk: TranscriptChunk, video_context: str = "") -> List[ClaimMinimal]:
         """Extract claims from a single chunk."""
         try:
             result = await self.extraction_agent.aextract(
                 video_id=chunk.video_id,
-                chunk=chunk.text
+                chunk=chunk.text,
+                video_context=video_context
             )
             
             # Update timing info for extracted claims if they don't have it
@@ -162,12 +166,12 @@ class AgentLoop:
             print(f"Error extracting claims from chunk {chunk.chunk_id}: {e}")
             return []
     
-    async def verify_claim(self, claim: ClaimMinimal, chunk_id: int) -> VerifiedClaim:
+    async def verify_claim(self, claim: ClaimMinimal, chunk_id: int, video_context: str = "") -> VerifiedClaim:
         """Verify a single claim."""
         start_time = asyncio.get_event_loop().time()
         
         try:
-            verification_result = await self.verification_orchestrator.verify_claim(claim.claim_text)
+            verification_result = await self.verification_orchestrator.verify_claim(claim.claim_text, video_context)
             processing_time = asyncio.get_event_loop().time() - start_time
             
             return VerifiedClaim(
@@ -199,6 +203,15 @@ class AgentLoop:
         """
         print(f"Processing transcript for video {video_id}")
         
+        # Step 0: Get video metadata for context
+        try:
+            video_metadata = get_video_metadata(video_id)
+            video_context = format_video_context(video_metadata)
+            print(f"Retrieved video metadata: {video_metadata.title} (published {video_metadata.publish_date.strftime('%Y-%m-%d')})")
+        except Exception as e:
+            print(f"Warning: Could not fetch video metadata: {e}")
+            video_context = ""
+        
         # Step 1: Chunk transcript
         chunks = self.chunk_transcript(transcript_raw, video_id)
         print(f"Created {len(chunks)} chunks (target: {self.chunk_size_seconds}s each)")
@@ -209,7 +222,7 @@ class AgentLoop:
         
         async def extract_with_semaphore(chunk: TranscriptChunk):
             async with semaphore_extract:
-                return await self.extract_claims_from_chunk(chunk), chunk.chunk_id
+                return await self.extract_claims_from_chunk(chunk, video_context), chunk.chunk_id
         
         extraction_tasks = [extract_with_semaphore(chunk) for chunk in chunks]
         extraction_results = await asyncio.gather(*extraction_tasks, return_exceptions=True)
@@ -245,7 +258,7 @@ class AgentLoop:
         async def verify_with_semaphore(claim_and_chunk):
             claim, chunk_id = claim_and_chunk
             async with semaphore_verify:
-                return await self.verify_claim(claim, chunk_id)
+                return await self.verify_claim(claim, chunk_id, video_context)
         
         verification_tasks = [verify_with_semaphore(claim_and_chunk) for claim_and_chunk in all_claims]
         verified_claims = await asyncio.gather(*verification_tasks, return_exceptions=True)

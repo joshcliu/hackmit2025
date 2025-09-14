@@ -83,13 +83,14 @@ You must provide a structured response with:
 
 Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible."""
         
-    async def verify(self, claim: str, agent_results: List[str] = None) -> VerificationResult:
+    async def verify(self, claim: str, agent_results: List[str] = None, video_context: str = "") -> VerificationResult:
         """
         Override verify to synthesize agent findings.
         
         Args:
             claim: The claim being verified
             agent_results: List of findings from specialist agents
+            video_context: Video metadata context for temporal verification
             
         Returns:
             Synthesized assessment with verdict and sources
@@ -107,8 +108,10 @@ Remember: You're the final arbiter. Use the tools to resolve uncertainties and p
         # Format agent results for synthesis
         agent_summaries = self._format_agent_results(agent_results)
         
-        # Create the synthesis request
-        synthesis_message = f"""CLAIM TO VERIFY: {claim}
+        # Create the synthesis request with video context
+        context_section = f"\n\n=== VIDEO CONTEXT ===\n{video_context}\n" if video_context else ""
+        
+        synthesis_message = f"""CLAIM TO VERIFY: {claim}{context_section}
 
 === SPECIALIST AGENT FINDINGS ===
 
@@ -116,14 +119,15 @@ Remember: You're the final arbiter. Use the tools to resolve uncertainties and p
 
 === YOUR TASK ===
 
-Synthesize all agent findings into a comprehensive final assessment. 
+Synthesize all agent findings into a comprehensive final assessment. Consider the video's publication date when evaluating temporal claims.
 
 Steps to follow:
 1. Analyze areas of agreement and contradiction between agents
 2. Use search/scraping tools to resolve any ambiguities or verify conflicting information
 3. Cross-reference sources mentioned by different agents
-4. Determine the most credible conclusion based on evidence quality
-5. Provide a structured verdict with comprehensive reasoning
+4. Consider the temporal context - evaluate claims based on information available at the video's publication date
+5. Determine the most credible conclusion based on evidence quality
+6. Provide a structured verdict with comprehensive reasoning
 
 Provide your response as a structured output with these exact fields:
 - verdict: Choose one: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
@@ -194,25 +198,26 @@ class ClaimVerificationOrchestrator:
         # TODO: Add memory system for contradiction detection
         self.memory = None
         
-    async def verify_claim(self, claim: str) -> VerificationResult:
+    async def verify_claim(self, claim: str, video_context: str = "") -> VerificationResult:
         """
         Verify a single atomic claim.
         
         Args:
             claim: The atomic claim to verify
+            video_context: Video metadata context for temporal verification
             
         Returns:
             Structured verification result with verdict, summary, score, and sources
         """
         print(f"Verifying claim: {claim}")
         
-        # Spawn all agents in parallel
+        # Spawn all agents in parallel with video context
         agent_tasks = [
-            self.news_agent.verify(claim),
-            self.academic_agent.verify(claim),
-            self.fact_check_agent.verify(claim),
-            self.gov_data_agent.verify(claim),
-            self.temporal_agent.verify(claim)
+            self.news_agent.verify(claim, video_context),
+            self.academic_agent.verify(claim, video_context),
+            self.fact_check_agent.verify(claim, video_context),
+            self.gov_data_agent.verify(claim, video_context),
+            self.temporal_agent.verify(claim, video_context)
         ]
         
         # Gather all results with error handling
@@ -230,7 +235,8 @@ class ClaimVerificationOrchestrator:
         print("Synthesizing agent findings...")
         final_assessment = await self.orchestrator.verify(
             claim=claim,
-            agent_results=agent_results
+            agent_results=agent_results,
+            video_context=video_context
         )
         
         # TODO: Store in memory for future contradiction detection

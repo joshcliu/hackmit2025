@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cla
 
 from claim_extraction.agent import ClaimExtractionAgent, ClaimMinimal
 from claim_verification.orchestrator import ClaimVerificationOrchestrator
+from video_metadata import get_video_metadata, format_video_context
 
 # Load environment variables
 load_dotenv()
@@ -182,7 +183,7 @@ def chunk_transcript(transcript: List[Dict[str, Any]], chunk_size_seconds: float
     
     return chunks
 
-async def verify_single_claim(claim, orchestrator, session_id: str, manager: ConnectionManager, semaphore: asyncio.Semaphore):
+async def verify_single_claim(claim, orchestrator, session_id: str, manager: ConnectionManager, semaphore: asyncio.Semaphore, video_context: str = ""):
     """
     Verify a single claim asynchronously with semaphore control.
     """
@@ -197,7 +198,7 @@ async def verify_single_claim(claim, orchestrator, session_id: str, manager: Con
             })
             
             # Verify the claim and get structured result
-            verification_result = await orchestrator.verify_claim(claim.claim_text)
+            verification_result = await orchestrator.verify_claim(claim.claim_text, video_context)
             
             # Map verdict to status
             verdict_status_map = {
@@ -236,13 +237,29 @@ async def verify_single_claim(claim, orchestrator, session_id: str, manager: Con
 async def process_video_pipeline(video_id: str, session_id: str):
     """
     Main pipeline for processing a video:
-    1. Fetch transcript
-    2. Extract claims
-    3. Verify claims
-    4. Send updates via WebSocket
+    1. Fetch video metadata
+    2. Fetch transcript
+    3. Extract claims
+    4. Verify claims
+    5. Send updates via WebSocket
     """
     try:
-        # Update status: fetching transcript
+        # Step 1: Get video metadata for context
+        await manager.send_message(session_id, {
+            "type": "status",
+            "status": "fetching_metadata",
+            "message": "Fetching video metadata..."
+        })
+        
+        try:
+            video_metadata = get_video_metadata(video_id)
+            video_context = format_video_context(video_metadata)
+            print(f"Retrieved video metadata: {video_metadata.title} (published {video_metadata.publish_date.strftime('%Y-%m-%d')})")
+        except Exception as e:
+            print(f"Warning: Could not fetch video metadata: {e}")
+            video_context = ""
+        
+        # Step 2: Fetch transcript
         await manager.send_message(session_id, {
             "type": "status",
             "status": "fetching_transcript",
@@ -284,7 +301,7 @@ async def process_video_pipeline(video_id: str, session_id: str):
         all_claims = []
         for i, chunk in enumerate(chunks):
             try:
-                result = await extraction_agent.aextract(video_id=video_id, chunk=chunk)
+                result = await extraction_agent.aextract(video_id=video_id, chunk=chunk, video_context=video_context)
                 
                 # Send progress update
                 await manager.send_message(session_id, {
@@ -316,7 +333,7 @@ async def process_video_pipeline(video_id: str, session_id: str):
                     if claim.importance_score >= 0.7:
                         # Create and track verification task
                         task = asyncio.create_task(verify_single_claim(
-                            claim, orchestrator, session_id, manager, verification_semaphore
+                            claim, orchestrator, session_id, manager, verification_semaphore, video_context
                         ))
                         verification_tasks.append(task)
                     
