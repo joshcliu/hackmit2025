@@ -48,18 +48,11 @@ export const VideoInfo = ({ claims, videoTitle }: VideoInfoProps) => {
         <div className="text-center flex-shrink-0">
           <h3 className="text-sm font-semibold text-custom-gold uppercase tracking-wider">Overall Score</h3>
           <div className="flex flex-col items-center mt-2">
+            <GaugeComponent score={averageScore} />
             {averageScore >= 0 ? (
-              <>
-                <GaugeComponent score={averageScore} />
-                <span className="text-xl font-bold text-white mt-1">{averageScore.toFixed(1)}</span>
-              </>
+              <span className="text-xl font-bold text-white mt-1">{averageScore.toFixed(1)}</span>
             ) : (
-              <>
-                <div className="w-20 h-20 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Pending</span>
-                </div>
-                <span className="text-xl font-bold text-gray-500 mt-1">--</span>
-              </>
+              <span className="text-xl font-bold text-gray-500 mt-1">--</span>
             )}
           </div>
         </div>
