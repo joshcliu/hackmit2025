@@ -118,7 +118,15 @@ def fetch_transcript(video_id: str) -> List[Dict[str, Any]]:
         # Fetch the transcript
         transcript_data = api.fetch(video_id)
         # Convert to raw data format (list of dicts)
-        return transcript_data.to_raw_data()
+        raw_data = transcript_data.to_raw_data()
+        
+        # Ensure all text content is properly encoded to avoid character issues
+        for item in raw_data:
+            if 'text' in item:
+                # Handle any encoding issues in transcript text
+                item['text'] = item['text'].encode('utf-8', errors='replace').decode('utf-8')
+        
+        return raw_data
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Failed to fetch transcript: {str(e)}")
 

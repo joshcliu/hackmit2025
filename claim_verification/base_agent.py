@@ -143,14 +143,19 @@ class BaseVerificationAgent:
                 response = requests.get(url, headers=headers, timeout=10)
                 response.raise_for_status()
                 
-                soup = BeautifulSoup(response.content, 'html.parser')
+                # Handle encoding properly to avoid character decoding warnings
+                response.encoding = response.apparent_encoding or 'utf-8'
+                soup = BeautifulSoup(response.text, 'html.parser')
                 
                 # Remove script and style elements
                 for script in soup(["script", "style"]):
                     script.decompose()
                 
-                # Get text content
+                # Get text content with proper encoding handling
                 text = soup.get_text()
+                
+                # Handle any remaining encoding issues by replacing problematic characters
+                text = text.encode('utf-8', errors='replace').decode('utf-8')
                 
                 # Clean up whitespace
                 lines = (line.strip() for line in text.splitlines())
