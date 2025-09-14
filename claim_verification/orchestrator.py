@@ -77,7 +77,7 @@ Tools at your disposal:
 
 You must provide a structured response with:
 1. verdict: Choose exactly one: TRUE, FALSE, MISLEADING, PARTIALLY TRUE, or UNVERIFIABLE
-2. summary: Comprehensive yet concise explanation (one paragraph max) synthesizing all findings, evidence, and reasoning
+2. summary: Comprehensive yet concise explanation (3-4 sentences per paragraph max, max 3 paragraphs) synthesizing all findings, evidence, and reasoning
 3. score: Rate 0-10 where 0=definitely false, 5=uncertain/mixed, 10=definitely true, on a decimal scale
 4. sources: List the most credible sources with URLs when available
 
