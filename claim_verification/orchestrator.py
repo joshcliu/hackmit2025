@@ -198,26 +198,30 @@ class ClaimVerificationOrchestrator:
         # TODO: Add memory system for contradiction detection
         self.memory = None
         
-    async def verify_claim(self, claim: str, video_context: str = "") -> VerificationResult:
+    async def verify_claim(self, claim: str, video_context: str = "", summary_context: str = "") -> VerificationResult:
         """
         Verify a single atomic claim.
         
         Args:
             claim: The atomic claim to verify
             video_context: Video metadata context for temporal verification
+            summary_context: Video summary context for better understanding
             
         Returns:
             Structured verification result with verdict, summary, score, and sources
         """
         print(f"Verifying claim: {claim}")
         
-        # Spawn all agents in parallel with video context
+        # Combine video context and summary context
+        combined_context = f"{video_context}\n\n{summary_context}".strip()
+        
+        # Spawn all agents in parallel with combined context
         agent_tasks = [
-            self.news_agent.verify(claim, video_context),
-            self.academic_agent.verify(claim, video_context),
-            self.fact_check_agent.verify(claim, video_context),
-            self.gov_data_agent.verify(claim, video_context),
-            self.temporal_agent.verify(claim, video_context)
+            self.news_agent.verify(claim, combined_context),
+            self.academic_agent.verify(claim, combined_context),
+            self.fact_check_agent.verify(claim, combined_context),
+            self.gov_data_agent.verify(claim, combined_context),
+            self.temporal_agent.verify(claim, combined_context)
         ]
         
         # Gather all results with error handling
@@ -236,7 +240,7 @@ class ClaimVerificationOrchestrator:
         final_assessment = await self.orchestrator.verify(
             claim=claim,
             agent_results=agent_results,
-            video_context=video_context
+            video_context=combined_context
         )
         
         # TODO: Store in memory for future contradiction detection
