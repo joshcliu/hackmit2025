@@ -174,56 +174,61 @@ def chunk_transcript(transcript: List[Dict[str, Any]], chunk_size_seconds: float
     
     return chunks
 
-async def verify_single_claim(claim, orchestrator, session_id: str, manager: ConnectionManager):
+async def verify_single_claim(claim, orchestrator, session_id: str, manager: ConnectionManager, semaphore: asyncio.Semaphore):
     """
-    Verify a single claim asynchronously.
+    Verify a single claim asynchronously with semaphore control.
     """
-    try:
-        # Send verification start
-        await manager.send_message(session_id, {
-            "type": "verification_start",
-            "claim_text": claim.claim_text[:100]
-        })
-        
-        # Verify the claim
-        verification_result = await orchestrator.verify_claim(claim.claim_text)
-        
-        # Parse verification result
-        verification_score = 5.0  # Default middle score
-        verification_status = "unverified"
-        
-        # Simple parsing of verdict
-        if "TRUE" in verification_result.upper()[:100]:
-            verification_score = 8.5
-            verification_status = "verified"
-        elif "FALSE" in verification_result.upper()[:100]:
-            verification_score = 2.0
-            verification_status = "false"
-        elif "MISLEADING" in verification_result.upper()[:100]:
-            verification_score = 4.0
-            verification_status = "misleading"
-        elif "PARTIALLY TRUE" in verification_result.upper()[:100]:
-            verification_score = 6.0
-            verification_status = "partial"
-        
-        # Send verification result
-        await manager.send_message(session_id, {
-            "type": "claim_verified",
-            "claim": {
-                "video_id": claim.video_id,
-                "start_s": claim.start_s,
-                "end_s": claim.end_s,
-                "claim_text": claim.claim_text,
-                "speaker": claim.speaker,
-                "importance_score": claim.importance_score,
-                "verification_status": verification_status,
-                "verification_score": verification_score,
-                "verification_summary": verification_result[:500]  # First 500 chars
-            }
-        })
-        
-    except Exception as e:
-        print(f"Error verifying claim '{claim.claim_text[:50]}...': {e}")
+    async with semaphore:  # Limit concurrent verifications
+        try:
+            print(f"[Verification] Starting verification for: {claim.claim_text[:50]}...")
+            
+            # Send verification start
+            await manager.send_message(session_id, {
+                "type": "verification_start",
+                "claim_text": claim.claim_text[:100]
+            })
+            
+            # Verify the claim
+            verification_result = await orchestrator.verify_claim(claim.claim_text)
+            
+            # Parse verification result
+            verification_score = 5.0  # Default middle score
+            verification_status = "unverified"
+            
+            # Simple parsing of verdict
+            if "TRUE" in verification_result.upper()[:100]:
+                verification_score = 8.5
+                verification_status = "verified"
+            elif "FALSE" in verification_result.upper()[:100]:
+                verification_score = 2.0
+                verification_status = "false"
+            elif "MISLEADING" in verification_result.upper()[:100]:
+                verification_score = 4.0
+                verification_status = "misleading"
+            elif "PARTIALLY TRUE" in verification_result.upper()[:100]:
+                verification_score = 6.0
+                verification_status = "partial"
+            
+            print(f"[Verification] Completed: {claim.claim_text[:50]}... -> {verification_status}")
+            
+            # Send verification result
+            await manager.send_message(session_id, {
+                "type": "claim_verified",
+                "claim": {
+                    "video_id": claim.video_id,
+                    "start_s": claim.start_s,
+                    "end_s": claim.end_s,
+                    "claim_text": claim.claim_text,
+                    "speaker": claim.speaker,
+                    "importance_score": claim.importance_score,
+                    "verification_status": verification_status,
+                    "verification_score": verification_score,
+                    "verification_summary": verification_result[:500]  # First 500 chars
+                }
+            })
+            
+        except Exception as e:
+            print(f"[Verification] Error verifying claim '{claim.claim_text[:50]}...': {e}")
 
 
 async def process_video_pipeline(video_id: str, session_id: str):
@@ -262,6 +267,10 @@ async def process_video_pipeline(video_id: str, session_id: str):
         
         extraction_agent = ClaimExtractionAgent()
         orchestrator = ClaimVerificationOrchestrator(anthropic_api_key=api_key)
+        
+        # Create semaphore to limit concurrent verifications (3 at a time)
+        verification_semaphore = asyncio.Semaphore(3)
+        verification_tasks = []
         
         # Extract claims from chunks
         await manager.send_message(session_id, {
@@ -303,17 +312,20 @@ async def process_video_pipeline(video_id: str, session_id: str):
                     
                     # Immediately verify high-importance claims
                     if claim.importance_score >= 0.7:
-                        # Start verification in background
-                        asyncio.create_task(verify_single_claim(
-                            claim, orchestrator, session_id, manager
+                        # Create and track verification task
+                        task = asyncio.create_task(verify_single_claim(
+                            claim, orchestrator, session_id, manager, verification_semaphore
                         ))
+                        verification_tasks.append(task)
                     
             except Exception as e:
                 print(f"Error processing chunk {i+1}: {e}")
                 continue
         
-        # Wait a bit for any ongoing verifications to complete
-        await asyncio.sleep(2)
+        # Wait for all verification tasks to complete
+        if verification_tasks:
+            print(f"[Pipeline] Waiting for {len(verification_tasks)} verification tasks to complete...")
+            await asyncio.gather(*verification_tasks, return_exceptions=True)
         
         # Count high-importance claims that were verified
         high_importance_count = len([c for c in all_claims if c.importance_score >= 0.7])
