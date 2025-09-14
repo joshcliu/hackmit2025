@@ -82,18 +82,19 @@ class ClaimExtractionAgent:
 Your task is to analyze transcript text from a political video and extract atomic, externally verifiable claims.
 
 Guidelines for extraction:
-1. Focus on FACTUAL claims that can be verified:
-   - Statistics and numbers (e.g., "unemployment is at 3.5%")
-   - Historical events and dates (e.g., "the bill was passed in 2021")
+1. Focus on SPECIFIC, MEASURABLE, CHECKWORTHY claims:
+   - Exact statistics and numbers (e.g., "unemployment is at 3.5%")
    - Specific attributions (e.g., "Senator X voted for Y")
-   - Policy positions and promises (e.g., "I will increase funding by $1B")
-   - Comparisons with concrete metrics (e.g., "crime is higher than last year")
+   - Comparisons with precise metrics (e.g., "crime decreased by 15% from 2022 to 2023")
 
 2. SKIP subjective or opinion statements:
    - Personal feelings (e.g., "I love my family")
    - Value judgments (e.g., "this is the best policy")
    - Predictions without specific metrics (e.g., "things will get better")
-   - Vague statements (e.g., "we need to do more")
+   - Vague quantifiers (e.g., "many people", "a lot of", "tremendous")
+   - Sweeping accomplishments (e.g., "we rebuilt our military", "we fixed the economy")
+   - Rhetorical generalizations (e.g., "America is stronger", "we're doing great")
+   - Non-specific statements (e.g., "we need to do more")
 
 3. Create ATOMIC claims:
    - Each claim should be self-contained and independently verifiable

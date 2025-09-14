@@ -44,11 +44,12 @@ def chunk_transcript(transcript_raw: List[Dict[str, Any]], chunk_size_seconds: f
         chunk_size_seconds: Target size for each chunk in seconds
         
     Returns:
-        List of text chunks
+        List of text chunks with timestamp information in the format expected by the agent
     """
     chunks = []
-    current_chunk_text = []
+    current_chunk_items = []
     current_start = None
+    line_number = 0
     
     for item in transcript_raw:
         start = item.get("start", 0.0)
@@ -59,29 +60,37 @@ def chunk_transcript(transcript_raw: List[Dict[str, Any]], chunk_size_seconds: f
         if not text:
             continue
             
+        line_number += 1
+        
         # Initialize first chunk
         if current_start is None:
             current_start = start
-            current_chunk_text = [text]
+            current_chunk_items = [(line_number, start, duration, text)]
             continue
         
         # Check if adding this item would exceed chunk size
         potential_duration = end - current_start
         
-        if potential_duration > chunk_size_seconds and current_chunk_text:
-            # Finalize current chunk
-            chunks.append(" ".join(current_chunk_text))
+        if potential_duration > chunk_size_seconds and current_chunk_items:
+            # Finalize current chunk with timestamp format
+            chunk_lines = []
+            for line_num, item_start, item_duration, item_text in current_chunk_items:
+                chunk_lines.append(f"{line_num} [{item_start:.2f}s + {item_duration:.2f}s] {item_text}")
+            chunks.append("\n".join(chunk_lines))
             
             # Start new chunk
             current_start = start
-            current_chunk_text = [text]
+            current_chunk_items = [(line_number, start, duration, text)]
         else:
             # Add to current chunk
-            current_chunk_text.append(text)
+            current_chunk_items.append((line_number, start, duration, text))
     
     # Add final chunk if it has content
-    if current_chunk_text:
-        chunks.append(" ".join(current_chunk_text))
+    if current_chunk_items:
+        chunk_lines = []
+        for line_num, item_start, item_duration, item_text in current_chunk_items:
+            chunk_lines.append(f"{line_num} [{item_start:.2f}s + {item_duration:.2f}s] {item_text}")
+        chunks.append("\n".join(chunk_lines))
     
     return chunks
 
