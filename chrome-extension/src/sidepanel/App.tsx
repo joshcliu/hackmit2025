@@ -7,8 +7,8 @@ import { Footer } from './components/Footer';
 import { api, WebSocketMessage, Claim as APIClaim } from '../services/api';
 
 export default function App() {
-  const [isStarted, setIsStarted] = useState(true);
-  const [videoTitle, setVideoTitle] = useState('Sample Video - Testing Hyperlinks');
+  const [isStarted, setIsStarted] = useState(false);
+  const [videoTitle, setVideoTitle] = useState('');
   const [videoId, setVideoId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -16,41 +16,7 @@ export default function App() {
   const [processingStatus, setProcessingStatus] = useState<string>('');
   const [currentVideoTime, setCurrentVideoTime] = useState<number>(0);
   const [scrollToClaimText, setScrollToClaimText] = useState<string | null>(null);
-  const [claims, setClaims] = useState<Claim[]>([
-    // Sample data for testing hyperlinks
-    {
-      timestamp: "01:23",
-      text: "Climate change is causing unprecedented global warming.",
-      type: "Fact" as const,
-      score: 8.5,
-      synthesis: "This claim is **well-supported** by scientific evidence. Multiple studies from reputable organizations confirm that current global warming trends are unprecedented in recent history.",
-      isVerified: true,
-      startSeconds: 83,
-      verdict: "TRUE",
-      sources: [
-        "https://www.nasa.gov/climate-change",
-        "[IPCC Climate Report](https://www.ipcc.ch/report/ar6/wg1/)",
-        "National Geographic: https://www.nationalgeographic.com/environment/climate-change/",
-        "[Scientific American Study](https://www.scientificamerican.com/climate/)"
-      ]
-    },
-    {
-      timestamp: "03:45",
-      text: "The economy is doing better than ever before.",
-      type: "Opinion" as const,
-      score: 4.2,
-      synthesis: "This claim is *subjective* and depends on various economic indicators. While some metrics show improvement, others indicate challenges.",
-      isVerified: true,
-      startSeconds: 225,
-      verdict: "PARTIALLY TRUE",
-      sources: [
-        "https://www.bls.gov/news.release/empsit.nr0.htm",
-        "[Federal Reserve Economic Data](https://fred.stlouisfed.org/)",
-        "Bureau of Economic Analysis: https://www.bea.gov/",
-        "[Wall Street Journal Analysis](https://www.wsj.com/economy)"
-      ]
-    }
-  ]);
+  const [claims, setClaims] = useState<Claim[]>([]);
   const [serverAvailable, setServerAvailable] = useState(true);
   const sessionIdRef = useRef<string | null>(null);
 
