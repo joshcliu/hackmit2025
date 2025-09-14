@@ -101,69 +101,112 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, cla
   
   const processInlineMarkdown = (text: string): React.ReactNode => {
     const parts: React.ReactNode[] = [];
-    let currentIndex = 0;
     
-    // Process bold (**text**)
-    text = text.replace(/\*\*(.*?)\*\*/g, (match, content, offset) => {
-      const before = text.slice(currentIndex, offset);
-      if (before) parts.push(before);
-      parts.push(<strong key={offset} className="font-bold text-white">{content}</strong>);
-      currentIndex = offset + match.length;
-      return ''; // Will be handled by parts array
-    });
+    // Find all patterns and their positions
+    const patterns = [
+      { regex: /\[([^\]]+)\]\(([^)]+)\)/g, type: 'markdown-link' },
+      { regex: /https?:\/\/[^\s<>"{}|\\^`[\]]+/g, type: 'url' },
+      { regex: /\*\*(.*?)\*\*/g, type: 'bold' },
+      { regex: /\*(.*?)\*/g, type: 'italic' },
+      { regex: /`([^`]+)`/g, type: 'code' }
+    ];
     
-    // Process italic (*text*)
-    text = text.replace(/\*(.*?)\*/g, (match, content, offset) => {
-      const before = text.slice(currentIndex, offset);
-      if (before) parts.push(before);
-      parts.push(<em key={offset} className="italic text-gray-200">{content}</em>);
-      currentIndex = offset + match.length;
-      return '';
-    });
+    const matches: Array<{
+      start: number;
+      end: number;
+      match: RegExpMatchArray;
+      type: string;
+    }> = [];
     
-    // Process inline code (`code`)
-    text = text.replace(/`([^`]+)`/g, (match, content, offset) => {
-      const before = text.slice(currentIndex, offset);
-      if (before) parts.push(before);
-      parts.push(
-        <code key={offset} className="bg-gray-800 text-green-400 px-1 rounded text-sm font-mono">
-          {content}
-        </code>
-      );
-      currentIndex = offset + match.length;
-      return '';
-    });
-    
-    // Process links [text](url)
-    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, linkText, url, offset) => {
-      const before = text.slice(currentIndex, offset);
-      if (before) parts.push(before);
-      parts.push(
-        <a 
-          key={offset} 
-          href={url} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-blue-400 hover:text-blue-300 underline"
-        >
-          {linkText}
-        </a>
-      );
-      currentIndex = offset + match.length;
-      return '';
-    });
-    
-    // If we processed any inline elements, return the parts array
-    if (parts.length > 0) {
-      // Add any remaining text
-      if (currentIndex < text.length) {
-        parts.push(text.slice(currentIndex));
+    // Find all matches
+    patterns.forEach(({ regex, type }) => {
+      let match;
+      const regexCopy = new RegExp(regex.source, regex.flags);
+      while ((match = regexCopy.exec(text)) !== null) {
+        matches.push({
+          start: match.index!,
+          end: match.index! + match[0].length,
+          match,
+          type
+        });
       }
-      return parts;
+    });
+    
+    // Sort matches by start position
+    matches.sort((a, b) => a.start - b.start);
+    
+    // Remove overlapping matches (keep the first one)
+    const filteredMatches = [];
+    let lastEnd = -1;
+    for (const match of matches) {
+      if (match.start >= lastEnd) {
+        filteredMatches.push(match);
+        lastEnd = match.end;
+      }
     }
     
-    // Otherwise return the original text
-    return text;
+    // Build parts
+    let currentIndex = 0;
+    let keyCounter = 0;
+    
+    filteredMatches.forEach(({ start, end, match, type }) => {
+      // Add text before this match
+      if (start > currentIndex) {
+        parts.push(text.slice(currentIndex, start));
+      }
+      
+      // Add the formatted element
+      switch (type) {
+        case 'markdown-link':
+          parts.push(
+            <a 
+              key={keyCounter++} 
+              href={match[2]} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline"
+            >
+              {match[1]}
+            </a>
+          );
+          break;
+        case 'url':
+          parts.push(
+            <a 
+              key={keyCounter++} 
+              href={match[0]} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline"
+            >
+              {match[0]}
+            </a>
+          );
+          break;
+        case 'bold':
+          parts.push(<strong key={keyCounter++} className="font-bold text-white">{match[1]}</strong>);
+          break;
+        case 'italic':
+          parts.push(<em key={keyCounter++} className="italic text-gray-200">{match[1]}</em>);
+          break;
+        case 'code':
+          parts.push(
+            <code key={keyCounter++} className="bg-gray-800 text-green-400 px-1 rounded text-sm font-mono">
+              {match[1]}
+            </code>
+          );
+          break;
+      }
+      
+      currentIndex = end;
+    });
+    
+    // Add remaining text
+    if (currentIndex < text.length) {
+      parts.push(text.slice(currentIndex));
+    }
+    
+    return parts.length > 0 ? parts : text;
   };
   
   return (
