@@ -2,7 +2,7 @@
 Specialized verification agents for different types of fact-checking.
 """
 
-from base_agent import BaseVerificationAgent
+from claim_verification.base_agent import BaseVerificationAgent
 
 
 class NewsSearcherAgent(BaseVerificationAgent):

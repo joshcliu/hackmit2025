@@ -7,14 +7,14 @@ from typing import List, Optional
 from langchain_anthropic import ChatAnthropic
 from pydantic import BaseModel, Field
 
-from agents import (
+from claim_verification.agents import (
     NewsSearcherAgent,
     AcademicSearcherAgent,
     FactCheckSearcherAgent,
     GovernmentDataAgent,
     TemporalConsistencyAgent
 )
-from base_agent import BaseVerificationAgent
+from claim_verification.base_agent import BaseVerificationAgent
 
 
 class VerificationResult(BaseModel):

@@ -19,11 +19,11 @@ from dotenv import load_dotenv
 
 # Add project directories to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'agents', 'claim_extraction'))
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'agents', 'claim_verification'))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'claim_extraction'))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'claim_verification'))
 
-from agents.claim_extraction.agent import ClaimExtractionAgent, ClaimMinimal
-from agents.claim_verification.orchestrator import ClaimVerificationOrchestrator
+from claim_extraction.agent import ClaimExtractionAgent, ClaimMinimal
+from claim_verification.orchestrator import ClaimVerificationOrchestrator
 
 # Load environment variables
 load_dotenv()
