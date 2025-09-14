@@ -94,7 +94,7 @@ You must provide a structured response with:
 Remember: You're the final arbiter. Use the tools to resolve uncertainties and provide the most accurate assessment possible. 
 Trust what your tools and agents find, even if the information seems unexpected or contradicts your training data."""
         
-    async def verify(self, claim: str, agent_results: List[str] = None, video_context: str = "") -> VerificationResult:
+    async def verify(self, claim: str, agent_results: List[str] = None, video_context: str = "", exact_quote: str = "") -> VerificationResult:
         """
         Override verify to synthesize agent findings.
         
@@ -102,6 +102,7 @@ Trust what your tools and agents find, even if the information seems unexpected 
             claim: The claim being verified
             agent_results: List of findings from specialist agents
             video_context: Video metadata context for temporal verification
+            exact_quote: The exact quote from transcript for additional context
             
         Returns:
             Synthesized assessment with verdict and sources
@@ -264,7 +265,8 @@ class ClaimVerificationOrchestrator:
         final_assessment = await self.orchestrator.verify(
             claim=claim,
             agent_results=agent_results,
-            video_context=combined_context
+            video_context=combined_context,
+            exact_quote=exact_quote
         )
         
         # TODO: Store in memory for future contradiction detection
