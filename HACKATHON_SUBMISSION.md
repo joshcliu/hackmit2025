@@ -1,8 +1,8 @@
-# HackMIT 2025 - TruthLens Submission
+# HackMIT 2025 - Veritas Submission
 
 ## 📝 Description of Project
 
-TruthLens is a real-time fact-checking Chrome extension that verifies claims in political videos as you watch them. Using advanced AI agents powered by Claude 4 Sonnet and a multi-source verification system, TruthLens extracts claims from video transcripts, evaluates their importance, and fact-checks them against news sources, academic papers, government data, and fact-checking databases - all within seconds. The results appear in a sleek side panel with color-coded confidence scores, helping viewers distinguish facts from fiction in real-time.
+Veritas is a real-time fact-checking Chrome extension that verifies claims in political videos as you watch them. Using advanced AI agents powered by Claude 4 Sonnet and a multi-source verification system, Veritas extracts claims from video transcripts, evaluates their importance, and fact-checks them against news sources, academic papers, government data, and fact-checking databases - all within seconds. The results appear in a sleek side panel with color-coded confidence scores, helping viewers distinguish facts from fiction in real-time.
 
 ## 💡 Inspiration
 
@@ -10,9 +10,9 @@ In an era of information overload and rapid misinformation spread, we were inspi
 
 ## 🎯 What It Does
 
-TruthLens transforms passive video watching into an interactive, educational experience:
+Veritas transforms passive video watching into an interactive, educational experience:
 
-1. **Automatic Claim Detection**: When you watch a YouTube video (especially political content), TruthLens automatically fetches the transcript and identifies verifiable claims vs. opinions
+1. **Automatic Claim Detection**: When you watch a YouTube video (especially political content), Veritas automatically fetches the transcript and identifies verifiable claims vs. opinions
 
 2. **Intelligent Prioritization**: Each claim gets an importance score (0-1). Only high-importance claims (≥0.7) are sent for verification to optimize processing time
 
@@ -28,7 +28,7 @@ TruthLens transforms passive video watching into an interactive, educational exp
    - Clickable timestamps to jump to that moment in the video
    - Expandable cards showing sources and detailed reasoning
 
-5. **Educational Context**: Rather than just saying "true" or "false," TruthLens provides nuanced verdicts like "MISLEADING" or "NEEDS CONTEXT" with explanations
+5. **Educational Context**: Rather than just saying "true" or "false," Veritas provides nuanced verdicts like "MISLEADING" or "NEEDS CONTEXT" with explanations
 
 ## 🔨 How We Built It
 
@@ -129,7 +129,7 @@ TruthLens transforms passive video watching into an interactive, educational exp
 2. **Social Media Integration**: Extend to Twitter/X videos, Instagram Reels, TikTok
 3. **Collaborative Fact-Checking**: Allow users to contribute corrections and sources
 4. **Historical Database**: Build a searchable database of verified claims for reference
-5. **API Platform**: Offer TruthLens as an API for other developers
+5. **API Platform**: Offer Veritas as an API for other developers
 
 ### Long Term Vision
 1. **AI Deepfake Detection**: Integrate video/audio analysis to detect manipulated media

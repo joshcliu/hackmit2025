@@ -1,12 +1,12 @@
-# 🔍 TruthLens - Real-Time Video Fact-Checker
+# 🔍 Veritas - Real-Time Video Fact-Checker
 
-![TruthLens Banner](https://img.shields.io/badge/HackMIT-2025-blue) ![Status](https://img.shields.io/badge/Status-Active-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Veritas Banner](https://img.shields.io/badge/HackMIT-2025-blue) ![Status](https://img.shields.io/badge/Status-Active-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-**TruthLens** is an AI-powered Chrome extension that fact-checks political videos in real-time, helping viewers distinguish facts from fiction as they watch. Built for HackMIT 2025.
+**Veritas** is an AI-powered Chrome extension that fact-checks political videos in real-time, helping viewers distinguish facts from fiction as they watch. Built for HackMIT 2025.
 
 ## 🎥 Demo
 
-Watch TruthLens in action as it processes political speeches, debates, and news videos - extracting claims and verifying them against multiple sources within seconds.
+Watch Veritas in action as it processes political speeches, debates, and news videos - extracting claims and verifying them against multiple sources within seconds.
 
 ## ✨ Key Features
 
@@ -93,7 +93,7 @@ npm run build
 ### 4. Start Fact-Checking!
 
 1. Navigate to any YouTube video
-2. Click the TruthLens extension icon
+2. Click the Veritas extension icon
 3. Click "Start Fact-Checking"
 4. Watch claims appear in real-time
 
@@ -143,7 +143,7 @@ An orchestrator agent synthesizes all findings to produce:
 
 ## 📁 Project Structure
 
-```
+```text
 hackmit2025/
 ├── api_server.py              # FastAPI backend server
 ├── claim_extraction/          # Claim extraction agent
@@ -205,7 +205,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🏆 HackMIT 2025 Submission
 
-Built with ❤️ by Team TruthLens at HackMIT 2025
+Built with ❤️ by Team Veritas at HackMIT 2025
 
 ---
 
