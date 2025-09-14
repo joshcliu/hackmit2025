@@ -14,6 +14,8 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingStatus, setProcessingStatus] = useState<string>('');
+  const [currentVideoTime, setCurrentVideoTime] = useState<number>(0);
+  const [scrollToClaimText, setScrollToClaimText] = useState<string | null>(null);
   const [claims, setClaims] = useState<Claim[]>([]);
   const [serverAvailable, setServerAvailable] = useState(true);
   const sessionIdRef = useRef<string | null>(null);
@@ -83,7 +85,7 @@ export default function App() {
         break;
 
       case 'verification_start':
-        setProcessingStatus(`Verifying claim ${message.claim_index}/${message.total_claims}: "${message.claim_text.substring(0, 50)}..."`);
+        setProcessingStatus(`Verifying claim ${message.claim_index}/${message.total_claims}`);
         break;
 
       case 'complete':
@@ -167,6 +169,25 @@ export default function App() {
     };
   }, [fetchMetadata]);
 
+  // Separate effect for video timestamp updates when processing is active
+  useEffect(() => {
+    if (!isStarted || !isProcessing) return;
+
+    const updateVideoTime = () => {
+      chrome.runtime.sendMessage({ type: 'get-video-timestamp' }, (response) => {
+        if (response && typeof response.timestamp === 'number') {
+          setCurrentVideoTime(response.timestamp);
+        }
+      });
+    };
+
+    // Update video time immediately and then every second
+    updateVideoTime();
+    const interval = setInterval(updateVideoTime, 1000);
+    
+    return () => clearInterval(interval);
+  }, [isStarted, isProcessing]);
+
   const handleStart = async () => {
     console.log('[DEBUG] handleStart called');
     console.log('[DEBUG] serverAvailable:', serverAvailable);
@@ -214,6 +235,28 @@ export default function App() {
     sessionIdRef.current = null;
   };
 
+    const handleScrollComplete = () => {
+    setScrollToClaimText(null);
+  };
+
+  // Find the most recent claim that has already been said (start time <= current video time)
+  const getCurrentClaim = useCallback(() => {
+    if (claims.length === 0) return null;
+    
+    // Filter claims that have already started (start time <= current time)
+    const pastClaims = claims.filter(claim => (claim.startSeconds || 0) <= currentVideoTime);
+    
+    if (pastClaims.length === 0) return null;
+    
+    // Find the most recent one (highest start time)
+    return pastClaims.reduce((latest, claim) => {
+      const claimStartTime = claim.startSeconds || 0;
+      const latestStartTime = latest?.startSeconds || 0;
+      
+      return claimStartTime > latestStartTime ? claim : latest;
+    });
+  }, [claims, currentVideoTime]);
+
   const handleTimestampClick = useCallback((seconds: number) => {
     chrome.runtime.sendMessage(
       { type: 'seek-video', seconds },
@@ -246,19 +289,39 @@ export default function App() {
           videoTitle={videoTitle}
         />
         
-        {/* Processing Status Bar */}
-        {isProcessing && (
-          <div className="px-4 py-2 bg-custom-gold/10 border-b border-custom-gold/30">
-            <div className="flex items-center space-x-2">
-              <div className="animate-pulse w-2 h-2 bg-custom-gold rounded-full"></div>
-              <p className="text-sm text-custom-gold">{processingStatus}</p>
+        {/* Current Claim Bar */}
+        {(() => {
+          const currentClaim = getCurrentClaim();
+          return (
+            <div className="px-4 py-2 bg-custom-gold/10 border-b border-custom-gold/30">
+              <div className="flex items-center space-x-2">
+                <div className="animate-pulse w-2 h-2 bg-custom-gold rounded-full"></div>
+                {currentClaim ? (
+                  <button 
+                    onClick={() => setScrollToClaimText(currentClaim.text)}
+                    className="text-sm text-custom-gold hover:text-white transition-colors duration-200 text-left truncate"
+                    title={currentClaim.text}
+                  >
+                    "{currentClaim.text}"
+                  </button>
+                ) : (
+                  <div className="text-sm text-gray-500">
+                    No recent claims
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
         
         {/* Claims Feed or Loading Message */}
         {claims.length > 0 ? (
-          <ClaimFeed claims={claims} onTimestampClick={handleTimestampClick} />
+          <ClaimFeed 
+            claims={claims} 
+            onTimestampClick={handleTimestampClick} 
+            scrollToClaimText={scrollToClaimText}
+            onScrollComplete={handleScrollComplete}
+          />
         ) : (
           <div className="flex-1 flex items-center justify-center p-8">
             <div className="text-center">

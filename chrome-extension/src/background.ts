@@ -106,5 +106,40 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       return true; // Keep the message channel open for the asynchronous response
     });
     return true; // Keep the message channel open for the asynchronous response
+  } else if (message.type === 'get-video-timestamp') {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const activeTab = tabs[0];
+      if (activeTab && activeTab.id && activeTab.url && activeTab.url.includes('youtube.com/watch')) {
+        chrome.scripting.executeScript(
+          {
+            target: { tabId: activeTab.id },
+            func: () => {
+              const video = document.querySelector('video');
+              if (video) {
+                return { timestamp: video.currentTime };
+              }
+              return { error: 'Video element not found.' };
+            }
+          },
+          (injectionResults) => {
+            if (chrome.runtime.lastError) {
+              sendResponse({ error: chrome.runtime.lastError.message });
+              return;
+            }
+            for (const frameResult of injectionResults) {
+              if (frameResult.result) {
+                sendResponse(frameResult.result);
+                return;
+              }
+            }
+            sendResponse({ error: 'Could not get video timestamp.' });
+          }
+        );
+      } else {
+        sendResponse({ error: 'Not a YouTube video page.' });
+      }
+      return true; // Keep the message channel open for the asynchronous response
+    });
+    return true; // Keep the message channel open for the asynchronous response
   }
 });
